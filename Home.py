@@ -51,7 +51,7 @@ st.markdown("""
             color: #888888;;
             text-align: center;
             padding: 10px;
-            font-size: 20px;
+            font-size: 15px;
         }
     </style>
     <div class="footer">
