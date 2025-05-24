@@ -55,6 +55,7 @@ st.markdown("""
         }
     </style>
     <div class="footer">
+        <hr>
         UTFPR - Universidade Tecnológica Federal do Paraná - Engenharia Eletrônica - 2025
     </div>
 """, unsafe_allow_html=True)
