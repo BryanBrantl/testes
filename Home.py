@@ -37,3 +37,24 @@ elif selected == "Relatórios":
 elif selected == "Cronograma":
     st.title("Cronograma")
     st.write("Conteúdo do cronograma.")
+
+
+# Rodapé
+st.markdown("""
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #0E1117;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+    </style>
+    <div class="footer">
+        UTFPR - Universidade Tecnológica Federal do Paraná - Engenharia Eletrônica - 2025
+    </div>
+""", unsafe_allow_html=True)
