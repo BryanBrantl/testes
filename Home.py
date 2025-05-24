@@ -46,7 +46,7 @@ st.markdown("""
             position: fixed;
             left: 0;
             bottom: 0;
-            width: 100%;
+            width: 300%;
             background-color: #0E1117;
             color: #888888;;
             text-align: center;
