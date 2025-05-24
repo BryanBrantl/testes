@@ -1,22 +1,39 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
 
-st.set_page_config(page_title="Site Customizado", layout="wide")
+st.set_page_config(page_title="BIOMOVE", layout="wide")
 
-# Simula navegação horizontal
-menu = st.radio(
-    "Navegação",
-    ["Home", "Página 1", "Página 2"],
-    horizontal=True
+# Título principal
+st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
+
+# Menu horizontal com abas
+selected = option_menu(
+    menu_title=None,  # remove o título do menu
+    options=["Home", "BioMove", "Atualização Semanal", "Relatórios", "Cronograma"],
+    orientation="horizontal",
+    default_index=0,
+    icons=["house", "bar-chart", "calendar", "file-earmark-text", "clock"],
+    styles={
+        "container": {"padding": "0!important", "background-color": "#0E1117"},
+        "icon": {"color": "white", "font-size": "16px"},
+        "nav-link": {"font-size": "16px", "text-align": "left", "margin": "0px", "color": "white"},
+        "nav-link-selected": {"background-color": "#0E1117", "color": "red", "border-bottom": "2px solid red"},
+    }
 )
 
-st.markdown("---")
-
-if menu == "Home":
+# Conteúdo de acordo com o menu selecionado
+if selected == "Home":
     st.title("Página Inicial")
-    st.write("Bem-vindo ao site com navegação horizontal.")
-elif menu == "Página 1":
-    st.title("Página 1")
-    st.write("Conteúdo da Página 1.")
-elif menu == "Página 2":
-    st.title("Página 2")
-    st.write("Conteúdo da Página 2.")
+    st.write("Conteúdo da Home.")
+elif selected == "BioMove":
+    st.title("BioMove")
+    st.write("Conteúdo do projeto BioMove.")
+elif selected == "Atualização Semanal":
+    st.title("Atualização Semanal")
+    st.write("Conteúdo das atualizações semanais.")
+elif selected == "Relatórios":
+    st.title("Relatórios")
+    st.write("Conteúdo dos relatórios.")
+elif selected == "Cronograma":
+    st.title("Cronograma")
+    st.write("Conteúdo do cronograma.")
