@@ -46,12 +46,12 @@ st.markdown("""
             position: fixed;
             left: 0;
             bottom: 0;
-            width: 200%;
-            background-color: #A9A9A9;
-            color: white;
+            width: 100%;
+            background-color: #0E1117;
+            color: #888888;;
             text-align: center;
             padding: 10px;
-            font-size: 16px;
+            font-size: 14px;
         }
     </style>
     <div class="footer">
