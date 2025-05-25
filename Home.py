@@ -87,21 +87,22 @@ elif selected == "Relatórios":
     Você pode acessar o documento completo clicando no botão abaixo:
     """)
 
-    st.markdown("""
+      st.markdown("""
         <a href="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing" target="_blank">
             <div style="
                 display: inline-block;
                 padding: 12px 24px;
-                background-color: #008080;
+                background-color: #0E1117;
                 color: white;
+                border: 2px solid white;
                 border-radius: 8px;
                 text-decoration: none;
                 font-weight: bold;
                 text-align: center;
-                transition: background-color 0.3s ease;
+                transition: all 0.3s ease;
             "
-            onmouseover="this.style.backgroundColor='#006666'"
-            onmouseout="this.style.backgroundColor='#008080'">
+            onmouseover="this.style.backgroundColor='#008080'; this.style.color='#0E1117';"
+            onmouseout="this.style.backgroundColor='#0E1117'; this.style.color='white';">
                 📄 Abrir Proposta
             </div>
         </a>
