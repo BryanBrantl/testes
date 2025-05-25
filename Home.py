@@ -17,7 +17,7 @@ selected = option_menu(
         "container": {"padding": "0!important", "background-color": "#0E1117"},
         "icon": {"color": "white", "font-size": "16px"},
         "nav-link": {"font-size": "16px", "text-align": "left", "margin": "0px", "color": "white"},
-        "nav-link-selected": {"background-color": "#008080", "color": "teal", "border-bottom": "2px solid teal"},
+        "nav-link-selected": {"background-color": "#0E1117", "color": "teal", "border-bottom": "2px solid teal"},
     }
 )
 
