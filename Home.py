@@ -6,22 +6,21 @@ st.set_page_config(page_title="BIOMOVE", layout="wide")
 # CSS para os botões com hover (borda e texto mudam, fundo continua)
 st.markdown("""
     <style>
-        .btn-white {
-            background-color: #0E1117;
+        .btn-colored {
+            background-color: #1f2b3a;
             color: white;
-            border: 2px solid white;
+            border: none;
             border-radius: 8px;
             padding: 10px 20px;
             text-decoration: none !important;
             font-weight: bold;
-            transition: 0.3s;
+            transition: background-color 0.3s;
         }
-        .btn-white:hover {
-            color: #008080;
-            border-color: #008080;
+        .btn-colored:hover {
+            background-color: #008080;
         }
     </style>
-    <a href="#" class="btn-white">Botão Branco</a>
+    <a href="#" class="btn-colored">Botão Colorido</a>
 """, unsafe_allow_html=True)
 
 ################################################################################################################################## Título principal
