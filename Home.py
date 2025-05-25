@@ -27,6 +27,7 @@ st.markdown("""
             color: #00CED1;
         }
     </style>
+""", unsafe_allow_html=True)
 
 ################################################################################################################################## Título principal
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
