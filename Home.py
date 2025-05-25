@@ -6,29 +6,31 @@ st.set_page_config(page_title="BIOMOVE", layout="wide")
 # CSS para os botões com hover (borda e texto mudam, fundo continua)
 st.markdown("""
     <style>
-        /* Estilo do botão clicável */
+        /* Define o estilo padrão do botão */
         .custom-button {
             display: inline-block;
-            padding: 12px 24px;
-            background-color: #0E1117;
-            color: white;
-            border: 2px solid white;
+            padding: 10px 20px;
+            background-color: #0E1117;        /* Fundo igual ao da página */
+            color: white;                     /* Cor do texto */
+            border: 2px solid white;          /* Contorno branco */
             border-radius: 8px;
-            text-decoration: none;
+            text-decoration: none !important; /* Remove sublinhado */
             font-weight: bold;
-            text-align: center;
+            font-size: 16px;
             transition: 0.3s ease;
         }
 
-        /* Estilo ao passar o mouse */
+        /* Define estilo ao passar o mouse */
         .custom-button:hover {
-            color: #008080;
-            border-color: #008080;
+            color: #008080;                  /* Texto fica teal */
+            border-color: #008080;           /* Contorno fica teal */
         }
     </style>
 
-    <!-- Botão que abre a proposta -->
-    <a href="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing" target="_blank" class="custom-button">
+    <!-- Botão clicável com o estilo definido acima -->
+    <a href="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing"
+       target="_blank"
+       class="custom-button">
         Abrir Proposta
     </a>
 """, unsafe_allow_html=True)
