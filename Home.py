@@ -66,7 +66,11 @@ elif selected == "Atualização Semanal":
     
    
 elif selected == "Relatórios":
-    st.title("Relatórios")
+    st.markdown("""
+        <h1 style='text-align: center; color: #FF4B4B;'>
+            Relatórios
+        </h1>
+    """, unsafe_allow_html=True)
 
     st.markdown("""
     ### Proposta de Projeto
@@ -78,22 +82,21 @@ elif selected == "Relatórios":
 
     col1, col2 = st.columns(2)
 
-    with col1:
-        if st.button("📄 Abrir Proposta"):
-            st.markdown(
-                "[Clique aqui para abrir a proposta](https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing)",
-                unsafe_allow_html=True
-            )
 
-    with col2:
-        st.markdown("""
-        ### Relatório Final
+    if st.button(" Abrir Proposta"):
+        st.markdown(
+            "[Clique aqui para abrir a proposta](https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing)",
+            unsafe_allow_html=True
+        )
 
-        Você pode acessar o documento completo clicando no botão abaixo:  
-        **OBS:** Ainda não disponível.
-        """)
+    st.markdown("""
+    ### Relatório Final
 
-        st.button("📁 Relatório Final (em breve)", disabled=True)
+    Você pode acessar o documento completo clicando no botão abaixo:  
+    **OBS:** Ainda não disponível.
+    """)
+
+    st.button("Relatório Final (em breve)", disabled=True)
         
 elif selected == "Cronograma":
     st.title("Cronograma | Orçamento")
