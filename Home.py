@@ -48,7 +48,7 @@ elif selected == "Atualização Semanal":
     
     def bloco_atualizacao(titulo, texto):
         st.markdown(f"""
-            <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid red;">
+            <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
                 <h4 style="color:white;">{titulo}</h4>
                 <p style="color:gray;">{texto}</p>
             </div>
