@@ -57,9 +57,15 @@ elif selected == "Atualização Semanal":
     """)
     
    
-elif selected == "Relatórios":
-    st.title("Relatórios")
-    st.write("Conteúdo dos relatórios.")
+elif selected == "Cronograma":
+    st.title("Cronograma | Orçamento")
+    st.write("Acesse o cronograma e orçamento completo no link abaixo:")
+
+    if st.button("📊 Abrir Cronograma e Orçamento"):
+        st.markdown(
+            "[Clique aqui para abrir](https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing)",
+            unsafe_allow_html=True
+        )
 elif selected == "Cronograma":
     st.title("Cronograma")
     st.write("Conteúdo do cronograma.")
