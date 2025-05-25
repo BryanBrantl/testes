@@ -57,7 +57,7 @@ elif selected == "Atualização Semanal":
     """)
     
    
-elif selected == "Cronograma":
+elif selected == "Relatórios":
     st.title("Cronograma | Orçamento")
     st.write("Acesse o cronograma e orçamento completo no link abaixo:")
 
