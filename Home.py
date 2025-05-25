@@ -28,8 +28,6 @@ st.markdown("""
         }
     </style>
 
-    <a href="#" class="btn-card">Botão em Estilo Card</a>
-""", unsafe_allow_html=True)
 ################################################################################################################################## Título principal
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
 
