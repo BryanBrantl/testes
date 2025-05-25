@@ -37,7 +37,11 @@ if selected == "Home":
 
 
 elif selected == "BioMove":
-
+        st.markdown("""
+        <h1 style='text-align: center; color: #008080 ;'>
+            HOME
+        </h1>
+    """, unsafe_allow_html=True)
     
 elif selected == "Atualização Semanal":
     st.title("Atualizações Semanais")
