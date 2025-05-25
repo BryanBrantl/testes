@@ -1,4 +1,4 @@
-import streamlit as st
+eimport streamlit as st
 from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="BIOMOVE", layout="wide")
@@ -6,33 +6,39 @@ st.set_page_config(page_title="BIOMOVE", layout="wide")
 # CSS para os botões com hover (borda e texto mudam, fundo continua)
 st.markdown("""
     <style>
+        /* Estilo do botão personalizado */
         .custom-button {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #0E1117;
-            color: white;
-            border: 2px solid white;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-            transition: 0.3s ease;
+            display: inline-block; /* Coloca o botão em linha */
+            padding: 12px 24px; /* Espaçamento interno do botão */
+            background-color: #0E1117; /* Fundo do botão (escuro, igual ao fundo da página) */
+            color: white; /* Cor do texto (branco) */
+            border: 2px solid white; /* Borda branca */
+            border-radius: 8px; /* Bordas arredondadas */
+            text-decoration: none !important; /* Remove sublinhado de links */
+            font-weight: bold; /* Texto em negrito */
+            text-align: center; /* Centraliza o texto */
+            transition: 0.3s ease; /* Suaviza a transição ao passar o mouse */
         }
+
+        /* Estilo do botão ao passar o mouse */
         .custom-button:hover {
-            border-color: #008080;
-            color: #008080;
+            border-color: #008080; /* Cor da borda (teal) no hover */
+            color: #008080; /* Cor do texto no hover */
+            text-decoration: none !important; /* Garante que não apareça sublinhado */
         }
+
+        /* Estilo de botão desabilitado (ex: relatório ainda não disponível) */
         .disabled-button {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #0E1117;
-            color: #999;
-            border: 2px solid #999;
+            background-color: #0E1117; /* Mesmo fundo escuro */
+            color: #999; /* Texto acinzentado */
+            border: 2px solid #999; /* Borda cinza */
             border-radius: 8px;
             text-align: center;
             font-weight: bold;
-            opacity: 0.6;
-            cursor: not-allowed;
+            opacity: 0.6; /* Deixa mais apagado para parecer desativado */
+            cursor: not-allowed; /* Cursor indicando que o botão está desativado */
         }
     </style>
 """, unsafe_allow_html=True)
