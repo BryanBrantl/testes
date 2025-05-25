@@ -71,7 +71,6 @@ elif selected == "Atualização Semanal":
    - Construção do esquemático EMG:
     """)
     
-   
 elif selected == "Relatórios":
     st.markdown("""
         <h1 style='text-align: center; color: #008080;'>
@@ -88,11 +87,25 @@ elif selected == "Relatórios":
     Você pode acessar o documento completo clicando no botão abaixo:
     """)
 
-    if st.button(" Abrir Proposta"):
-        st.markdown(
-            "[Clique aqui para abrir a proposta](https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing)",
-            unsafe_allow_html=True
-        )
+    st.markdown("""
+        <a href="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing" target="_blank">
+            <div style="
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: #008080;
+                color: white;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: bold;
+                text-align: center;
+                transition: background-color 0.3s ease;
+            "
+            onmouseover="this.style.backgroundColor='#006666'"
+            onmouseout="this.style.backgroundColor='#008080'">
+                📄 Abrir Proposta
+            </div>
+        </a>
+    """, unsafe_allow_html=True)
 
     st.markdown("""
     ### Relatório Final
@@ -101,10 +114,30 @@ elif selected == "Relatórios":
     **OBS:** Ainda não disponível.
     """)
 
-    st.button("Relatório Final (em breve)", disabled=True)
-        
+    st.markdown("""
+        <div style="
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #cccccc;
+            color: #666;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            cursor: not-allowed;
+            opacity: 0.6;
+        ">
+            📄 Relatório Final (em breve)
+        </div>
+    """, unsafe_allow_html=True)
+
 elif selected == "Cronograma":
-    st.title("Cronograma | Orçamento")
+    st.markdown("""
+        <h1 style='text-align: center; color: #008080;'>
+            Cronograma | Orçamento
+        </h1>
+        <hr style='border: 2px solid #888; margin-top: 10px; margin-bottom: 30px;'/>
+    """, unsafe_allow_html=True)
 
     st.markdown("""
     ### Cronograma:
@@ -113,12 +146,26 @@ elif selected == "Cronograma":
     Você pode acessar o documento completo clicando no botão abaixo:
     """)
 
-    if st.button("Abrir Cronograma e Orçamento"):
-        st.markdown(
-            "[Clique aqui para abrir](https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing)",
-            unsafe_allow_html=True
-        )
-        
+    st.markdown("""
+        <a href="https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing" target="_blank">
+            <div style="
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: #008080;
+                color: white;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: bold;
+                text-align: center;
+                transition: background-color 0.3s ease;
+            "
+            onmouseover="this.style.backgroundColor='#006666'"
+            onmouseout="this.style.backgroundColor='#008080'">
+                 Abrir Cronograma e Orçamento
+            </div>
+        </a>
+    """, unsafe_allow_html=True)
+
 # Rodapé
 st.markdown("""
     <style>
