@@ -115,22 +115,22 @@ elif selected == "Relatórios":
     **OBS:** Ainda não disponível.
     """)
 
-    st.markdown("""
-        <div style="
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #0E1117;
-            color: #666;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-            cursor: not-allowed;
-            opacity: 0.6;
-        ">
-            📄 Relatório Final (em breve)
-        </div>
-    """, unsafe_allow_html=True)
+st.markdown("""
+    <div style="
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #0E1117;
+        color: #666;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        cursor: not-allowed;
+        opacity: 0.6;
+    ">
+        📄 Relatório Final (em breve)
+    </div>
+""", unsafe_allow_html=True)
 
 elif selected == "Cronograma":
     st.markdown("""
