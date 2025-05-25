@@ -58,19 +58,30 @@ elif selected == "Atualização Semanal":
     
    
 elif selected == "Relatórios":
-    st.title("Cronograma | Orçamento")
+    st.title("Relatórios")
+    st.write("Documentos relacionados ao projeto:")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        if st.button("📄 Abrir Proposta"):
+            st.markdown(
+                "[Clique aqui para abrir a proposta](https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing)",
+                unsafe_allow_html=True
+            )
+
+    with col2:
+        st.button("📁 Relatório Final (em breve)", disabled=True)
+   
+elif selected == "Cronograma":
+ st.title("Cronograma | Orçamento")
     st.write("Acesse o cronograma e orçamento completo no link abaixo:")
 
-    if st.button("📊 Abrir Cronograma e Orçamento"):
+    if st.button("Abrir Cronograma e Orçamento"):
         st.markdown(
             "[Clique aqui para abrir](https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing)",
             unsafe_allow_html=True
         )
-elif selected == "Cronograma":
-    st.title("Cronograma")
-    st.write("Conteúdo do cronograma.")
-
-
 # Rodapé
 st.markdown("""
     <style>
