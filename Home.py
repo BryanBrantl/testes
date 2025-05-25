@@ -13,7 +13,7 @@ st.markdown("""
             font-size: 16px;
         }
         .btn-minimal:hover {
-            color: #00CED1;
+            color: #008080;
             text-decoration: none;
         }
     </style>
