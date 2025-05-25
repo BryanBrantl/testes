@@ -37,15 +37,7 @@ if selected == "Home":
 
 
 elif selected == "BioMove":
-    st.title("Cronograma | Orçamento")
 
-    st.markdown("""
-    <a href="https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing" target="_blank">
-        <div style="display:inline-block; padding:12px 24px; background-color:#ff4b4b; color:teal; border-radius:8px; text-decoration:none; font-weight:600;">
-            📊 Acessar Cronograma e Orçamento
-        </div>
-    </a>
-    """, unsafe_allow_html=True)
     
 elif selected == "Atualização Semanal":
     st.title("Atualizações Semanais")
