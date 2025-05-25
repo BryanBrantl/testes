@@ -23,8 +23,24 @@ selected = option_menu(
 
 # Conteúdo de acordo com o menu selecionado
 if selected == "Home":
-    st.title("Página Inicial")
-    st.write("Conteúdo da Home.")
+    st.markdown("""
+        <h1 style='text-align: center; color: #FF4B4B;'>
+            HOME
+        </h1>
+    """, unsafe_allow_html=True)
+    <h>
+    st.markdown("""
+        <h1 style='text-align: center; color: #FF4B4B;'>
+            MEMBROS
+        </h1>
+    """, unsafe_allow_html=True)
+
+     st.markdown("""
+        <h1 style='text-align: center; color: #FF4B4B;'>
+            MEMBROS
+        </h1>
+    """, unsafe_allow_html=True)
+
 elif selected == "BioMove":
     st.title("Cronograma | Orçamento")
 
