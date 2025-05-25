@@ -135,7 +135,7 @@ elif selected == "Relatórios":
 
     st.markdown("""
         <a href="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing" target="_blank" class="custom-button">
-            📄 Abrir Proposta
+             Abrir Proposta
         </a>
     """, unsafe_allow_html=True)
 
@@ -148,7 +148,7 @@ elif selected == "Relatórios":
 
     st.markdown("""
         <div class="disabled-button">
-            📄 Relatório Final (em breve)
+             Relatório Final (em breve)
         </div>
     """, unsafe_allow_html=True)
 
@@ -171,7 +171,7 @@ elif selected == "Cronograma":
 
     st.markdown("""
         <a href="https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing" target="_blank" class="custom-button">
-            📊 Abrir Cronograma e Orçamento
+            Abrir Cronograma e Orçamento
         </a>
     """, unsafe_allow_html=True)
 
