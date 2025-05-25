@@ -81,7 +81,7 @@ elif selected == "Relatórios":
         <h1 style='text-align: center; color: #008080;'>
             Relatórios
         </h1>
-        <hr style='border: 1px solid #444;'/>
+        <hr style='border: 1px solid #367588;'/>
     """, unsafe_allow_html=True)
 
     st.markdown("""
