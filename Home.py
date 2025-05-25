@@ -2,6 +2,38 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="BIOMOVE", layout="wide")
+st.markdown("""
+    <style>
+        .custom-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #0E1117;
+            color: white;
+            border: 2px solid white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+        .custom-button:hover {
+            background-color: #008080;
+            color: #0E1117;
+        }
+        .disabled-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #0E1117;
+            color: #999;
+            border: 2px solid #999;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 # Título principal
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
@@ -71,6 +103,7 @@ elif selected == "Atualização Semanal":
    - Construção do esquemático EMG:
     """)
     
+# RELATÓRIOS
 elif selected == "Relatórios":
     st.markdown("""
         <h1 style='text-align: center; color: #008080;'>
@@ -88,23 +121,8 @@ elif selected == "Relatórios":
     """)
 
     st.markdown("""
-        <a href="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing" target="_blank">
-            <div style="
-                display: inline-block;
-                padding: 12px 24px;
-                background-color: #0E1117;
-                color: white;
-                border: 2px solid white;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: bold;
-                text-align: center;
-                transition: all 0.3s ease;
-            "
-            onmouseover="this.style.backgroundColor='#008080'; this.style.color='#0E1117';"
-            onmouseout="this.style.backgroundColor='#0E1117'; this.style.color='white';">
-                📄 Abrir Proposta
-            </div>
+        <a href="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing" target="_blank" class="custom-button">
+            📄 Abrir Proposta
         </a>
     """, unsafe_allow_html=True)
 
@@ -116,23 +134,12 @@ elif selected == "Relatórios":
     """)
 
     st.markdown("""
-        <div style="
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #0E1117;
-            color: #999;
-            border: 2px solid #999;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: bold;
-            opacity: 0.6;
-            cursor: not-allowed;
-        ">
+        <div class="disabled-button">
             📄 Relatório Final (em breve)
         </div>
     """, unsafe_allow_html=True)
 
-
+# CRONOGRAMA
 elif selected == "Cronograma":
     st.markdown("""
         <h1 style='text-align: center; color: #008080;'>
@@ -149,23 +156,8 @@ elif selected == "Cronograma":
     """)
 
     st.markdown("""
-        <a href="https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing" target="_blank">
-            <div style="
-                display: inline-block;
-                padding: 12px 24px;
-                background-color: #0E1117;
-                color: white;
-                border: 2px solid white;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: bold;
-                text-align: center;
-                transition: all 0.3s ease;
-            "
-            onmouseover="this.style.backgroundColor='#008080'; this.style.color='#0E1117';"
-            onmouseout="this.style.backgroundColor='#0E1117'; this.style.color='white';">
-                📊 Abrir Cronograma e Orçamento
-            </div>
+        <a href="https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing" target="_blank" class="custom-button">
+            📊 Abrir Cronograma e Orçamento
         </a>
     """, unsafe_allow_html=True)
 
