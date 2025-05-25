@@ -24,13 +24,13 @@ selected = option_menu(
 # Conteúdo de acordo com o menu selecionado
 if selected == "Home":
     st.markdown("""
-        <h1 style='text-align: center; color: #FF4B4B;'>
+        <h1 style='text-align: center; color: #008080 ;'>
             HOME
         </h1>
     """, unsafe_allow_html=True)
     
     st.markdown("""
-        <h1 style='text-align: center; color: #FF4B4B;'>
+        <h1 style='text-align: center; color: #008080 ;'>
             MEMBROS
         </h1>
     """, unsafe_allow_html=True)
@@ -41,7 +41,7 @@ elif selected == "BioMove":
 
     st.markdown("""
     <a href="https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing" target="_blank">
-        <div style="display:inline-block; padding:12px 24px; background-color:#ff4b4b; color:white; border-radius:8px; text-decoration:none; font-weight:600;">
+        <div style="display:inline-block; padding:12px 24px; background-color:#ff4b4b; color:teal; border-radius:8px; text-decoration:none; font-weight:600;">
             📊 Acessar Cronograma e Orçamento
         </div>
     </a>
