@@ -19,12 +19,15 @@ st.markdown("""
             font-weight: 600;
             box-shadow: 0 2px 5px rgba(0,0,0,0.5);
             transition: 0.3s ease;
+            text-align: center;  /* <- centraliza o texto */
         }
+
         .btn-card:hover {
             border-color: #00CED1;
             color: #00CED1;
         }
     </style>
+
     <a href="#" class="btn-card">Botão em Estilo Card</a>
 """, unsafe_allow_html=True)
 ################################################################################################################################## Título principal
