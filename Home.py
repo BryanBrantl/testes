@@ -67,7 +67,14 @@ elif selected == "Atualização Semanal":
    
 elif selected == "Relatórios":
     st.title("Relatórios")
-    st.write("Documentos relacionados ao projeto:")
+
+    st.markdown("""
+    ### Proposta de Projeto
+
+    Nesta seção, está disponibilizada a proposta de projeto do BioMove.  
+    O documento reúne informações detalhadas sobre o escopo do projeto, sendo esta proposta já aprovada.  
+    Você pode acessar o documento completo clicando no botão abaixo:
+    """)
 
     col1, col2 = st.columns(2)
 
@@ -79,17 +86,31 @@ elif selected == "Relatórios":
             )
 
     with col2:
+        st.markdown("""
+        ### Relatório Final
+
+        Você pode acessar o documento completo clicando no botão abaixo:  
+        **OBS:** Ainda não disponível.
+        """)
+
         st.button("📁 Relatório Final (em breve)", disabled=True)
-   
+        
 elif selected == "Cronograma":
     st.title("Cronograma | Orçamento")
-    st.write("Acesse o cronograma e orçamento completo no link abaixo:")
+
+    st.markdown("""
+    ### Cronograma:
+
+    Nesta seção, está disponibilizado o cronograma completo juntamente com os custos previstos e realizados do projeto BioMove.  
+    Você pode acessar o documento completo clicando no botão abaixo:
+    """)
 
     if st.button("Abrir Cronograma e Orçamento"):
         st.markdown(
             "[Clique aqui para abrir](https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing)",
             unsafe_allow_html=True
         )
+        
 # Rodapé
 st.markdown("""
     <style>
