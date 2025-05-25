@@ -41,7 +41,7 @@ elif selected == "Atualização Semanal":
     
     bloco_atualizacao("📅 Semana 1 - 20/05/2025", """
    - Realizados testes nos principais componentes do carrinho (motor DC, ESP32 e ponte H), sem identificação de defeitos.<br>
-   - Conduzido estudo sobre softwares de modelagem 3D. Optou-se pela utilização do Eagle para o desenvolvimento do carrinho e do sistema EMG.
+   - Conduzido estudo sobre softwares de modelagem 3D. Optou-se pela utilização do Eagle para o desenvolvimento do carrinho e do sistema EMG.<br>
    - Modelo do site finalizado.
    - Proposta e cronograma revisados e atualizados conforme a devolutiva, já disponíveis no site.<br>
    - Decisões sobre o projeto: Definido que será utilizado baterias 18650 (4.2v) para alimentação dos sistemas.<br>
