@@ -74,7 +74,7 @@ elif selected == "Relatórios":
         st.button("📁 Relatório Final (em breve)", disabled=True)
    
 elif selected == "Cronograma":
- st.title("Cronograma | Orçamento")
+    st.title("Cronograma | Orçamento")
     st.write("Acesse o cronograma e orçamento completo no link abaixo:")
 
     if st.button("Abrir Cronograma e Orçamento"):
