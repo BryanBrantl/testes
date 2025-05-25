@@ -29,8 +29,27 @@ elif selected == "BioMove":
     st.title("BioMove")
     st.write("Conteúdo do projeto BioMove.")
 elif selected == "Atualização Semanal":
-    st.title("Atualização Semanal")
-    st.write("Conteúdo das atualizações semanais.")
+    st.title("Atualizações Semanais")
+    
+    def bloco_atualizacao(titulo, texto):
+        st.markdown(f"""
+            <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid red;">
+                <h4 style="color:white;">{titulo}</h4>
+                <p style="color:gray;">{texto}</p>
+            </div>
+        """, unsafe_allow_html=True)
+    
+    bloco_atualizacao("📅 Semana 1 - 20/05/2025", """
+    - Finalizamos a integração com o sensor X.<br>
+    - Corrigido o bug de comunicação serial.<br>
+    - Início da documentação do projeto.
+    """)
+    
+    bloco_atualizacao("📅 Semana 2 - 27/05/2025", """
+    - Realizado testes com protótipo 1.<br>
+    - Melhorias na eficiência do algoritmo de leitura.<br>
+    - Planejamento da próxima sprint.
+    """)
 elif selected == "Relatórios":
     st.title("Relatórios")
     st.write("Conteúdo dos relatórios.")
