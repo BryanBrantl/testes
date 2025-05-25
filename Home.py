@@ -118,7 +118,7 @@ elif selected == "Relatórios":
         <div style="
             display: inline-block;
             padding: 12px 24px;
-            background-color: #cccccc;
+            background-color: #0E1117;
             color: #666;
             border-radius: 8px;
             text-decoration: none;
@@ -151,7 +151,7 @@ elif selected == "Cronograma":
             <div style="
                 display: inline-block;
                 padding: 12px 24px;
-                background-color: #008080;
+                background-color: #0E1117;
                 color: white;
                 border-radius: 8px;
                 text-decoration: none;
