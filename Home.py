@@ -126,9 +126,7 @@ elif selected == "Relatórios":
     """)
 
     st.markdown("""
-        <a href="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing" target="_blank" class="custom-button">
-             Abrir Proposta
-        </a>
+            <a href="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing" class="btn-card">Botão em Estilo Card</a>
     """, unsafe_allow_html=True)
 
     st.markdown("""
