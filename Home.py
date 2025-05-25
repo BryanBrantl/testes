@@ -2,6 +2,8 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="BIOMOVE", layout="wide")
+
+# CSS para os botões com hover (borda e texto mudam, fundo continua)
 st.markdown("""
     <style>
         .custom-button {
@@ -17,8 +19,8 @@ st.markdown("""
             transition: 0.3s ease;
         }
         .custom-button:hover {
-            background-color: #008080;
-            color: #0E1117;
+            border-color: #008080;
+            color: #008080;
         }
         .disabled-button {
             display: inline-block;
@@ -35,7 +37,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Título principal
+################################################################################################################################## Título principal
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
 
 # Menu horizontal com abas
@@ -53,7 +55,10 @@ selected = option_menu(
     }
 )
 
-# Conteúdo de acordo com o menu selecionado
+################################################################################################################################## Conteúdo de acordo com o menu selecionado
+
+################   HOME    #################################
+
 if selected == "Home":
     st.markdown("""
         <h1 style='text-align: center; color: #008080 ;'>
@@ -67,6 +72,8 @@ if selected == "Home":
         </h1>
     """, unsafe_allow_html=True)
 
+############################################################################################
+######################################   BIOMOVE    ########################################
 
 elif selected == "BioMove":
         st.markdown("""
@@ -74,7 +81,10 @@ elif selected == "BioMove":
             OVERVIEW DO PROJETO
         </h1>
     """, unsafe_allow_html=True)
-    
+
+############################################################################################
+##########################   ATUALIZAÇÃO SEMANAL    ########################################
+
 elif selected == "Atualização Semanal":
     st.title("Atualizações Semanais")
     
@@ -103,7 +113,10 @@ elif selected == "Atualização Semanal":
    - Construção do esquemático EMG:
     """)
     
-# RELATÓRIOS
+
+############################################################################################
+###################################   RELATORIOS    ########################################
+
 elif selected == "Relatórios":
     st.markdown("""
         <h1 style='text-align: center; color: #008080;'>
@@ -139,7 +152,8 @@ elif selected == "Relatórios":
         </div>
     """, unsafe_allow_html=True)
 
-# CRONOGRAMA
+############################################################################################
+###################################   CRONOGRAMA    ########################################
 elif selected == "Cronograma":
     st.markdown("""
         <h1 style='text-align: center; color: #008080;'>
