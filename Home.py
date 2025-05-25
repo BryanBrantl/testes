@@ -28,7 +28,7 @@ if selected == "Home":
             HOME
         </h1>
     """, unsafe_allow_html=True)
-    <h>
+    
     st.markdown("""
         <h1 style='text-align: center; color: #FF4B4B;'>
             MEMBROS
