@@ -39,7 +39,7 @@ if selected == "Home":
 elif selected == "BioMove":
         st.markdown("""
         <h1 style='text-align: center; color: #008080 ;'>
-            HOME
+            OVERVIEW DO PROJETO
         </h1>
     """, unsafe_allow_html=True)
     
