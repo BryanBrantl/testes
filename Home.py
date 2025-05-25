@@ -6,18 +6,26 @@ st.set_page_config(page_title="BIOMOVE", layout="wide")
 # CSS para os botões com hover (borda e texto mudam, fundo continua)
 st.markdown("""
     <style>
-        .btn-minimal {
+        .btn-card {
+            display: block;
+            background-color: #1c1f26;
             color: white;
-            text-decoration: underline;
-            font-weight: normal;
-            font-size: 16px;
+            border: 2px solid #444;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 10px 0;
+            text-decoration: none !important;
+            font-size: 18px;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            transition: 0.3s ease;
         }
-        .btn-minimal:hover {
-            color: #008080;
-            text-decoration: none;
+        .btn-card:hover {
+            border-color: #00CED1;
+            color: #00CED1;
         }
     </style>
-    <a href="#" class="btn-minimal">Botão Minimalista</a>
+    <a href="#" class="btn-card">Botão em Estilo Card</a>
 """, unsafe_allow_html=True)
 ################################################################################################################################## Título principal
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
