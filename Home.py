@@ -78,14 +78,14 @@ elif selected == "Atualização Semanal":
    
 elif selected == "Relatórios":
     st.markdown("""
-        <h1 style='text-align: center; color: #FF4B4B;'>
+        <h1 style='text-align: center; color: #008080;'>
             Relatórios
         </h1>
         <hr style='border: 1px solid #444;'/>
     """, unsafe_allow_html=True)
 
     st.markdown("""
-        <h1 style='text-align: center; color: #FF4B4B;'>
+        <h1 style='text-align: center; color: #008080;'>
             Relatórios
         </h1>
         <hr style='border: 2px solid #888; margin-top: 10px; margin-bottom: 30px;'/>
@@ -98,9 +98,6 @@ elif selected == "Relatórios":
     O documento reúne informações detalhadas sobre o escopo do projeto, sendo esta proposta já aprovada.  
     Você pode acessar o documento completo clicando no botão abaixo:
     """)
-
-    col1, col2 = st.columns(2)
-
 
     if st.button(" Abrir Proposta"):
         st.markdown(
