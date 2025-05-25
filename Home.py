@@ -38,8 +38,16 @@ elif selected == "Atualização Semanal":
                 <p style="color:gray;">{texto}</p>
             </div>
         """, unsafe_allow_html=True)
+     
+    bloco_atualizacao(" Semana 2 - 27/05/2025", """
+    - Definido a utilização de um Kit chassi para a construção do carrinho. <br>
+    - Montagem do sensor EMG em protoboard baseado no esquemático da semana anterior. <br>
+    - Validamos o sinal no osciloscópio, detectado presença de ruído da rede. <br>
+    - Definido a necessidade de implementar mais filtros no circuito para reduzir o ruído. <br>
+    - Circuito montado em protoboard: <br>
+    """)
     
-    bloco_atualizacao("📅 Semana 1 - 20/05/2025", """
+    bloco_atualizacao(" Semana 1 - 20/05/2025", """
    - Realizados testes nos principais componentes do carrinho (motor DC, ESP32 e ponte H), sem identificação de defeitos.<br>
    - Conduzido estudo sobre softwares de modelagem 3D. Optou-se pela utilização do Eagle para o desenvolvimento do carrinho e do sistema EMG.<br>
    - Modelo do site finalizado.
@@ -48,11 +56,7 @@ elif selected == "Atualização Semanal":
    - Construção do esquemático EMG:
     """)
     
-    bloco_atualizacao("📅 Semana 2 - 27/05/2025", """
-    - Realizado testes com protótipo 1.<br>
-    - Melhorias na eficiência do algoritmo de leitura.<br>
-    - Planejamento da próxima sprint.
-    """)
+   
 elif selected == "Relatórios":
     st.title("Relatórios")
     st.write("Conteúdo dos relatórios.")
