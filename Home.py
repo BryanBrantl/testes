@@ -133,9 +133,7 @@ elif selected == "Atualização Semanal":
 
 elif selected == "Relatórios":
     st.markdown("""
-        <h1 style='text-align: center; color: #008080;'>
-            Relatórios
-        </h1>
+        <h1 style='text-align: center; color: #008080;'>Relatórios</h1>
         <hr style='border: 2px solid #008080 ; margin-top: 10px; margin-bottom: 30px;'/>
     """, unsafe_allow_html=True)
 
@@ -147,14 +145,22 @@ elif selected == "Relatórios":
             </div>
         """, unsafe_allow_html=True)
 
-
     bloco_relatorio("Relatório Final", """ 
         <p style="color:gray;">
-            <br>  Você poderá acessar o documento completo clicando no botão abaixo: <br> 
-            <br>[Ainda não disponível]<br>
+            Você poderá acessar o documento completo clicando no botão abaixo:
         </p>
+        <p style="color:gray;">[Ainda não disponível]</p>
+        <br>
+        <button style="
+            background-color: #008080;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            opacity: 0.6;
+            cursor: not-allowed;
+        ">Download</button>
     """)
-
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
 elif selected == "Cronograma":
