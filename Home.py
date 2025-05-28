@@ -5,11 +5,16 @@ from PIL import Image
 st.set_page_config(page_title="BIOMOVE", layout="wide")
 
 # CSS para os botões com hover (borda e texto mudam, fundo continua)
+# e outros estilos
 st.markdown("""
     <style>
-        .my-button {
+        .my-button,
+        a.my-button,                 /* Aplica a tags <a> com a classe .my-button */
+        a.my-button:link,            /* Links não visitados */
+        a.my-button:visited          /* Links visitados */
+        {
             background-color: #1c1f26;
-            color: white;
+            color: white !important;     /* Força a cor branca para o texto */
             border: 2px solid white;
             border-radius: 10px;
             padding: 10px 20px;
@@ -17,13 +22,30 @@ st.markdown("""
             font-weight: bold;
             cursor: pointer;
             text-align: center;
+            text-decoration: none;       /* Remove o sublinhado do link */
+            display: inline-block;       /* Garante que padding e etc. funcionem bem em <a> */
             transition: 0.3s;
         }
 
-        .my-button:hover {
-            color: #00CED1;
+        .my-button:hover,
+        a.my-button:hover              /* Estilo hover para tags <a> com a classe */
+        {
+            background-color: #1c1f26; /* Mantém o fundo no hover, se não quiser que mude */
+            color: #00CED1 !important;    /* Força a cor ciano no hover */
             border-color: #00CED1;
         }
+
+        /* Se você tiver outros estilos globais, eles continuam aqui... */
+        /* Exemplo: .info-block-title que usamos antes (se ainda for necessário)
+        .info-block-title {
+            color: #00CED1;
+            margin-bottom: 5px;
+        }
+        .info-block-button-container {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        */
     </style>
 """, unsafe_allow_html=True)
 
