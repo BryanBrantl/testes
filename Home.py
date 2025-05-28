@@ -139,19 +139,16 @@ elif selected == "Relatórios":
         <hr style='border: 2px solid #008080 ; margin-top: 10px; margin-bottom: 30px;'/>
     """, unsafe_allow_html=True)
 
-    st.markdown("""
-    ### Proposta de Projeto
-
-    Nesta seção, está disponibilizada a proposta de projeto do BioMove.  
+    bloco_atualizacao(" Proposta de projeto", """
+    <br>Nesta seção, está disponibilizada a proposta de projeto do BioMove.<br> 
     O documento reúne informações detalhadas sobre o escopo do projeto, sendo esta proposta já aprovada.  
     Você pode acessar o documento completo clicando no botão abaixo:
-    """)
-    
-    st.markdown("""
-        <button class="my-button" onclick="window.open('https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing', '_blank')">
+
+    <button class="my-button" onclick="window.open('https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing', '_blank')">
         PROPOSTA DO PROJETO
     </button>
-    """, unsafe_allow_html=True)
+
+    """)
 
     st.markdown("""
     ### Relatório Final
@@ -163,15 +160,6 @@ elif selected == "Relatórios":
     st.markdown("""
         <div class="disabled-button">
              Relatório Final (em breve)
-        </div>
-    """, unsafe_allow_html=True)
-
-    # Relatório Final
-    st.markdown("""
-        <div class="card">
-            <h3>📘 Relatório Final</h3>
-            <p>Você poderá acessar o relatório final do projeto assim que for disponibilizado.</p>
-            <div class="disabled-button">⏳ Relatório Final (em breve)</div>
         </div>
     """, unsafe_allow_html=True)
 
