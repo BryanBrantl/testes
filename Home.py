@@ -73,17 +73,17 @@ if selected == "Home":
     """, unsafe_allow_html=True)
 
     col1, col2, col3, col4 = st.columns(4)  
-        with col1:
-            st.image(img1, caption='Coluna 3 (width=100)', width=300)
-        with col2:
-            #st.image(img2, caption='Coluna 2 (mesma imagem, parecerá menor se a imagem original for grande)')
-            st.image(img2, caption='Coluna 3 (width=100)', width=300)
-        # Você também pode usar o parâmetro 'width' dentro das colunas
-        with col3:
-            st.image(img3, caption='Coluna 3 (width=100)', width=300)
-        with col4:
-            st.image(img4, caption='Coluna 3 (width=100)', width=300)
-    
+    with col1:
+        st.image(img1, caption='Coluna 3 (width=100)', width=300)
+    with col2:
+        #st.image(img2, caption='Coluna 2 (mesma imagem, parecerá menor se a imagem original for grande)')
+        st.image(img2, caption='Coluna 3 (width=100)', width=300)
+    # Você também pode usar o parâmetro 'width' dentro das colunas
+    with col3:
+        st.image(img3, caption='Coluna 3 (width=100)', width=300)
+    with col4:
+        st.image(img4, caption='Coluna 3 (width=100)', width=300)
+
 ############################################################################################
 ######################################   BIOMOVE    ########################################
 
