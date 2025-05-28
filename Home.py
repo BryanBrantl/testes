@@ -143,9 +143,9 @@ elif selected == "Relatórios":
             <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
                 <h4 style="color:white;">{titulo_bloco}</h4>
                 <p style="color:gray;">{texto_descricao_html}</p>
-                <div style="margin-top: 15px; margin-bottom: 5px;"> <button class="my-button" onclick="window.open('{url_botao}', '_blank')">
+                <div style="margin-top: 15px; margin-bottom: 5px;"> <a href="{url_botao}" target="_blank" class="my-button" style="text-decoration: none; display: inline-block;">
                         {texto_botao}
-                    </button>
+                    </a>
                 </div>
             </div>
         """, unsafe_allow_html=True)
