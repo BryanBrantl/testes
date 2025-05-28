@@ -25,13 +25,16 @@ st.markdown("""
             border-color: #00CED1;
         }
     </style>
-
-    <button class="my-button" onclick="window.open('https://www.google.com', '_blank')">
-        ABRIR RELATORIO
-    </button>
 """, unsafe_allow_html=True)
 
-################################################################################################################################## Título principal
+############################################################## MODELO BOTAO ######################################################################
+##
+##    <button class="my-button" onclick="window.open('https://www.google.com', '_blank')">
+##        ABRIR RELATORIO
+##    </button> 
+##
+########################################################### Título principal #####################################################################
+
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
 
 # Menu horizontal com abas
@@ -49,16 +52,15 @@ selected = option_menu(
     }
 )
 
-################################################################################################################################## Conteúdo de acordo com o menu selecionado
 
-################   HOME    #################################
-
-
+############################################ IMAGENS ############################################
 img1 = Image.open("image/foto_01.png")
 img2 = Image.open("image/foto_02.png")
 img3 = Image.open("image/foto_03.png")
 img4 = Image.open("image/foto_04.png")
 
+############################################ Conteúdo de acordo com o menu selecionado ############################################
+################################################################################################   HOME    #################################
 if selected == "Home":
     st.markdown("""
         <h1 style='text-align: center; color: #008080 ;'>
@@ -144,14 +146,10 @@ elif selected == "Relatórios":
     O documento reúne informações detalhadas sobre o escopo do projeto, sendo esta proposta já aprovada.  
     Você pode acessar o documento completo clicando no botão abaixo:
     """)
-
-    st.markdown("""
-            <a href="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing" class="btn-card">PROPOSTA DO PROJETO</a>
-    """, unsafe_allow_html=True)
     
     st.markdown("""
         <button class="my-button" onclick="window.open('https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing', '_blank')">
-        ABRIR RELATORIO
+        PROPOSTA DO PROJETO
     </button>
     """, unsafe_allow_html=True)
 
