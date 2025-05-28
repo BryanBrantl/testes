@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+from PIL import Image
 
 st.set_page_config(page_title="BIOMOVE", layout="wide")
 
@@ -52,6 +53,9 @@ selected = option_menu(
 
 ################   HOME    #################################
 
+col1, col2, col3 = st.columns(3)
+img = Image.open("image/")
+
 if selected == "Home":
     st.markdown("""
         <h1 style='text-align: center; color: #008080 ;'>
@@ -64,6 +68,16 @@ if selected == "Home":
             MEMBROS
         </h1>
     """, unsafe_allow_html=True)
+
+with col1:
+    st.image(img, caption='Coluna 1')
+
+with col2:
+    st.image(img, caption='Coluna 2 (mesma imagem, parecerá menor se a imagem original for grande)')
+
+# Você também pode usar o parâmetro 'width' dentro das colunas
+with col3:
+    st.image(img, caption='Coluna 3 (width=100)', width=100)
 
 ############################################################################################
 ######################################   BIOMOVE    ########################################
