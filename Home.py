@@ -54,7 +54,10 @@ selected = option_menu(
 ################   HOME    #################################
 
 col1, col2, col3 = st.columns(3)
-img = Image.open("image/")
+img1 = Image.open("image/foto_01.png")
+img2 = Image.open("image/foto_02.png")
+img3 = Image.open("image/foto_03.png")
+img4 = Image.open("image/foto_04.png")
 
 if selected == "Home":
     st.markdown("""
@@ -70,14 +73,14 @@ if selected == "Home":
     """, unsafe_allow_html=True)
 
 with col1:
-    st.image(img, caption='Coluna 1')
+    st.image(img1, caption='Coluna 1')
 
 with col2:
-    st.image(img, caption='Coluna 2 (mesma imagem, parecerá menor se a imagem original for grande)')
+    st.image(img2, caption='Coluna 2 (mesma imagem, parecerá menor se a imagem original for grande)')
 
 # Você também pode usar o parâmetro 'width' dentro das colunas
 with col3:
-    st.image(img, caption='Coluna 3 (width=100)', width=100)
+    st.image(img3, caption='Coluna 3 (width=100)', width=100)
 
 ############################################################################################
 ######################################   BIOMOVE    ########################################
