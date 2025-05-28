@@ -27,7 +27,7 @@ st.markdown("""
     </style>
 
     <button class="my-button" onclick="window.open('https://www.google.com', '_blank')">
-        Abrir Link
+        ABRIR RELATORIO
     </button>
 """, unsafe_allow_html=True)
 
@@ -148,7 +148,12 @@ elif selected == "Relatórios":
     st.markdown("""
             <a href="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing" class="btn-card">PROPOSTA DO PROJETO</a>
     """, unsafe_allow_html=True)
-
+    
+    st.markdown("""
+        <button class="my-button" onclick="window.open('https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing', '_blank')">
+        ABRIR RELATORIO
+    </button>
+    """)
     st.markdown("""
     ### Relatório Final
 
