@@ -148,14 +148,14 @@ elif selected == "Relatórios":
         """, unsafe_allow_html=True)
     
     
-    bloco_relatorio("📄 Proposta de Projeto", """ 
+    bloco_relatorio("Proposta de Projeto", """ 
         <p style="color:gray;">
             Nesta seção, está disponibilizada a proposta de projeto do <strong>BioMove</strong>.<br> 
             O documento reúne informações detalhadas sobre o escopo do projeto, sendo esta proposta já aprovada.
         </p>
         <br>
         <button class="my-button" onclick="window.open('https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing', '_blank')">
-            📁 Acessar Proposta
+            Acessar Proposta
         </button>
     """)
 
