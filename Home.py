@@ -138,15 +138,6 @@ elif selected == "Relatórios":
         </h1>
         <hr style='border: 2px solid #008080 ; margin-top: 10px; margin-bottom: 30px;'/>
     """, unsafe_allow_html=True)
-
-    def bloco_relatorio(titulo, conteudo_html): 
-        st.markdown(f"""
-            <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
-                <h4 style="color:white;">{titulo}</h4>
-                {conteudo_html}
-            </div>
-        """, unsafe_allow_html=True)
-    
     
     def bloco_relatorio(titulo, conteudo_html): 
         html = f'''
