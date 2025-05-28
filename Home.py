@@ -67,7 +67,7 @@ if selected == "Home":
             HOME
         </h1>
     """, unsafe_allow_html=True)
-    
+
     st.markdown("""
         <h1 style='text-align: center; color: #008080 ;'>
             MEMBROS
@@ -101,7 +101,15 @@ elif selected == "BioMove":
 
 elif selected == "Atualização Semanal":
     st.title("Atualizações Semanais")
-     
+
+    def bloco_atualizacao(titulo, texto):
+        st.markdown(f"""
+            <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
+                <h4 style="color:white;">{titulo}</h4>
+                <p style="color:gray;">{texto}</p>
+            </div>
+        """, unsafe_allow_html=True)
+
     bloco_atualizacao(" Semana 2 - 27/05/2025", """
     - Definido a utilização de um Kit chassi para a construção do carrinho. <br>
     - Montagem do sensor EMG em protoboard baseado no esquemático da semana anterior. <br>
@@ -109,7 +117,7 @@ elif selected == "Atualização Semanal":
     - Definido a necessidade de implementar mais filtros no circuito para reduzir o ruído. <br>
     - Circuito montado em protoboard: <br>
     """)
-    
+
     bloco_atualizacao(" Semana 1 - 20/05/2025", """
    - Realizados testes nos principais componentes do carrinho (motor DC, ESP32 e ponte H), sem identificação de defeitos.<br>
    - Conduzido estudo sobre softwares de modelagem 3D. Optou-se pela utilização do Eagle para o desenvolvimento do carrinho e do sistema EMG.<br>
@@ -118,7 +126,7 @@ elif selected == "Atualização Semanal":
    - Decisões sobre o projeto: Definido que será utilizado baterias 18650 (4.2v) para alimentação dos sistemas.<br>
    - Construção do esquemático EMG:
     """)
-    
+
 
 ############################################################################################
 ###################################   RELATORIOS    ########################################
@@ -130,6 +138,35 @@ elif selected == "Relatórios":
         </h1>
         <hr style='border: 2px solid #008080 ; margin-top: 10px; margin-bottom: 30px;'/>
     """, unsafe_allow_html=True)
+
+    def bloco_relatorio(titulo, conteudo_html): 
+        st.markdown(f"""
+            <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
+                <h4 style="color:white;">{titulo}</h4>
+                {conteudo_html}
+            </div>
+        """, unsafe_allow_html=True)
+
+
+    bloco_relatorio("📄 Proposta de Projeto", """ 
+    bloco_relatorio("Proposta de Projeto", """ 
+        <p style="color:gray;">
+            Nesta seção, está disponibilizada a proposta de projeto do <strong>BioMove</strong>.<br> 
+            O documento reúne informações detalhadas sobre o escopo do projeto, sendo esta proposta já aprovada.
+        </p>
+        <br>
+        <button class="my-button" onclick="window.open('https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing', '_blank')">
+            📁 Acessar Proposta
+            Acessar Proposta
+        </button>
+    """)
+
+    bloco_relatorio("Relatório Final", """ 
+        <p style="color:gray;">
+            <br>  Você poderá acessar o documento completo clicando no botão abaixo: <br> 
+            <br>[Ainda não disponível]<br>
+        </p>
+    """)
 
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
