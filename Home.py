@@ -72,7 +72,7 @@ if selected == "Home":
         </h1>
     """, unsafe_allow_html=True)
 
-  col1, col2, col3, col4 = st.columns(4)  
+col1, col2, col3, col4 = st.columns(4)  
     with col1:
         st.image(img1, caption='Coluna 3 (width=100)', width=300)
     with col2:
