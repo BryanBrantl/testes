@@ -132,64 +132,42 @@ elif selected == "Atualização Semanal":
 ###################################   RELATORIOS    ########################################
 
 elif selected == "Relatórios":
-    # ======== Cabeçalho ========
-    st.markdown("""
-        <h1 style='text-align: center; color: #008080;'>Relatórios</h1>
-        <hr style='border: 2px solid #008080; margin-top: 10px; margin-bottom: 30px;'/>
-    """, unsafe_allow_html=True)
-
-    # ======== Função de card ========
-    def bloco_relatorio(titulo, conteudo_html):
+      def bloco_relatorio_final(titulo_bloco, texto_descricao, texto_botao, url_botao):
+        """
+        Cria um bloco de conteúdo estilizado com título, descrição e um botão clicável.
+        Semelhante ao 'bloco_atualizacao', mas para relatórios com um botão.
+        """
+        # Converte quebras de linha \n em <br> para HTML, para que o texto_descricao formate corretamente
+        texto_descricao_html = texto_descricao.replace('\n', '<br>')
+    
         st.markdown(f"""
-            <div style="
-                background-color: #1e1e1e;
-                padding: 20px;
-                margin-bottom: 20px;
-                border-radius: 10px;
-                border-left: 5px solid teal;
-            ">
-                <h4 style="color: white; margin-top: 0;">{titulo}</h4>
-                {conteudo_html}
+            <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
+                <h4 style="color:white;">{titulo_bloco}</h4>
+                <p style="color:gray;">{texto_descricao_html}</p>
+                <div style="margin-top: 15px; margin-bottom: 5px;"> <button class="my-button" onclick="window.open('{url_botao}', '_blank')">
+                        {texto_botao}
+                    </button>
+                </div>
             </div>
         """, unsafe_allow_html=True)
-
-    # ======== HTML do conteúdo, inclui o botão estilizado ========
-    html_do_relatorio = """
-        <p style="color: gray; margin-bottom: 15px;">
-            Você poderá acessar o documento completo clicando no botão abaixo:
-        </p>
-        <div style="text-align: center;">
-            <button class="my-button"
-                    onclick="window.open('https://www.google.com', '_blank')">
-                ABRIR RELATÓRIO
-            </button>
-        </div>
-    """
-
-    # ======== Render do card ========
-    bloco_relatorio("Relatório Final", html_do_relatorio)
+    
+    # --- Exemplo de como usar a função ---
+    
+    # URL fornecida para o relatório final
+    link_do_relatorio_final = "https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing"
+    
+    # Chamando a função para criar o bloco do Relatório Final
+    bloco_relatorio_final(
+        titulo_bloco="Relatório Final do Projeto",
+        texto_descricao="""O relatório final consolida todos os resultados, análises e conclusões do projeto BioMove. 
+        Acesse o documento completo para mais detalhes.""",
+        texto_botao="ABRIR RELATÓRIO FINAL",
+        url_botao=link_do_relatorio_final
+    )
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
 elif selected == "Cronograma":
-    st.markdown("""
-        <h1 style='text-align: center; color: #008080;'>
-            Cronograma | Orçamento
-        </h1>
-        <hr style='border: 2px solid #888; margin-top: 10px; margin-bottom: 30px;'/>
-    """, unsafe_allow_html=True)
 
-    st.markdown("""
-    ### Cronograma:
-
-    Nesta seção, está disponibilizado o cronograma completo juntamente com os custos previstos e realizados do projeto BioMove.  
-    Você pode acessar o documento completo clicando no botão abaixo:
-    """)
-
-    st.markdown("""
-         <button class="my-button" onclick="window.open('https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing', '_blank')">
-         ABRIR RELATORIO
-         </button> 
-    """, unsafe_allow_html=True)
 
 # Rodapé
 st.markdown("""
