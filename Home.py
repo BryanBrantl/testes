@@ -133,56 +133,36 @@ elif selected == "Atualização Semanal":
 
 elif selected == "Relatórios":
     st.markdown("""
-        <h1 style='text-align: center; color: #008080;'>Relatórios</h1>
+        <h1 style='text-align: center; color: #008080;'>
+            Relatórios
+        </h1>
         <hr style='border: 2px solid #008080 ; margin-top: 10px; margin-bottom: 30px;'/>
     """, unsafe_allow_html=True)
 
-    # Estilo CSS para os botões e caixas
     st.markdown("""
-        <style>
-            .card {
-                border: 1px solid #00bfa6;
-                border-radius: 10px;
-                padding: 20px;
-                margin-bottom: 25px;
-                background-color: #f0f0f0;
-                color: #202020; /* COR DO TEXTO */
-            }
-            .my-button {
-                background-color: #00bfa6;
-                color: white;
-                padding: 10px 20px;
-                text-align: center;
-                border: none;
-                border-radius: 8px;
-                font-size: 16px;
-                cursor: pointer;
-                transition: background-color 0.3s;
-            }
-            .my-button:hover {
-                background-color: #009e8a;
-            }
-            .disabled-button {
-                background-color: #cccccc;
-                color: #444444;
-                padding: 10px 20px;
-                text-align: center;
-                border-radius: 8px;
-                font-size: 16px;
-                cursor: not-allowed;
-            }
-        </style>
+    ### Proposta de Projeto
+
+    Nesta seção, está disponibilizada a proposta de projeto do BioMove.  
+    O documento reúne informações detalhadas sobre o escopo do projeto, sendo esta proposta já aprovada.  
+    Você pode acessar o documento completo clicando no botão abaixo:
+    """)
+    
+    st.markdown("""
+        <button class="my-button" onclick="window.open('https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing', '_blank')">
+        PROPOSTA DO PROJETO
+    </button>
     """, unsafe_allow_html=True)
 
-    # Proposta de Projeto
     st.markdown("""
-        <div class="card">
-            <h3>📄 Proposta de Projeto</h3>
-            <p>Nesta seção, está disponibilizada a proposta de projeto do <strong>BioMove</strong>.<br>
-            O documento reúne informações detalhadas sobre o escopo do projeto, sendo esta proposta já aprovada.</p>
-            <button class="my-button" onclick="window.open('https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing', '_blank')">
-                📂 Acessar Proposta
-            </button>
+    ### Relatório Final
+
+    Você pode acessar o documento completo clicando no botão abaixo:  
+    **OBS:** Ainda não disponível.
+    """)
+
+    st.markdown("""
+        <div class="disabled-button">
+             Relatório Final (em breve)
         </div>
     """, unsafe_allow_html=True)
 
