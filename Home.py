@@ -161,13 +161,9 @@ elif selected == "Relatórios":
 
     bloco_relatorio("Relatório Final", """ 
         <p style="color:gray;">
-           <br>  Você pode acessar o documento completo clicando no botão abaixo: <br> 
-            <br>**OBS:** Ainda não disponível.<br>
+            <br>  Você poderá acessar o documento completo clicando no botão abaixo: <br> 
+            <br>[Ainda não disponível]<br>
         </p>
-        <br>
-        <div class="disabled-button">
-             Relatório Final (em breve)
-        </div>
     """)
 
 ############################################################################################
