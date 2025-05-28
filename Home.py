@@ -145,22 +145,20 @@ elif selected == "Relatórios":
             </div>
         """, unsafe_allow_html=True)
 
-    bloco_relatorio("Relatório Final", """ 
+      bloco_relatorio(
+        "Relatório Final",
+        """
         <p style="color:gray;">
             Você poderá acessar o documento completo clicando no botão abaixo:
         </p>
-        <p style="color:gray;">[Ainda não disponível]</p>
-        <br>
-        <button style="
-            background-color: #008080;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            opacity: 0.6;
-            cursor: not-allowed;
-        ">Download</button>
-    """)
+        <div style="text-align:center; margin-top:15px;">
+            <button class="my-button"
+                    onclick="window.open('https://www.google.com', '_blank')">
+                ABRIR RELATÓRIO
+            </button>
+        </div>
+        """
+    )
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
 elif selected == "Cronograma":
