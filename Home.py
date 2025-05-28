@@ -132,26 +132,35 @@ elif selected == "Atualização Semanal":
 ###################################   RELATORIOS    ########################################
 
 elif selected == "Relatórios":
+    # Cabeçalho da seção
     st.markdown("""
         <h1 style='text-align: center; color: #008080;'>Relatórios</h1>
-        <hr style='border: 2px solid #008080 ; margin-top: 10px; margin-bottom: 30px;'/>
+        <hr style='border: 2px solid #008080; margin-top: 10px; margin-bottom: 30px;'/>
     """, unsafe_allow_html=True)
 
-    def bloco_relatorio(titulo, conteudo_html): 
+    # Função para renderizar um card de relatório
+    def bloco_relatorio(titulo, conteudo_html):
         st.markdown(f"""
-            <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
-                <h4 style="color:white;">{titulo}</h4>
+            <div style="
+                background-color: #1e1e1e;
+                padding: 20px;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                border-left: 5px solid teal;
+            ">
+                <h4 style="color: white;">{titulo}</h4>
                 {conteudo_html}
             </div>
         """, unsafe_allow_html=True)
 
-      bloco_relatorio(
+    # Chamada à função, incluindo o botão estilizado com a classe .my-button
+    bloco_relatorio(
         "Relatório Final",
         """
-        <p style="color:gray;">
+        <p style="color: gray; margin-bottom: 15px;">
             Você poderá acessar o documento completo clicando no botão abaixo:
         </p>
-        <div style="text-align:center; margin-top:15px;">
+        <div style="text-align: center;">
             <button class="my-button"
                     onclick="window.open('https://www.google.com', '_blank')">
                 ABRIR RELATÓRIO
