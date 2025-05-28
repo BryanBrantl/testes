@@ -132,14 +132,13 @@ elif selected == "Atualização Semanal":
 ###################################   RELATORIOS    ########################################
 
 elif selected == "Relatórios":
-      def bloco_relatorio_final(titulo_bloco, texto_descricao, texto_botao, url_botao):
+    st.markdown("<h1 style='text-align: center; color: #008080;'>RELATÓRIOS</h1>", unsafe_allow_html=True)
+
+    def bloco_relatorio_final(titulo_bloco, texto_descricao, texto_botao, url_botao):
         """
         Cria um bloco de conteúdo estilizado com título, descrição e um botão clicável.
-        Semelhante ao 'bloco_atualizacao', mas para relatórios com um botão.
         """
-        # Converte quebras de linha \n em <br> para HTML, para que o texto_descricao formate corretamente
         texto_descricao_html = texto_descricao.replace('\n', '<br>')
-    
         st.markdown(f"""
             <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
                 <h4 style="color:white;">{titulo_bloco}</h4>
@@ -150,20 +149,28 @@ elif selected == "Relatórios":
                 </div>
             </div>
         """, unsafe_allow_html=True)
-    
-    # --- Exemplo de como usar a função ---
-    
+
     # URL fornecida para o relatório final
     link_do_relatorio_final = "https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing"
-    
+
     # Chamando a função para criar o bloco do Relatório Final
     bloco_relatorio_final(
         titulo_bloco="Relatório Final do Projeto",
-        texto_descricao="""O relatório final consolida todos os resultados, análises e conclusões do projeto BioMove. 
-        Acesse o documento completo para mais detalhes.""",
+        texto_descricao="""O relatório final consolida todos os resultados, análises e conclusões do projeto BioMove.
+Acesse o documento completo para mais detalhes.""", # \n será convertido para <br>
         texto_botao="ABRIR RELATÓRIO FINAL",
         url_botao=link_do_relatorio_final
     )
+
+    # Exemplo de como adicionar outro bloco de relatório, se necessário:
+    # link_relatorio_parcial = "SUA_URL_PARA_OUTRO_RELATORIO"
+    # bloco_relatorio_final(
+    #     titulo_bloco="Relatório Parcial Q1",
+    #     texto_descricao="Este relatório cobre as atividades e progresso do primeiro trimestre do projeto.",
+    #     texto_botao="ABRIR RELATÓRIO PARCIAL Q1",
+    #     url_botao=link_relatorio_parcial
+    # )
+
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
 elif selected == "Cronograma":
