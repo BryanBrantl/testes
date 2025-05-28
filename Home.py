@@ -153,7 +153,7 @@ elif selected == "Relatórios":
         <button class="my-button" onclick="window.open('https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing', '_blank')">
         ABRIR RELATORIO
     </button>
-    """)
+    """, unsafe_allow_html=True))
     st.markdown("""
     ### Relatório Final
 
