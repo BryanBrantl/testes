@@ -174,7 +174,28 @@ Acesse o documento completo para mais detalhes.""", # \n será convertido para <
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
 elif selected == "Cronograma":
+    st.markdown("<h1 style='text-align: center; color: #008080;'>RELATÓRIOS</h1>", unsafe_allow_html=True)
 
+    # URL fornecida para o relatório final
+    link_do_relatorio_final = "https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing"
+
+    # Chamando a função para criar o bloco do Relatório Final
+    bloco_relatorio_final(
+        titulo_bloco="Relatório Final do Projeto",
+        texto_descricao="""O relatório final consolida todos os resultados, análises e conclusões do projeto BioMove.
+Acesse o documento completo para mais detalhes.""", # \n será convertido para <br>
+        texto_botao="ABRIR RELATÓRIO FINAL",
+        url_botao=link_do_relatorio_final
+    )
+
+    # Exemplo de como adicionar outro bloco de relatório, se necessário:
+    # link_relatorio_parcial = "SUA_URL_PARA_OUTRO_RELATORIO"
+    # bloco_relatorio_final(
+    #     titulo_bloco="Relatório Parcial Q1",
+    #     texto_descricao="Este relatório cobre as atividades e progresso do primeiro trimestre do projeto.",
+    #     texto_botao="ABRIR RELATÓRIO PARCIAL Q1",
+    #     url_botao=link_relatorio_parcial
+    # )
 
 # Rodapé
 st.markdown("""
