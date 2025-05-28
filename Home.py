@@ -202,6 +202,16 @@ elif selected == "Cronograma":
         </h1>
     """, unsafe_allow_html=True)
 
+
+ link3 = "https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing"
+
+ bloco_relatorio_final(
+     titulo_bloco="Relatório Parcial Q1",
+     texto_descricao="Este relatório cobre as atividades e progresso do primeiro trimestre do projeto.",
+     texto_botao="ABRIR RELATÓRIO PARCIAL Q1",
+     url_botao=link_relatorio_parcial
+ )
+    
 # Rodapé
 st.markdown("""
     <style>
