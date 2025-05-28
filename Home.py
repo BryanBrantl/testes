@@ -139,29 +139,36 @@ elif selected == "Relatórios":
         <hr style='border: 2px solid #008080 ; margin-top: 10px; margin-bottom: 30px;'/>
     """, unsafe_allow_html=True)
 
-    bloco_atualizacao(" Proposta de projeto", """
-    <br>Nesta seção, está disponibilizada a proposta de projeto do BioMove.<br> 
-    O documento reúne informações detalhadas sobre o escopo do projeto, sendo esta proposta já aprovada.  
-    Você pode acessar o documento completo clicando no botão abaixo:
-
-    <button class="my-button" onclick="window.open('https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing', '_blank')">
-        PROPOSTA DO PROJETO
-    </button>
-
+    def bloco_relatorio(titulo, conteudo_html): 
+        st.markdown(f"""
+            <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
+                <h4 style="color:white;">{titulo}</h4>
+                {conteudo_html}
+            </div>
+        """, unsafe_allow_html=True)
+    
+    
+    bloco_relatorio("📄 Proposta de Projeto", """ 
+        <p style="color:gray;">
+            Nesta seção, está disponibilizada a proposta de projeto do <strong>BioMove</strong>.<br> 
+            O documento reúne informações detalhadas sobre o escopo do projeto, sendo esta proposta já aprovada.
+        </p>
+        <br>
+        <button class="my-button" onclick="window.open('https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing', '_blank')">
+            📁 Acessar Proposta
+        </button>
     """)
 
-    st.markdown("""
-    ### Relatório Final
-
-    Você pode acessar o documento completo clicando no botão abaixo:  
-    **OBS:** Ainda não disponível.
-    """)
-
-    st.markdown("""
+    bloco_relatorio("Relatório Final", """ 
+        <p style="color:gray;">
+           <br>  Você pode acessar o documento completo clicando no botão abaixo: <br> 
+            <br>**OBS:** Ainda não disponível.<br>
+        </p>
+        <br>
         <div class="disabled-button">
              Relatório Final (em breve)
         </div>
-    """, unsafe_allow_html=True)
+    """)
 
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
