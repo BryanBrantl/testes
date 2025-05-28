@@ -132,31 +132,29 @@ elif selected == "Atualização Semanal":
 ###################################   RELATORIOS    ########################################
 
 elif selected == "Relatórios":
-    # Cabeçalho da seção
+    # ======== Cabeçalho ========
     st.markdown("""
         <h1 style='text-align: center; color: #008080;'>Relatórios</h1>
         <hr style='border: 2px solid #008080; margin-top: 10px; margin-bottom: 30px;'/>
     """, unsafe_allow_html=True)
 
-    # Função para renderizar um card de relatório
+    # ======== Função de card ========
     def bloco_relatorio(titulo, conteudo_html):
         st.markdown(f"""
             <div style="
                 background-color: #1e1e1e;
                 padding: 20px;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
                 border-radius: 10px;
                 border-left: 5px solid teal;
             ">
-                <h4 style="color: white;">{titulo}</h4>
+                <h4 style="color: white; margin-top: 0;">{titulo}</h4>
                 {conteudo_html}
             </div>
         """, unsafe_allow_html=True)
 
-    # Chamada à função, incluindo o botão estilizado com a classe .my-button
-    bloco_relatorio(
-        "Relatório Final",
-        """
+    # ======== HTML do conteúdo, inclui o botão estilizado ========
+    html_do_relatorio = """
         <p style="color: gray; margin-bottom: 15px;">
             Você poderá acessar o documento completo clicando no botão abaixo:
         </p>
@@ -166,8 +164,10 @@ elif selected == "Relatórios":
                 ABRIR RELATÓRIO
             </button>
         </div>
-        """
-    )
+    """
+
+    # ======== Render do card ========
+    bloco_relatorio("Relatório Final", html_do_relatorio)
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
 elif selected == "Cronograma":
