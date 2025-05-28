@@ -186,9 +186,9 @@ elif selected == "Cronograma":
     """)
 
     st.markdown("""
-        <a href="https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing" target="_blank" class="custom-button">
-            Abrir Cronograma e Orçamento
-        </a>
+         <button class="my-button" onclick="window.open('https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing', '_blank')">
+         ABRIR RELATORIO
+         </button> 
     """, unsafe_allow_html=True)
 
 # Rodapé
