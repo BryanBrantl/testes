@@ -138,40 +138,41 @@ elif selected == "Relatórios":
     """, unsafe_allow_html=True)
 
     # Estilo CSS para os botões e caixas
-    st.markdown("""
-        <style>
-            .card {
-                border: 1px solid #00bfa6;
-                border-radius: 10px;
-                padding: 20px;
-                margin-bottom: 25px;
-                background-color: #f0f0f0;
-            }
-            .my-button {
-                background-color: #00bfa6;
-                color: white;
-                padding: 10px 20px;
-                text-align: center;
-                border: none;
-                border-radius: 8px;
-                font-size: 16px;
-                cursor: pointer;
-                transition: background-color 0.3s;
-            }
-            .my-button:hover {
-                background-color: #009e8a;
-            }
-            .disabled-button {
-                background-color: #cccccc;
-                color: #666666;
-                padding: 10px 20px;
-                text-align: center;
-                border-radius: 8px;
-                font-size: 16px;
-                cursor: not-allowed;
-            }
-        </style>
-    """, unsafe_allow_html=True)
+st.markdown("""
+    <style>
+        .card {
+            border: 1px solid #00bfa6;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            background-color: #f0f0f0;
+            color: #202020; /* COR DO TEXTO */
+        }
+        .my-button {
+            background-color: #00bfa6;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .my-button:hover {
+            background-color: #009e8a;
+        }
+        .disabled-button {
+            background-color: #cccccc;
+            color: #444444;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: not-allowed;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
     # Proposta de Projeto
     st.markdown("""
