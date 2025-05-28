@@ -53,7 +53,7 @@ selected = option_menu(
 
 ################   HOME    #################################
 
-col1, col2, col3, col4 = st.columns(4)
+
 img1 = Image.open("image/foto_01.png")
 img2 = Image.open("image/foto_02.png")
 img3 = Image.open("image/foto_03.png")
@@ -71,7 +71,8 @@ if selected == "Home":
             MEMBROS
         </h1>
     """, unsafe_allow_html=True)
-    
+
+  col1, col2, col3, col4 = st.columns(4)  
     with col1:
         st.image(img1, caption='Coluna 3 (width=100)', width=300)
     with col2:
