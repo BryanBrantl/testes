@@ -210,7 +210,6 @@ elif selected == "Cronograma":
      texto_descricao="Este relatório cobre as atividades e progresso do primeiro trimestre do projeto.",
      texto_botao="ABRIR RELATÓRIO PARCIAL Q1",
      url_botao=link_relatorio_parcial
-     url_botao=link3
  )
 
 # Rodapé
