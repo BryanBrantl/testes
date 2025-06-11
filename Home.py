@@ -80,7 +80,7 @@ if selected == "Home":
         st.markdown(
             """
             <div style='text-align: center'>
-                <strong><span style='color: #008080; Bryan Alexandre de Lima Brantl</span></strong><br><br>
+                <strong><span style='color: #008080;'> Bryan Alexandre de Lima Brantl</span></strong><br><br>
                  RA: 2414139<br><br>
                  E-mail: brantl@alunos.utfpr.edu.br<br><br>
                  Contato: (41) 99278-3929
