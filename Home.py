@@ -79,10 +79,10 @@ if selected == "Home":
         st.image(img1, width=300)
         st.markdown(
             """
-            **Bryan Alexandre de Lima Brantl**  
-            **Ra:** 2414139 
-            **E-mail: brantl@alunos.utfpr.edu.br**
-            **Contato:** (41) 99742-4536
+            Bryan Alexandre de Lima Brantl 
+            Ra: 2414139 
+            E-mail: brantl@alunos.utfpr.edu.br
+            Contato: (41) 99742-4536
             """,
             unsafe_allow_html=True
         )
