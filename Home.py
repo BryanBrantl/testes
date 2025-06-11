@@ -207,7 +207,7 @@ elif selected == "BioMove":
     with B2col2:
         vazia1, img_col, vazia2 = st.columns([1, 4, 1])
         with img_col:
-             st.write("")
+            st.write("")
             st.write("")
             st.write("")
             st.write("")
