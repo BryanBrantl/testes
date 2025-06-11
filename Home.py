@@ -237,7 +237,7 @@ elif selected == "BioMove":
             st.image(img5) 
     
     # Adiciona uma linha para separar os blocos
-   # st.divider()
+    st.divider()
     
     # Bloco 2: Imagem na Esquerda, Texto na Direita
     B3col1, B3col2 = st.columns([1.5, 2]) # Dando mais espaço para o texto
