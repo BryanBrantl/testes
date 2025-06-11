@@ -257,6 +257,7 @@ elif selected == "BioMove":
 elif selected == "Atualização Semanal":
     st.title("Atualizações Semanais")
     
+    # A função para criar os blocos continua a mesma
     def bloco_atualizacao(titulo, texto):
         st.markdown(f"""
             <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
@@ -265,23 +266,46 @@ elif selected == "Atualização Semanal":
             </div>
         """, unsafe_allow_html=True)
      
-    bloco_atualizacao(" Semana 2 - 27/05/2025", """
+    # --- NOVAS ATUALIZAÇÕES ADICIONADAS AQUI ---
+
+    bloco_atualizacao("Semana 5 - 06/06/2025", """
+    - <strong>[PLACEHOLDER]</strong> Nesta semana, o foco foi na correção da PCI e na integração do software de controle.<br>
+    - Realizamos novos testes de soldagem e estamos validando o layout do circuito.<br>
+    - Próximos passos: Finalizar a PCI funcional e iniciar a integração com o sensor EMG.
+    """)
+
+    bloco_atualizacao("Semana 4 - 30/05/2025", """
+    - Avançamos na produção da placa de circuito impresso (PCI), mas enfrentamos contratempos no roteamento e soldagem que comprometeram o funcionamento da primeira versão.<br>
+    - Estamos corrigindo o layout da PCI e aprimorando o processo de soldagem.<br><br>
+    - Em paralelo, o software para controlar o carrinho via joystick no celular (Bluetooth) foi desenvolvido e finalizado com sucesso.
+    """)
+
+    bloco_atualizacao("Semana 3 - 23/05/2025", """
+    - Finalizada a montagem do chassi e estrutura do carrinho.<br>
+    - Adicionados novos filtros ao esquemático do EMG para melhorar a qualidade do sinal.<br>
+    - O circuito EMG foi montado em placa perfurada, oferecendo mais estabilidade que a protoboard.<br>
+    - O filtro Notch não apresentou o resultado esperado, levando à hipótese de usar filtros digitais no futuro.<br>
+    - Circuito montado em placa perfurada:
+    """)
+    
+    # --- ATUALIZAÇÕES ANTERIORES ---
+
+    bloco_atualizacao("Semana 2 - 27/05/2025", """
     - Definido a utilização de um Kit chassi para a construção do carrinho. <br>
     - Montagem do sensor EMG em protoboard baseado no esquemático da semana anterior. <br>
     - Validamos o sinal no osciloscópio, detectado presença de ruído da rede. <br>
     - Definido a necessidade de implementar mais filtros no circuito para reduzir o ruído. <br>
-    - Circuito montado em protoboard: <br>
+    - Circuito montado em protoboard:
     """)
     
-    bloco_atualizacao(" Semana 1 - 20/05/2025", """
+    bloco_atualizacao("Semana 1 - 20/05/2025", """
    - Realizados testes nos principais componentes do carrinho (motor DC, ESP32 e ponte H), sem identificação de defeitos.<br>
    - Conduzido estudo sobre softwares de modelagem 3D. Optou-se pela utilização do Eagle para o desenvolvimento do carrinho e do sistema EMG.<br>
-   - Modelo do site finalizado.
+   - Modelo do site finalizado.<br>
    - Proposta e cronograma revisados e atualizados conforme a devolutiva, já disponíveis no site.<br>
    - Decisões sobre o projeto: Definido que será utilizado baterias 18650 (4.2v) para alimentação dos sistemas.<br>
    - Construção do esquemático EMG:
     """)
-    
 
 ############################################################################################
 ###################################   RELATORIOS    ########################################
