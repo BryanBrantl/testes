@@ -150,7 +150,7 @@ elif selected == "BioMove":
         </h1>
     """, unsafe_allow_html=True)
 ##        
-    Bcol1, Bcol2, st.columns(2)  
+    Bcol1, Bcol2 = st.columns(2)  
     with Bcol1:
         st.image(img1, width=500)   
 ##
