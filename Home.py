@@ -33,8 +33,19 @@ st.markdown("""
 ##        ABRIR RELATORIO
 ##    </button> 
 ##
-########################################################### Título principal #####################################################################
+########################################################### linhas  #####################################################################
+## Linha padrão do HTML
+## st.markdown("<hr>", unsafe_allow_html=True)
+##    
+##    # Linha customizada com a cor do seu projeto
+## st.markdown("<hr style='border: 1px solid #008080;'>", unsafe_allow_html=True)
+##    
+##    # Outro exemplo de linha mais grossa e com margens
+## st.markdown("<hr style='height:2px; background-color:#008080; border:none; margin-top: 20px; margin-bottom: 20px;'>", unsafe_allow_html=True)
+#####################################################################################################################################################
 
+
+########################################################### Título principal #####################################################################
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
 
 # Menu horizontal com abas
@@ -150,13 +161,13 @@ elif selected == "BioMove":
         </h1>
     """, unsafe_allow_html=True)
 ##        
-    Bcol1, Bcol2 = st.columns(2)  
-    with Bcol1:
+    B1col1, B1col2 = st.columns(2)  
+    with B1col1:
         st.write("")
         st.write("")
         st.image(img5, width=500)   
 ##
-    with Bcol2:
+    with B1col2:
         st.markdown("""
             <div style='text-align: justify;'>
                 <h2 style='color: #008080; text-align: center;'>Problemática e Objetivo</h2>
@@ -175,12 +186,49 @@ elif selected == "BioMove":
         """, unsafe_allow_html=True)
 # Linha padrão do HTML
     st.markdown("<hr>", unsafe_allow_html=True)
+    B2col1, B2col2 = st.columns(2)
+    with B2col1:
+        st.markdown("""
+            <div style='text-align: justify;'>
+                <h2 style='color: #008080; text-align: center;'>Problemática e Objetivo</h2>
+                <p>
+                    O projeto BioMove surge para <span style='text-decoration: underline; text-decoration-color: #008080;'>melhorar a interação do paciente com a fisioterapia</span>, tornando-a mais motivadora e eficaz, com objetivo de <span style='text-decoration: underline; text-decoration-color: #008080;'>acelerar o progresso de reabilitação</span>. Muitos pacientes desistem antes de alcançar melhora significativa devido a:
+                </p>
+                <ul>
+                    <li>Métodos tradicionais repetitivos e pouco engajadores;</li>
+                    <li>Dificuldade em perceber progresso imediato, causando desmotivação;</li>
+                    <li>Falta de acesso a equipamentos modernos que estimulem o tratamento.</li>
+                </ul>
+                <p>
+                    A proposta central é <span style='text-decoration: underline; text-decoration-color: #008080;'>estabelecer uma base de gamificação</span> para o tratamento, inspirando-se em exemplos como o Instituto Albert Einstein, para tornar o processo mais dinâmico e envolvente.
+                </p>
+            </div>
+        """, unsafe_allow_html=True)
+    with B2col2:
+        st.image(img5, width=300) 
+
+    B3col1, B3col2 = st.columns(2)
+    with B3col1:
+        st.image(img5, width=300) 
+    with B3col2:
+        st.markdown("""
+            <div style='text-align: justify;'>
+                <h2 style='color: #008080; text-align: center;'>Problemática e Objetivo</h2>
+                <p>
+                    O projeto BioMove surge para <span style='text-decoration: underline; text-decoration-color: #008080;'>melhorar a interação do paciente com a fisioterapia</span>, tornando-a mais motivadora e eficaz, com objetivo de <span style='text-decoration: underline; text-decoration-color: #008080;'>acelerar o progresso de reabilitação</span>. Muitos pacientes desistem antes de alcançar melhora significativa devido a:
+                </p>
+                <ul>
+                    <li>Métodos tradicionais repetitivos e pouco engajadores;</li>
+                    <li>Dificuldade em perceber progresso imediato, causando desmotivação;</li>
+                    <li>Falta de acesso a equipamentos modernos que estimulem o tratamento.</li>
+                </ul>
+                <p>
+                    A proposta central é <span style='text-decoration: underline; text-decoration-color: #008080;'>estabelecer uma base de gamificação</span> para o tratamento, inspirando-se em exemplos como o Instituto Albert Einstein, para tornar o processo mais dinâmico e envolvente.
+                </p>
+            </div>
+        """, unsafe_allow_html=True)
+
     
-    # Linha customizada com a cor do seu projeto
-    st.markdown("<hr style='border: 1px solid #008080;'>", unsafe_allow_html=True)
-    
-    # Outro exemplo de linha mais grossa e com margens
-    st.markdown("<hr style='height:2px; background-color:#008080; border:none; margin-top: 20px; margin-bottom: 20px;'>", unsafe_allow_html=True)
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 
