@@ -77,6 +77,7 @@ if selected == "Home":
 
     col1, col2, col3, col4 = st.columns(4)  
     with col1:
+        st.write("")
         st.image(img1, width=500)
         st.markdown(
             """
