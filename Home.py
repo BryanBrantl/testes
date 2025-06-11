@@ -58,6 +58,7 @@ img1 = Image.open("image/foto_01.png")
 img2 = Image.open("image/foto_02.png")
 img3 = Image.open("image/foto_03.png")
 img4 = Image.open("image/foto_04.png")
+img5 = Image.open("image/gamificacao.jpg")
 
 ############################################ Conteúdo de acordo com o menu selecionado ############################################
 ################################################################################################   HOME    #################################
@@ -142,13 +143,19 @@ if selected == "Home":
 ############################################################################################
 ######################################   BIOMOVE    ########################################
 
-elif selected == "BioMove":
-        st.markdown("""
+elif selected == "BioMove": 
+    st.markdown("""
         <h1 style='text-align: center; color: #008080 ;'>
             OVERVIEW DO PROJETO
         </h1>
     """, unsafe_allow_html=True)
-
+##        
+    Bcol1, Bcol2, st.columns(2)  
+    with Bcol1:
+        st.image(img1, width=500)   
+##
+    with Bcol2:
+        st.image(img1, width=500)   
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 
