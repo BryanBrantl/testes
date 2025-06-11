@@ -81,9 +81,10 @@ if selected == "Home":
             """
             <div style='text-align: center'>
                 <strong>Bryan Alexandre de Lima Brantl</strong><br>
-                <strong> RA: <strong> 2414139<br>
-                 <strong>E-mail: <strong> brantl@alunos.utfpr.edu.br<br>
-                 <strong>Contato: <strong> (41) 99278-3929
+                 RA: 2414139<br>
+                 E-mail: brantl@alunos.utfpr.edu.br<br>  
+                 <br>
+                 Contato: (41) 99278-3929
             </div>
             """,
             unsafe_allow_html=True
