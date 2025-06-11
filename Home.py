@@ -70,7 +70,8 @@ img2 = Image.open("image/foto_02.png")
 img3 = Image.open("image/foto_03.png")
 img4 = Image.open("image/foto_04.png")
 img5 = Image.open("image/gamificacao.jpg")
-
+img6 = Image.open("image/Musculo_0.png")
+img7 = Image.open("image/Musculo_1.png")
 ############################################ Conteúdo de acordo com o menu selecionado ############################################
 ################################################################################################   HOME    #################################
 if selected == "Home":
@@ -234,7 +235,7 @@ elif selected == "BioMove":
         # Centralizando a imagem
         vazia1, img_col, vazia2 = st.columns([1, 4, 1])
         with img_col:
-            st.image(img5) 
+            st.image(img6) 
     
     # Adiciona uma linha para separar os blocos
     st.divider()
@@ -245,7 +246,7 @@ elif selected == "BioMove":
         # Centralizando a imagem
         vazia3, img_col2, vazia4 = st.columns([1, 4, 1])
         with img_col2:
-            st.image(img5)
+            st.image(img7)
     
     with B3col2:
         st.markdown(texto_funcionamento, unsafe_allow_html=True)
