@@ -98,8 +98,11 @@ if selected == "Home":
             """
             <div style='text-align: center'>
                 <strong>João Roberto Klassen</strong><br>
+                <br>
                 RA: 2414155<br>
+                <br>
                 E-mail: joaoklassen@alunos.utfpr.edu.br<br>
+                <br>
                 Contato: (41) 99742-4536
             </div>
             """,
@@ -112,8 +115,11 @@ if selected == "Home":
             """
             <div style='text-align: center'>
                 <strong>Leonardo Amancio</strong><br>
+                <br>
                 RA: 2402580<br>
+                <br>
                 E-mail: leonardoamancio@alunos.utfpr.edu.br<br>
+                <br>
                 Contato: (41) 99805-1279
             </div>
             """,
@@ -126,8 +132,11 @@ if selected == "Home":
             """
             <div style='text-align: center'>
                 <strong>Luiz Prado</strong><br>
+                <br>
                 RA: 2402629<br>
+                <br>
                 E-mail: luizoliveira.2002@alunos.utfpr.edu.br<br>
+                <br>
                 Contato: (41) 99815-6532
             </div>
             """,
