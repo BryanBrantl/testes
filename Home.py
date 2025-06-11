@@ -155,7 +155,22 @@ elif selected == "BioMove":
         st.image(img5, width=500)   
 ##
     with Bcol2:
-        st.image(img5, width=500)   
+        st.markdown("""
+            <div style='text-align: justify;'>
+                <h2 style='color: #008080;'>1. Problemática e Objetivo</h2>
+                <p>
+                    O projeto BioMove surge para <strong style='color: #008080;'>melhorar a interação do paciente com a fisioterapia</strong>, tornando-a mais motivadora e eficaz, com objetivo de <strong style='color: #008080;'>acelerar o progresso de reabilitação</strong>. Muitos pacientes desistem antes de alcançar melhora significativa devido a:
+                </p>
+                <ul>
+                    <li>Métodos tradicionais repetitivos e pouco engajadores;</li>
+                    <li>Dificuldade em perceber progresso imediato, causando desmotivação;</li>
+                    <li>Falta de acesso a equipamentos modernos que estimulem o tratamento.</li>
+                </ul>
+                <p>
+                    A proposta central é <strong style='color: #008080;'>estabelecer uma base de gamificação</strong> para o tratamento, inspirando-se em exemplos como o Instituto Albert Einstein, para tornar o processo mais dinâmico e envolvente.
+                </p>
+            </div>
+        """, unsafe_allow_html=True)
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 
