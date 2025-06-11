@@ -207,7 +207,7 @@ elif selected == "BioMove":
     with B2col2:
         st.image(img5, width=300) 
 
-    B3col1, B3col2 = st.columns(2)
+    B3col1, B3col2 = st.columns([1, 2])
     with B3col1:
     # Centralizando a imagem também neste bloco
         vazia3, img_col2, vazia4 = st.columns([1, 4, 1])
