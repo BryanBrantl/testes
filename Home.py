@@ -236,7 +236,7 @@ elif selected == "BioMove":
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 
 elif selected == "Atualização Semanal":
-    st.title("Atualizações Semanais")e
+    st.title("Atualizações Semanais")
     
     def bloco_atualizacao(titulo, texto):
         st.markdown(f"""
