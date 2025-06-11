@@ -185,61 +185,70 @@ elif selected == "BioMove":
             </div>
         """, unsafe_allow_html=True)
 # Linha padrão do HTML
-    st.markdown("<hr>", unsafe_allow_html=True)
-    B2col1, B2col2 = st.columns([2, 1]) # Dando mais espaço para o texto
+        st.markdown("<hr>", unsafe_allow_html=True)
+        texto_proposta_escopo = """
+        <div style='text-align: justify;'>
+            <h2 style='color: #008080; text-align: center;'>Proposta e Escopo</h2>
+            <p>
+                O sistema BioMove utiliza <strong style='color: #008080;'>sensores EMG caseiros</strong> (montados a partir de amplificadores de instrumentação e filtros analógicos) para captar sinais musculares do paciente.
+            </p>
+            <p>
+                Estes sinais são processados (amplificação, filtragem, retificação e análise digital) para serem transformados em comandos de controle de um carrinho autônomo.
+            </p>
+            <p>
+                O projeto prioriza a qualidade do controle baseado em EMG, em vez de funcionalidades avançadas no robô, concentrando esforços na aquisição e interpretação dos sinais.
+            </p>
+        </div>
+    """
+    
+    # 2. Defina o texto para o segundo bloco (Funcionamento Básico)
+    texto_funcionamento = """
+        <div style='text-align: justify;'>
+            <h2 style='color: #008080; text-align: center;'>Funcionamento Básico</h2>
+            <p>
+                Eletrodos são posicionados em músculos-alvo (por exemplo, bíceps direito e esquerdo) para captar o sinal EMG e processá-lo, identificando a ativação muscular.
+            </p>
+            <p>
+                Os sinais são traduzidos em comandos para mover o carrinho, conforme a lógica:
+            </p>
+            <ul>
+                <li><strong>Ambos músculos ativados:</strong> carrinho anda para frente.</li>
+                <li><strong>Somente esquerdo ativado:</strong> carrinho vira à direita.</li>
+                <li><strong>Somente direito ativado:</strong> carrinho vira à esquerda.</li>
+                <li><strong>Sem ativação:</strong> carrinho permanece parado.</li>
+            </ul>
+            <p>
+                A comunicação entre o módulo EMG e o carrinho é feita via <strong style='color: #008080;'>Wi-Fi</strong> ou <strong style='color: #008080;'>Bluetooth</strong>, já que ambos os módulos rodam com um ESP32.
+            </p>
+        </div>
+    """
+    
+    # 3. Construção do Layout no Streamlit
+    
+    # Bloco 1: Texto na Esquerda, Imagem na Direita
+    B2col1, B2col2 = st.columns([2, 1.5]) # Dando mais espaço para o texto
     with B2col1:
-        st.markdown("""
-            <div style='text-align: justify;'>
-                <h2 style='color: #008080; text-align: center;'>Problemática e Objetivo</h2>
-                <p>
-                    O projeto BioMove surge para <span style='text-decoration: underline; text-decoration-color: #008080;'>melhorar a interação do paciente com a fisioterapia</span>, tornando-a mais motivadora e eficaz, com objetivo de <span style='text-decoration: underline; text-decoration-color: #008080;'>acelerar o progresso de reabilitação</span>. Muitos pacientes desistem antes de alcançar melhora significativa devido a:
-                </p>
-                <ul>
-                    <li>Métodos tradicionais repetitivos e pouco engajadores;</li>
-                    <li>Dificuldade em perceber progresso imediato, causando desmotivação;</li>
-                    <li>Falta de acesso a equipamentos modernos que estimulem o tratamento.</li>
-                </ul>
-                <p>
-                    A proposta central é <span style='text-decoration: underline; text-decoration-color: #008080;'>estabelecer uma base de gamificação</span> para o tratamento, inspirando-se em exemplos como o Instituto Albert Einstein, para tornar o processo mais dinâmico e envolvente.
-                </p>
-            </div>
-        """, unsafe_allow_html=True)
+        st.markdown(texto_proposta_escopo, unsafe_allow_html=True)
+    
     with B2col2:
+        # Centralizando a imagem
         vazia1, img_col, vazia2 = st.columns([1, 4, 1])
         with img_col:
-            st.write("")
-            st.write("")
-            st.write("")
-            st.write("")
-            st.image(img5, width=300) 
-    B3col1, B3col2 = st.columns([1, 2])
+            st.image(img5) 
+    
+    # Adiciona uma linha para separar os blocos
+    st.divider()
+    
+    # Bloco 2: Imagem na Esquerda, Texto na Direita
+    B3col1, B3col2 = st.columns([1.5, 2]) # Dando mais espaço para o texto
     with B3col1:
-    # Centralizando a imagem também neste bloco
+        # Centralizando a imagem
         vazia3, img_col2, vazia4 = st.columns([1, 4, 1])
         with img_col2:
-            st.write("")
-            st.write("")
-            st.write("")
-            st.write("")
             st.image(img5)
+    
     with B3col2:
-        st.markdown("""
-            <div style='text-align: justify;'>
-                <h2 style='color: #008080; text-align: center;'>Problemática e Objetivo</h2>
-                <p>
-                    O projeto BioMove surge para <span style='text-decoration: underline; text-decoration-color: #008080;'>melhorar a interação do paciente com a fisioterapia</span>, tornando-a mais motivadora e eficaz, com objetivo de <span style='text-decoration: underline; text-decoration-color: #008080;'>acelerar o progresso de reabilitação</span>. Muitos pacientes desistem antes de alcançar melhora significativa devido a:
-                </p>
-                <ul>
-                    <li>Métodos tradicionais repetitivos e pouco engajadores;</li>
-                    <li>Dificuldade em perceber progresso imediato, causando desmotivação;</li>
-                    <li>Falta de acesso a equipamentos modernos que estimulem o tratamento.</li>
-                </ul>
-                <p>
-                    A proposta central é <span style='text-decoration: underline; text-decoration-color: #008080;'>estabelecer uma base de gamificação</span> para o tratamento, inspirando-se em exemplos como o Instituto Albert Einstein, para tornar o processo mais dinâmico e envolvente.
-                </p>
-            </div>
-        """, unsafe_allow_html=True)
-
+        st.markdown(texto_funcionamento, unsafe_allow_html=True)
     
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
