@@ -93,7 +93,7 @@ if selected == "Home":
         )
     
     with col2:
-        st.image(img2, width=300)
+        st.image(img2, width=500)
         st.markdown(
             """
             <div style='text-align: center'>
@@ -107,7 +107,7 @@ if selected == "Home":
         )
     
     with col3:
-        st.image(img3, width=300)
+        st.image(img3, width=500)
         st.markdown(
             """
             <div style='text-align: center'>
@@ -121,7 +121,7 @@ if selected == "Home":
         )
     
     with col4:
-        st.image(img4, width=300)
+        st.image(img4, width=500)
         st.markdown(
             """
             <div style='text-align: center'>
