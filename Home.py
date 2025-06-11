@@ -186,7 +186,7 @@ elif selected == "BioMove":
         """, unsafe_allow_html=True)
 # Linha padrão do HTML
     st.markdown("<hr>", unsafe_allow_html=True)
-    B2col1, B2col2 = st.columns(2)
+    B2col1, B2col2 = st.columns([2, 1]) # Dando mais espaço para o texto
     with B2col1:
         st.markdown("""
             <div style='text-align: justify;'>
@@ -205,8 +205,13 @@ elif selected == "BioMove":
             </div>
         """, unsafe_allow_html=True)
     with B2col2:
-        st.image(img5, width=300) 
-
+        vazia1, img_col, vazia2 = st.columns([1, 4, 1])
+        with img_col:
+             st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.image(img5, width=300) 
     B3col1, B3col2 = st.columns([1, 2])
     with B3col1:
     # Centralizando a imagem também neste bloco
