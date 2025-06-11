@@ -173,7 +173,14 @@ elif selected == "BioMove":
                 </p>
             </div>
         """, unsafe_allow_html=True)
-
+# Linha padrão do HTML
+    st.markdown("<hr>", unsafe_allow_html=True)
+    
+    # Linha customizada com a cor do seu projeto
+    st.markdown("<hr style='border: 1px solid #008080;'>", unsafe_allow_html=True)
+    
+    # Outro exemplo de linha mais grossa e com margens
+    st.markdown("<hr style='height:2px; background-color:#008080; border:none; margin-top: 20px; margin-bottom: 20px;'>", unsafe_allow_html=True)
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 
