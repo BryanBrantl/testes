@@ -298,7 +298,7 @@ elif selected == "Atualização Semanal":
     - Circuito montado em protoboard:
     """)
     
-    bloco_atualizacao("Semana 1 - 20/05/2025", """
+    bloco_atualizacao("Semana 1 - 20/05/20255", """
    - Realizados testes nos principais componentes do carrinho (motor DC, ESP32 e ponte H), sem identificação de defeitos.<br>
    - Conduzido estudo sobre softwares de modelagem 3D. Optou-se pela utilização do Eagle para o desenvolvimento do carrinho e do sistema EMG.<br>
    - Modelo do site finalizado.<br>
