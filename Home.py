@@ -212,6 +212,10 @@ elif selected == "BioMove":
     # Centralizando a imagem também neste bloco
         vazia3, img_col2, vazia4 = st.columns([1, 4, 1])
         with img_col2:
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
             st.image(img5)
     with B3col2:
         st.markdown("""
