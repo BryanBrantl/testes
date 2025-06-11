@@ -205,10 +205,36 @@ elif selected == "BioMove":
             </div>
         """, unsafe_allow_html=True)
     with B2col2:
+# Adiciona o CSS para centralizar o conteúdo da coluna
+        st.markdown(
+            """
+            <style>
+                div[data-testid="stHorizontalBlock"] > div:first-child {
+                    display: flex;
+                    justify-content: center;
+                }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+#
         st.image(img5, width=300) 
 
     B3col1, B3col2 = st.columns(2)
     with B3col1:
+# Adiciona o CSS para centralizar o conteúdo da coluna
+        st.markdown(
+            """
+            <style>
+                div[data-testid="stHorizontalBlock"] > div:first-child {
+                    display: flex;
+                    justify-content: center;
+                }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+#
         st.image(img5, width=300) 
     with B3col2:
         st.markdown("""
