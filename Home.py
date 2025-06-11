@@ -94,7 +94,7 @@ if selected == "Home":
         st.markdown(
             """
             <div style='text-align: center'>
-                <strong>João Roberto Klassen</strong><br>
+                <strong><span style='color: #008080;'>João Roberto Klassen</span></strong><br>
                 <br>
                 RA: 2414155<br>
                 <br>
@@ -111,7 +111,7 @@ if selected == "Home":
         st.markdown(
             """
             <div style='text-align: center'>
-                <strong>Leonardo Amancio</strong><br>
+                <strong><span style='color: #008080;'>Leonardo Amancio</span></strong><br>
                 <br>
                 RA: 2402580<br>
                 <br>
@@ -128,7 +128,7 @@ if selected == "Home":
         st.markdown(
             """
             <div style='text-align: center'>
-                <strong>Luiz Prado</strong><br>
+                <strong><span style='color: #008080;'>Luiz Prado</span></strong><br>
                 <br>
                 RA: 2402629<br>
                 <br>
