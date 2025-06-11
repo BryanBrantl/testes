@@ -190,7 +190,7 @@ elif selected == "BioMove":
         <div style='text-align: justify;'>
             <h2 style='color: #008080; text-align: center;'>Proposta e Escopo</h2>
             <p>
-                O sistema BioMove utiliza <strong style='color: #008080;'>sensores EMG caseiros</strong> (montados a partir de amplificadores de instrumentação e filtros analógicos) para captar sinais musculares do paciente.
+                O sistema BioMove utiliza <strong style='color: #008080;'>sensores EMG </strong> (montados a partir de amplificadores de instrumentação e filtros analógicos) para captar sinais musculares do paciente.
             </p>
             <p>
                 Estes sinais são processados (amplificação, filtragem, retificação e análise digital) para serem transformados em comandos de controle de um carrinho autônomo.
