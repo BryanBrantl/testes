@@ -152,10 +152,10 @@ elif selected == "BioMove":
 ##        
     Bcol1, Bcol2 = st.columns(2)  
     with Bcol1:
-        st.image(img1, width=500)   
+        st.image(img5, width=500)   
 ##
     with Bcol2:
-        st.image(img1, width=500)   
+        st.image(img5, width=500)   
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 
