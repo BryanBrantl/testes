@@ -205,37 +205,14 @@ elif selected == "BioMove":
             </div>
         """, unsafe_allow_html=True)
     with B2col2:
-# Adiciona o CSS para centralizar o conteúdo da coluna
-        st.markdown(
-            """
-            <style>
-                div[data-testid="stHorizontalBlock"] > div:first-child {
-                    display: flex;
-                    justify-content: center;
-                }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-#
         st.image(img5, width=300) 
 
     B3col1, B3col2 = st.columns(2)
     with B3col1:
-# Adiciona o CSS para centralizar o conteúdo da coluna
-        st.markdown(
-            """
-            <style>
-                div[data-testid="stHorizontalBlock"] > div:first-child {
-                    display: flex;
-                    justify-content: center;
-                }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-#
-        st.image(img5, width=300) 
+    # Centralizando a imagem também neste bloco
+        vazia3, img_col2, vazia4 = st.columns([1, 4, 1])
+        with img_col2:
+            st.image(img5)
     with B3col2:
         st.markdown("""
             <div style='text-align: justify;'>
@@ -259,7 +236,7 @@ elif selected == "BioMove":
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 
 elif selected == "Atualização Semanal":
-    st.title("Atualizações Semanais")
+    st.title("Atualizações Semanais")e
     
     def bloco_atualizacao(titulo, texto):
         st.markdown(f"""
