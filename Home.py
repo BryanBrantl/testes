@@ -157,9 +157,9 @@ elif selected == "BioMove":
     with Bcol2:
         st.markdown("""
             <div style='text-align: justify;'>
-                <h2 style='color: #008080;text-align: center;'> Problemática e Objetivo</h2>
+                <h2 style='color: #008080; text-align: center;'>Problemática e Objetivo</h2>
                 <p>
-                    O projeto BioMove surge para <strong style='color: #008080;'>melhorar a interação do paciente com a fisioterapia</strong>, tornando-a mais motivadora e eficaz, com objetivo de <strong style='color: #008080;'>acelerar o progresso de reabilitação</strong>. Muitos pacientes desistem antes de alcançar melhora significativa devido a:
+                    O projeto BioMove surge para <span style='text-decoration: underline; text-decoration-color: #008080;'>melhorar a interação do paciente com a fisioterapia</span>, tornando-a mais motivadora e eficaz, com objetivo de <span style='text-decoration: underline; text-decoration-color: #008080;'>acelerar o progresso de reabilitação</span>. Muitos pacientes desistem antes de alcançar melhora significativa devido a:
                 </p>
                 <ul>
                     <li>Métodos tradicionais repetitivos e pouco engajadores;</li>
@@ -167,7 +167,7 @@ elif selected == "BioMove":
                     <li>Falta de acesso a equipamentos modernos que estimulem o tratamento.</li>
                 </ul>
                 <p>
-                    A proposta central é <strong style='color: #008080;'>estabelecer uma base de gamificação</strong> para o tratamento, inspirando-se em exemplos como o Instituto Albert Einstein, para tornar o processo mais dinâmico e envolvente.
+                    A proposta central é <span style='text-decoration: underline; text-decoration-color: #008080;'>estabelecer uma base de gamificação</span> para o tratamento, inspirando-se em exemplos como o Instituto Albert Einstein, para tornar o processo mais dinâmico e envolvente.
                 </p>
             </div>
         """, unsafe_allow_html=True)
