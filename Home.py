@@ -157,7 +157,7 @@ elif selected == "BioMove":
     with Bcol2:
         st.markdown("""
             <div style='text-align: justify;'>
-                <h2 style='color: #008080;'>1. Problemática e Objetivo</h2>
+                <h2 style='color: #008080;text-align: center;'> Problemática e Objetivo</h2>
                 <p>
                     O projeto BioMove surge para <strong style='color: #008080;'>melhorar a interação do paciente com a fisioterapia</strong>, tornando-a mais motivadora e eficaz, com objetivo de <strong style='color: #008080;'>acelerar o progresso de reabilitação</strong>. Muitos pacientes desistem antes de alcançar melhora significativa devido a:
                 </p>
