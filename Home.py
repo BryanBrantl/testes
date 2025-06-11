@@ -153,6 +153,7 @@ elif selected == "BioMove":
     Bcol1, Bcol2 = st.columns(2)  
     with Bcol1:
         st.write("")
+        st.write("")
         st.image(img5, width=500)   
 ##
     with Bcol2:
