@@ -75,7 +75,7 @@ if selected == "Home":
     """, unsafe_allow_html=True)
 
     col1, col2, col3, col4 = st.columns(4)  
-   with col1:
+with col1:
     st.image(img1, width=300)
     st.markdown(
         """
