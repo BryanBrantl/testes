@@ -214,7 +214,6 @@ elif selected == "Atualização Semanal":
 	                <p>O projeto prioriza a qualidade do controle baseado em EMG, em vez de funcionalidades avançadas no robô, concentrando esforços na aquisição e interpretação dos sinais.</p>
 	            </div>
 	        """, unsafe_allow_html=True)
-		 st.divider()
 	#A2_col1, A2_col2
 
 ############################################################################################
