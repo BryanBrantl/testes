@@ -207,7 +207,7 @@ elif selected == "Atualização Semanal":
 	            </div>
 	        """, unsafe_allow_html=True)
 	with A1_col2:
-		st.image(img8)
+		st.image(img8, width=200)
 	st.divider()
 	#A2_col1, A2_col2
 
