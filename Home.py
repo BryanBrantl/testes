@@ -200,96 +200,16 @@ elif selected == "BioMove" and all([img5, img6, img7]):
     
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
-
 elif selected == "Atualização Semanal":
-    st.markdown("<h1 style='text-align: center; color: #008080;'>ATUALIZAÇÕES SEMANAIS</h1>", unsafe_allow_html=True)
-    st.divider()
-
-    # --- FUNÇÃO AUXILIAR PARA CONVERTER IMAGENS (Necessária para esta abordagem) ---
-    # (Esta função já deve estar no seu código, mas garanta que ela esteja presente)
-    import base64
-    from pathlib import Path
-    def img_to_base64(img_path):
-        try:
-            img_bytes = Path(img_path).read_bytes()
-            encoded = base64.b64encode(img_bytes).decode()
-            return f"data:image/png;base64,{encoded}"
-        except FileNotFoundError:
-            return ""
-
-    # --- NOVA FUNÇÃO ESPECIALIZADA PARA CRIAR O BLOCO COM DUAS IMAGENS ---
-    def bloco_com_duas_imagens(titulo, texto, img1_info, img2_info):
-        """
-        Cria um bloco de atualização completo com texto e duas imagens lado a lado.
-        img1_info e img2_info devem ser tuplas no formato: (caminho_da_imagem, legenda)
-        """
-        # Extrai as informações das imagens
-        img1_path, img1_caption = img1_info
-        img2_path, img2_caption = img2_info
-
-        # Converte as imagens para Base64
-        img1_base64 = img_to_base64(img1_path)
-        img2_base64 = img_to_base64(img2_path)
-        
-        # Monta o HTML completo do bloco
-        st.markdown(f"""
-            <div style="background-color:#1e1e1e; padding: 20px; margin-bottom: 20px; border-radius: 10px; border-left: 5px solid teal;">
-                
-                <h4 style="color:white;">{titulo}</h4>
-                <p style="color:gray;">{texto}</p>
-                
-                <div style="display: flex; justify-content: space-around; align-items: start; margin-top: 20px;">
-                    
-                    <div style="width: 48%; text-align: center;">
-                        <img src="{img1_base64}" style="width: 100%; border-radius: 5px;">
-                        <p style="color: #888; font-size: 14px; margin-top: 5px;">{img1_caption}</p>
-                    </div>
-                    
-                    <div style="width: 48%; text-align: center;">
-                        <img src="{img2_base64}" style="width: 100%; border-radius: 5px;">
-                        <p style="color: #888; font-size: 14px; margin-top: 5px;">{img2_caption}</p>
-                    </div>
-
-                </div>
-            </div>
-        """, unsafe_allow_html=True)
-
-
-    # --- EXEMPLO DE USO DA NOVA FUNÇÃO ---
-    bloco_com_duas_imagens(
-        titulo="Semana 4 - Hardware e Software",
-        texto="Nesta semana, finalizamos a montagem do carrinho e também a primeira versão do circuito EMG em placa perfurada. O software de controle via Bluetooth também foi concluído.",
-        img1_info=("image/gamificacao.jpg", "Carrinho finalizado"), # Substitua pelo caminho da imagem do carrinho
-        img2_info=("image/gamificacao.jpg", "EMG em placa perfurada")   # Substitua pelo caminho da imagem da placa
+    st.markdown(
+    """
+    <div style="background-color:darkred; padding:10px; border-radius:10px;">
+        <p style="color:white; font-weight:bold;">Este é um bloco customizado com HTML!</p>
+    </div>
+    """,
+    unsafe_allow_html=True
     )
 
-############################################################################################
-###################################   RELATORIOS    ########################################
-
-elif selected == "Relatórios":
-    st.markdown("<h1 style='text-align: center; color: #008080;'>RELATÓRIOS</h1>", unsafe_allow_html=True)
-
-    def bloco_relatorio(titulo_bloco, texto_descricao, texto_botao, url_botao):
-        texto_descricao_html = texto_descricao.replace('\n', '<br>')
-        st.markdown(f"""
-            <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
-                <h4 style="color:white;">{titulo_bloco}</h4>
-                <p style="color:gray;">{texto_descricao_html}</p>
-                <div style="margin-top: 15px; margin-bottom: 5px;"> <a href="{url_botao}" target="_blank" class="my-button" style="text-decoration: none; display: inline-block;">
-                        {texto_botao}
-                    </a>
-                </div>
-            </div>
-        """, unsafe_allow_html=True)
-
-    link_do_relatorio_final = "https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing"
-
-    bloco_relatorio(
-        titulo_bloco="Relatório Final do Projeto",
-        texto_descricao="""O relatório final consolida todos os resultados, análises e conclusões do projeto BioMove. Acesse o documento completo para mais detalhes.""",
-        texto_botao="ABRIR RELATÓRIO FINAL",
-        url_botao=link_do_relatorio_final
-    )
 
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
