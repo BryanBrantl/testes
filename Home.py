@@ -220,7 +220,7 @@ elif selected == "Atualização Semanal":
 	            </div>
 	        """, unsafe_allow_html=True)
 	with A2_col2:
-		vazia1, col_video, vazia2 = st.columns([1, 2, 1])
+		vazia1, col_video, vazia2 = A2_col2.columns([1, 2, 1])
 		with col_video:
 			st.video(video1)
 	st.divider()
