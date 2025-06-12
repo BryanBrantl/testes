@@ -74,7 +74,7 @@ if selected == "Home" and all([img1, img2, img3, img4]):
 
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.image(img1, use_column_width=True)
+        st.image(img1, width=500)
         st.markdown(
             """
             <div style='text-align: center'>
@@ -86,7 +86,7 @@ if selected == "Home" and all([img1, img2, img3, img4]):
             """, unsafe_allow_html=True)
     
     with col2:
-        st.image(img2, use_column_width=True)
+        st.image(img2,width=500)
         st.markdown(
             """
             <div style='text-align: center'>
@@ -98,7 +98,7 @@ if selected == "Home" and all([img1, img2, img3, img4]):
             """, unsafe_allow_html=True)
     
     with col3:
-        st.image(img3, use_column_width=True)
+        st.image(img3, width=500)
         st.markdown(
             """
             <div style='text-align: center'>
@@ -110,7 +110,7 @@ if selected == "Home" and all([img1, img2, img3, img4]):
             """, unsafe_allow_html=True)
     
     with col4:
-        st.image(img4, use_column_width=True)
+        st.image(img4, width=500)
         st.markdown(
             """
             <div style='text-align: center'>
@@ -195,7 +195,7 @@ elif selected == "BioMove" and all([img5, img6, img7]):
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 elif selected == "Atualização Semanal":
-	
+	st.divider()
 	A1_col1, A1_col2 = st.columns(2)
 	with A1_col1:
 		st.markdown("""
@@ -208,6 +208,7 @@ elif selected == "Atualização Semanal":
 	        """, unsafe_allow_html=True)
 	with A1_col2:
 		st.image(img8)
+	st.divider()
 	#A2_col1, A2_col2
 
 ############################################################################################
