@@ -69,7 +69,7 @@ except FileNotFoundError:
     img1, img2, img3, img4, img5, img6, img7, img = (None,)*8
 
 video1 = "video/carrinhoandando.mp4"
-video2 = "sinal_emg1.mp4"
+video2 = "video/sinal_emg1.mp4"
 
 ############################################ Conteúdo de acordo com o menu selecionado ############################################
 ################################################################################################   HOME    #################################
