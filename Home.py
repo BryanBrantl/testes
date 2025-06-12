@@ -201,90 +201,115 @@ elif selected == "BioMove" and all([img5, img6, img7]):
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 elif selected == "Atualização Semanal":
-    st.markdown("<h1 style='text-align: center; color: #008080;'>ATUALIZAÇÕES SEMANAIS</h1>", unsafe_allow_html=True)
-    st.divider()
-
-    # --- FUNÇÕES AUXILIARES PARA OS ESTILOS DOS BLOCOS ---
-
-    # Função para um bloco que contém APENAS texto
-    def bloco_completo(titulo, texto):
-        st.markdown(f"""
-            <div style="background-color:#1e1e1e; padding: 20px; margin-bottom: 20px; border-radius: 10px; border-left: 5px solid teal;">
-                <h4 style="color:white;">{titulo}</h4>
-                <p style="color:gray;">{texto}</p>
+        # === Atualização Semanal #4  ===
+    video_path = "image/carrinhoandando.mp4"
+    with open(video_path, "rb") as f:
+    	video_bytes = f.read()
+    	video_base64 = base64.b64encode(video_bytes).decode()
+    with st.container():
+    	st.markdown(f"""
+    <div style="background-color:#1C1C1C; padding:15px; border-radius:10px;">
+        <h4 style="color:#DC143C;">#4 - Atualização Semanal - 30/05/2025</h4>
+        <ul style="color:#FFFFFF;">
+            <li>
+	    	Nesta semana, avançamos na produção da placa de circuito impresso (PCI) para o nosso projeto. Reproduzimos o modelo utilizando novamente o filtro notch para testes. No entanto, enfrentamos alguns contratempos que impactaram o andamento do cronograma.
+     	    	Durante a etapa de montagem e teste da placa, identificamos problemas relacionados ao roteamento do circuito e à soldagem de alguns componentes. Esses erros comprometeram o funcionamento esperado da PCI, impossibilitando a continuidade dos testes nesta fase.
+	    	Estamos trabalhando na correção do layout e no aprimoramento do processo de soldagem para evitar recorrência desses problemas nas próximas versões.
+     	    </li>
+        </ul>
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <!-- st.image("caminho/para/imagem_exemplo_atualizacao2.png", width=200) -->
+            <img src="data:image/png;base64,{base64.b64encode(open('image/emg5.jpg','rb').read()).decode('utf-8')}"
+                 style="width: 600px; height: 500px; border-radius: 10px; object-fit: cover;"
+                 alt="Circuito montado">
+        </div>
+	<ul style="color:#FFFFFF;">
+            <li>Como informado na semana passada, a montagem do carrinho foi finalizada. Nesta semana, a equipe desenvolveu o software que permite controlar o carrinho por meio de um joystick no celular, utilizando conexão via Bluetooth.</li>
+        </ul>
+	<div style="display: flex; justify-content: center; margin-top: 20px;">
+        	<video width="600" height="400" controls style="border-radius: 10px;">
+                	<source src="data:video/mp4;base64,{video_base64}" type="video/mp4">
+                    	Seu navegador não suporta a tag de vídeo.
+                </video>
             </div>
-        """, unsafe_allow_html=True)
+        </div>
+    	""", unsafe_allow_html=True)
 
-    # Função para ABRIR um bloco que terá mais conteúdo (imagens, vídeos, etc.)
-    def bloco_texto_inicial(titulo, texto):
-        st.markdown(f"""
-            <div style="background-color:#1e1e1e; padding: 20px; padding-bottom: 15px; border-radius: 10px 10px 0 0; border-left: 5px solid teal; margin-bottom: -2px;">
-                <h4 style="color:white;">{titulo}</h4>
-                <p style="color:gray;">{texto}</p>
-            </div>
-        """, unsafe_allow_html=True)
+    st.markdown("<div style='height:40px;'></div>", unsafe_allow_html=True)
+	
+        # === Atualização Semanal #3  ===
+    st.markdown(f"""
+    <div style="background-color:#1C1C1C; padding:15px; border-radius:10px;">
+        <h4 style="color:#DC143C;">#3 - Atualização Semanal - 23/05/2025</h4>
+        <ul style="color:#FFFFFF;">
+            <li>Finalizado a montagem do carrinho.</li>
+            <li>Adição de novos filtros no esquemático do EMG.</li>
+            <li>Montagem do circuito EMG em placa perfurada para melhorar os testes quando comparado a protoboard.</li>
+            <li>Filtro Notch não apresentou resultado esperado, levantado a hipótese de utilizar filtros digitais
+				para melhorar a performance.</li>
+            <li>Circuito montado em placa perfurada:</li>
+        </ul>
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <!-- st.image("caminho/para/imagem_exemplo_atualizacao2.png", width=200) -->
+            <img src="data:image/png;base64,{base64.b64encode(open('image/emg4.jpg','rb').read()).decode('utf-8')}"
+                 style="width: 600px; height: 500px; border-radius: 10px; object-fit: cover;"
+                 alt="Circuito montado">
+        </div> 
+    """, unsafe_allow_html=True)
+    st.markdown("<div style='height:40px;'></div>", unsafe_allow_html=True)
 
-    # Função para FECHAR um bloco que teve conteúdo adicionado
-    def base_bloco():
-        st.markdown(f"""
-            <div style="background-color:#1e1e1e; padding-top: 10px; border-radius: 0 0 10px 10px; border-left: 5px solid teal; margin-bottom: 20px;">
-            </div>
-        """, unsafe_allow_html=True)
-    # ---------------------------------------------------
 
-    # --- Semana 5 (Apenas Texto) ---
-    bloco_completo("Semana 5 - 06/06/2025", """
-    - <strong>[PLACEHOLDER]</strong> Nesta semana, o foco foi na correção da PCI e na integração do software de controle.<br>
-    - Realizamos novos testes de soldagem e estamos validando o layout do circuito.<br>
-    - Próximos passos: Finalizar a PCI funcional e iniciar a integração com o sensor EMG.
-    """)
+    # === Atualização Semanal #2 === 
+    st.markdown(f"""
+    <div style="background-color:#1C1C1C; padding:15px; border-radius:10px;">
+        <h4 style="color:#DC143C;">#2 - Atualização Semanal - 16/05/2025</h4>
+        <ul style="color:#FFFFFF;">
+            <li>Definido a utilização de um Kit chassi para a construção do carrinho.</li>
+            <li>Montagem do sensor EMG em protoboard baseado no esquemático da semana anterior.</li>
+            <li>Validamos o sinal no osciloscópio, detectado presença de ruído da rede.</li>
+            <li>Definido a necessidade de implementar mais filtros no circuito para reduzir o ruído.</li>
+            <li>Circuito montado em protoboard:</li>
+        </ul>
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <!-- st.image("caminho/para/imagem_exemplo_atualizacao2.png", width=200) -->
+            <img src="data:image/png;base64,{base64.b64encode(open('image/Protoboard.jpg','rb').read()).decode('utf-8')}"
+                 style="width: 600px; height: 225px; border-radius: 10px; object-fit: cover;"
+                 alt="Circuito montado">
+        </div>
+        <ul style="color:#FFFFFF;">
+            <li>Sinal no osciloscópio:</li>
+        </ul>
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <!-- st.image("caminho/para/imagem_exemplo_atualizacao3.png", width=200) -->
+            <img src="data:image/png;base64,{base64.b64encode(open('image/Osciloscopio_Protoboard.jpg','rb').read()).decode('utf-8')}"
+                 style="width: 600px; height: 400px; border-radius: 10px; object-fit: cover;"
+                 alt="Sinal gerado">
+        </div>
+    """, unsafe_allow_html=True)
 
-    # --- Semana 4 (Apenas Texto) ---
-    bloco_completo("Semana 4 - 30/05/2025", """
-    - Avançamos na produção da placa de circuito impresso (PCI), mas enfrentamos contratempos no roteamento e soldagem que comprometeram o funcionamento da primeira versão.<br>
-    - Estamos corrigindo o layout da PCI e aprimorando o processo de soldagem.<br><br>
-    - Em paralelo, o software para controlar o carrinho via joystick no celular (Bluetooth) foi desenvolvido e finalizado com sucesso.
-    """)
+    st.markdown("<div style='height:40px;'></div>", unsafe_allow_html=True)
 
-    # --- Semana 3 (Texto + Imagem) ---
-    bloco_texto_inicial("Semana 3 - 23/05/2025", """
-    - Finalizada a montagem do chassi e estrutura do carrinho.<br>
-    - Adicionados novos filtros ao esquemático do EMG para melhorar a qualidade do sinal.<br>
-    - O circuito EMG foi montado em placa perfurada, oferecendo mais estabilidade que a protoboard.<br>
-    - O filtro Notch não apresentou o resultado esperado, levando à hipótese de usar filtros digitais no futuro.<br>
-    - Circuito montado em placa perfurada:
-    """)
-    vazia1, col_img1, vazia2 = st.columns([1, 1.5, 1])
-    with col_img1:
-        st.image("caminho/para/imagem_placa_perfurada.png", caption="Circuito EMG em placa perfurada")
-    base_bloco()
+    # === Atualização Semanal #1 ===
+    st.markdown(f"""
+    <div style="background-color:#1C1C1C; padding:15px; border-radius:10px; margin-bottom: 20px;">
+        <h4 style="color:#DC143C;">#1 - Atualização Semanal - 09/05/2025</h4>
+        <ul style="color:#FFFFFF;">
+            <li>Realizados testes nos principais componentes do carrinho (motor DC, ESP32 e ponte H), sem identificação de defeitos.</li>
+            <li>Conduzido estudo sobre softwares de modelagem 3D. Optou-se pela utilização do <b>Eagle</b> para o desenvolvimento do carrinho e do sistema EMG.</li>
+            <li>Modelo do site finalizado.</li>
+            <li>Proposta e cronograma revisados e atualizados conforme a devolutiva, já disponíveis no site.</li>
+            <li>Decisões sobre o projeto: Definido que será utilizado baterias 18650 (4.2v) para alimentação dos sistemas.</li>
+            <li>Construção do esquemático EMG:</li>
+        </ul>
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <!-- st.image("caminho/para/imagem_simulacao_emg.gif", width=200) -->
+            <img src="data:image/png;base64,{base64.b64encode(open('image/ESQUEMATICO_Semana1.JPG','rb').read()).decode('utf-8')}"
+                 style="width: 660px; height: 300px; border-radius: 10px; object-fit: cover;"
+                 alt="Exemplo atualização 2">
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
-    # --- Semana 2 (Texto + Imagem) ---
-    bloco_texto_inicial("Semana 2 - 27/05/2025", """
-    - Definido a utilização de um Kit chassi para a construção do carrinho. <br>
-    - Montagem do sensor EMG em protoboard baseado no esquemático da semana anterior. <br>
-    - Validamos o sinal no osciloscópio, detectado presença de ruído da rede. <br>
-    - Definido a necessidade de implementar mais filtros no circuito para reduzir o ruído. <br>
-    - Circuito montado em protoboard:
-    """)
-    vazia3, col_img2, vazia4 = st.columns([1, 1.5, 1])
-    with col_img2:
-        st.image("caminho/para/imagem_protoboard.png", caption="Protótipo em protoboard")
-    base_bloco()
-    
-    # --- Semana 1 (Texto + Imagem) ---
-    bloco_texto_inicial("Semana 1 - 20/05/2025", """
-    - Realizados testes nos principais componentes do carrinho (motor DC, ESP32 e ponte H), sem identificação de defeitos.<br>
-    - Conduzido estudo sobre softwares de modelagem 3D. Optou-se pela utilização do Eagle para o desenvolvimento do carrinho e do sistema EMG.<br>
-    - Modelo do site finalizado.<br>
-    - Proposta e cronograma revisados e atualizados conforme a devolutiva, já disponíveis no site.<br>
-    - Decisões sobre o projeto: Definido que será utilizado baterias 18650 (4.2v) para alimentação dos sistemas.<br>
-    - Construção do esquemático EMG:
-    """)
-    vazia5, col_img3, vazia6 = st.columns([1, 1.5, 1])
-    with col_img3:
-        st.image("caminho/para/imagem_esquematico.png", caption="Esquema do circuito EMG")
-    base_bloco()
 
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
