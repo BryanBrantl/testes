@@ -106,7 +106,7 @@ if selected == "Home":
                 <strong><span style='color: #008080;'> Bryan Alexandre de Lima Brantl</span></strong><br><br>
                  RA: 2414139<br><br>
                  E-mail: brantl@alunos.utfpr.edu.br<br><br>
-                 Contato: (41) 99278-3929
+                 Contato: (41) 99278-39299
             </div>
             """,
             unsafe_allow_html=True
