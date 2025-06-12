@@ -222,7 +222,7 @@ elif selected == "Atualização Semanal":
 	with A2_col2:
 		vazia1, col_video, vazia2 = st.columns([1, 2, 1])
 		with col_video:
-			st.video(video1, width = 300)
+			st.video(video1)
 	st.divider()
 	
 
