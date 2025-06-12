@@ -29,7 +29,15 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-
+st.markdown("""
+<style>
+/* Alvo: o contêiner principal do vídeo do Streamlit */
+div[data-testid="stVideo"] {
+    width: 30%; /* Defina a largura desejada (ex: 60% ou 500px) */
+    margin: auto;      /* Centraliza o vídeo na página */
+}
+</style>
+""", unsafe_allow_html=True)
 
 ########################################################### Título principal ##################################################################
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
