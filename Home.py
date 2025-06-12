@@ -29,16 +29,9 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Função para converter uma imagem local para Base64 (usada em outras partes, mantida por segurança)
-def img_to_base64(img_path):
-    try:
-        img_bytes = Path(img_path).read_bytes()
-        encoded = base64.b64encode(img_bytes).decode()
-        return f"data:image/png;base64,{encoded}"
-    except FileNotFoundError:
-        return ""
 
-########################################################### Título principal #####################################################################
+
+########################################################### Título principal ####################################################################
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
 
 # Menu horizontal com abas
