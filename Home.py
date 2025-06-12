@@ -60,7 +60,9 @@ try:
     img5 = Image.open("image/gamificacao.jpg")
     img6 = Image.open("image/Musculo_0.png")
     img7 = Image.open("image/Musculo_1.png")
-    img8 = Image.open("image/pcb1.png")	
+    img8 = Image.open("image/pcb1.png")
+    img9 = Image.open("pcb2.jpg")	
+    img10 = Image.open("pcb3.jpg")	
 except FileNotFoundError:
     st.error("Uma ou mais imagens não foram encontradas. Verifique os caminhos dos arquivos.")
     # Atribui None para evitar mais erros
@@ -197,6 +199,31 @@ elif selected == "BioMove" and all([img5, img6, img7]):
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 elif selected == "Atualização Semanal":
+	##################### atualizacao 5 ##########################################################3
+	A0_col1, A0_col2 = st.columns(2)
+	with A0_col1:
+	with A0_col2:
+		st.markdown("""
+	            <div style='text-align: justify;'>
+	                <h2 style='color: #008080; text-align: center;'> #5 - Entregável de Hardware - 06/06</h2>
+			<ul>
+		                <li>Avançamos na produção da placa de circuito impresso (PCI) para o nosso projeto. Reproduzimos o modelo utilizando novamente o filtro notch para testes. No entanto, enfrentamos alguns contratempos que impactaram o andamento do cronograma. Durante a etapa de montagem e teste da placa, identificamos problemas relacionados ao roteamento do circuito e à soldagem de alguns componentes. Esses erros comprometeram o funcionamento esperado da PCI, impossibilitando a continuidade dos testes nesta fase. Estamos trabalhando na correção do layout e no aprimoramento do processo de soldagem para evitar recorrência desses problemas nas próximas versões.</li>
+			<ul>
+	            </div>
+	        """, unsafe_allow_html=True)
+	A0_col3, A0_col4, A0_col5 = st.columns(3)
+	with A0_col3:
+		st.image(img9)
+	with A0_col4:
+		st.markdown("""
+			<ul>
+		                <li>Avançamos na produção da placa de circuito impresso (PCI) para o nosso projeto. Reproduzimos o modelo utilizando novamente o filtro notch para testes. No entanto, enfrentamos alguns contratempos que impactaram o andamento do cronograma. Durante a etapa de montagem e teste da placa, identificamos problemas relacionados ao roteamento do circuito e à soldagem de alguns componentes. Esses erros comprometeram o funcionamento esperado da PCI, impossibilitando a continuidade dos testes nesta fase. Estamos trabalhando na correção do layout e no aprimoramento do processo de soldagem para evitar recorrência desses problemas nas próximas versões.</li>
+			<ul>
+	            </div>
+	        """, unsafe_allow_html=True)
+	with A0_col5:
+		st.image(img10)
+	##################### atualizacao 4 ##########################################################3
 	st.divider()
 	A1_col1, A1_col2 = st.columns(2)
 	with A1_col1:
@@ -204,7 +231,7 @@ elif selected == "Atualização Semanal":
 	            <div style='text-align: justify;'>
 	                <h2 style='color: #008080; text-align: center;'> #4 - Atualização Semanal - 30/05/2025 </h2>
 			<ul>
-		                <li>Avançamos na produção da placa de circuito impresso (PCI) para o nosso projeto. Reproduzimos o modelo utilizando novamente o filtro notch para testes. No entanto, enfrentamos alguns contratempos que impactaram o andamento do cronograma. Durante a etapa de montagem e teste da placa, identificamos problemas relacionados ao roteamento do circuito e à soldagem de alguns componentes. Esses erros comprometeram o funcionamento esperado da PCI, impossibilitando a continuidade dos testes nesta fase. Estamos trabalhando na correção do layout e no aprimoramento do processo de soldagem para evitar recorrência desses problemas nas próximas versões.</li>
+		                <li></li>
 			<ul>
 	            </div>
 	        """, unsafe_allow_html=True)
