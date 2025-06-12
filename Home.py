@@ -39,7 +39,7 @@ div[data-testid="stVideo"] {
 </style>
 """, unsafe_allow_html=True)
 
-########################################################### Título principal #################################################################
+########################################################### Título principal ################################################################
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
 
 # Menu horizontal com abas
