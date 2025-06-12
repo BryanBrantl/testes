@@ -201,7 +201,7 @@ elif selected == "BioMove" and all([img5, img6, img7]):
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 elif selected == "Atualização Semanal":
-	A1_col1, A1_col2 = st.columns()
+	A1_col1, A1_col2 = st.columns(2)
 	with A1_col1:
 		st.markdown("""
 	            <div style='text-align: justify;'>
