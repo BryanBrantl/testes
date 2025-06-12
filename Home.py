@@ -27,6 +27,16 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# Função para converter uma imagem local para Base64
+def img_to_base64(img_path):
+    try:
+        img_bytes = Path(img_path).read_bytes()
+        encoded = base64.b64encode(img_bytes).decode()
+        return f"data:image/png;base64,{encoded}"
+    except FileNotFoundError:
+        # Retorna uma string vazia ou uma imagem de placeholder se o arquivo não for encontrado
+        return ""
+
 ############################################################## MODELO BOTAO ######################################################################
 ##
 ##    <button class="my-button" onclick="window.open('https://www.google.com', '_blank')">
@@ -257,12 +267,20 @@ elif selected == "BioMove":
 elif selected == "Atualização Semanal":
     st.title("Atualizações Semanais")
     
-    # A função para criar os blocos continua a mesma
-    def bloco_atualizacao(titulo, texto):
+# Função modificada para aceitar um caminho de imagem opcional
+    def bloco_atualizacao(titulo, texto, image_path=None):
+        img_html = ""
+        if image_path:
+            # Converte a imagem para Base64 e cria a tag <img>
+            img_base64 = img_to_base64(image_path)
+            if img_base64:
+                img_html = f'<img src="{img_base64}" alt="Imagem da semana" style="width:100%; border-radius:5px; margin-top:10px;">'
+    
         st.markdown(f"""
             <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
                 <h4 style="color:white;">{titulo}</h4>
                 <p style="color:gray;">{texto}</p>
+                {img_html}
             </div>
         """, unsafe_allow_html=True)
      
@@ -286,7 +304,7 @@ elif selected == "Atualização Semanal":
     - O circuito EMG foi montado em placa perfurada, oferecendo mais estabilidade que a protoboard.<br>
     - O filtro Notch não apresentou o resultado esperado, levando à hipótese de usar filtros digitais no futuro.<br>
     - Circuito montado em placa perfurada:
-    """)
+    """, )
     
     # --- ATUALIZAÇÕES ANTERIORES ---
 
@@ -306,6 +324,43 @@ elif selected == "Atualização Semanal":
    - Decisões sobre o projeto: Definido que será utilizado baterias 18650 (4.2v) para alimentação dos sistemas.<br>
    - Construção do esquemático EMG:
     """)
+
+        # --- EXEMPLO 1: TEXTO E DUAS IMAGENS LADO A LADO ---
+    bloco_texto(
+        "Semana 3 - Montagem do Circuito e Carrinho",
+        "Nesta semana, finalizamos a montagem do carrinho e também a primeira versão do circuito EMG em placa perfurada, como pode ser visto abaixo:"
+    )
+
+    col1, col2 = st.columns(2)
+    with col1:
+        # Substitua pelo caminho da sua imagem
+        st.image("image/gamificacao.jpg", caption="Carrinho finalizado")
+    with col2:
+        # Substitua pelo caminho da sua imagem
+        st.image("image/gamificacao.jpg", caption="EMG em placa perfurada")
+
+    base_bloco()
+
+
+    st.divider() # Apenas para separar os exemplos
+
+
+    # --- EXEMPLO 2: TEXTO, IMAGEM, TEXTO, IMAGEM EM SEQUÊNCIA ---
+    bloco_texto(
+        "Semana 4 - PCI e Software",
+        "Avançamos na produção da placa de circuito impresso (PCI). Apesar de alguns desafios na primeira versão, o aprendizado foi grande."
+    )
+
+    # Substitua pelo caminho da sua imagem
+    st.image("image/gamificacao.jpg", caption="Primeira versão da PCI")
+
+    # Você pode usar st.write ou st.markdown para textos intermediários
+    st.markdown("O desenvolvimento do software de controle, por outro lado, foi um sucesso. O aplicativo permite o controle total do carrinho via Bluetooth.")
+
+    # Substitua pelo caminho da sua imagem
+    st.image("image/gamificacao.jpg", caption="Interface do aplicativo de controle")
+
+    base_bloco()
 
 ############################################################################################
 ###################################   RELATORIOS    ########################################
