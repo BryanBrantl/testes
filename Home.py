@@ -33,7 +33,7 @@ st.markdown("""
 <style>
 /* Alvo: o contêiner principal do vídeo do Streamlit */
 div[data-testid="stVideo"] {
-    width: 30%; /* Defina a largura desejada (ex: 60% ou 500px) */
+    width: 10%; /* Defina a largura desejada (ex: 60% ou 500px) */
     margin: auto;      /* Centraliza o vídeo na página */
 }
 </style>
