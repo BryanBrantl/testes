@@ -201,115 +201,26 @@ elif selected == "BioMove" and all([img5, img6, img7]):
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 elif selected == "Atualização Semanal":
-        # === Atualização Semanal #4  ===
-    video_path = "image/carrinhoandando.mp4"
-    with open(video_path, "rb") as f:
-    	video_bytes = f.read()
-    	video_base64 = base64.b64encode(video_bytes).decode()
-    with st.container():
-    	st.markdown(f"""
-    <div style="background-color:#1C1C1C; padding:15px; border-radius:10px;">
-        <h4 style="color:#DC143C;">#4 - Atualização Semanal - 30/05/2025</h4>
-        <ul style="color:#FFFFFF;">
-            <li>
-	    	Nesta semana, avançamos na produção da placa de circuito impresso (PCI) para o nosso projeto. Reproduzimos o modelo utilizando novamente o filtro notch para testes. No entanto, enfrentamos alguns contratempos que impactaram o andamento do cronograma.
-     	    	Durante a etapa de montagem e teste da placa, identificamos problemas relacionados ao roteamento do circuito e à soldagem de alguns componentes. Esses erros comprometeram o funcionamento esperado da PCI, impossibilitando a continuidade dos testes nesta fase.
-	    	Estamos trabalhando na correção do layout e no aprimoramento do processo de soldagem para evitar recorrência desses problemas nas próximas versões.
-     	    </li>
-        </ul>
-        <div style="display: flex; justify-content: center; margin-top: 20px;">
-            <!-- st.image("caminho/para/imagem_exemplo_atualizacao2.png", width=200) -->
-            <img src="data:image/png;base64,{base64.b64encode(open('image/emg5.jpg','rb').read()).decode('utf-8')}"
-                 style="width: 600px; height: 500px; border-radius: 10px; object-fit: cover;"
-                 alt="Circuito montado">
-        </div>
-	<ul style="color:#FFFFFF;">
-            <li>Como informado na semana passada, a montagem do carrinho foi finalizada. Nesta semana, a equipe desenvolveu o software que permite controlar o carrinho por meio de um joystick no celular, utilizando conexão via Bluetooth.</li>
-        </ul>
-	<div style="display: flex; justify-content: center; margin-top: 20px;">
-        	<video width="600" height="400" controls style="border-radius: 10px;">
-                	<source src="data:video/mp4;base64,{video_base64}" type="video/mp4">
-                    	Seu navegador não suporta a tag de vídeo.
-                </video>
-            </div>
-        </div>
-    	""", unsafe_allow_html=True)
-
-    st.markdown("<div style='height:40px;'></div>", unsafe_allow_html=True)
-	
-        # === Atualização Semanal #3  ===
-    st.markdown(f"""
-    <div style="background-color:#1C1C1C; padding:15px; border-radius:10px;">
-        <h4 style="color:#DC143C;">#3 - Atualização Semanal - 23/05/2025</h4>
-        <ul style="color:#FFFFFF;">
-            <li>Finalizado a montagem do carrinho.</li>
-            <li>Adição de novos filtros no esquemático do EMG.</li>
-            <li>Montagem do circuito EMG em placa perfurada para melhorar os testes quando comparado a protoboard.</li>
-            <li>Filtro Notch não apresentou resultado esperado, levantado a hipótese de utilizar filtros digitais
-				para melhorar a performance.</li>
-            <li>Circuito montado em placa perfurada:</li>
-        </ul>
-        <div style="display: flex; justify-content: center; margin-top: 20px;">
-            <!-- st.image("caminho/para/imagem_exemplo_atualizacao2.png", width=200) -->
-            <img src="data:image/png;base64,{base64.b64encode(open('image/emg4.jpg','rb').read()).decode('utf-8')}"
-                 style="width: 600px; height: 500px; border-radius: 10px; object-fit: cover;"
-                 alt="Circuito montado">
-        </div> 
-    """, unsafe_allow_html=True)
-    st.markdown("<div style='height:40px;'></div>", unsafe_allow_html=True)
-
-
-    # === Atualização Semanal #2 === 
-    st.markdown(f"""
-    <div style="background-color:#1C1C1C; padding:15px; border-radius:10px;">
-        <h4 style="color:#DC143C;">#2 - Atualização Semanal - 16/05/2025</h4>
-        <ul style="color:#FFFFFF;">
-            <li>Definido a utilização de um Kit chassi para a construção do carrinho.</li>
-            <li>Montagem do sensor EMG em protoboard baseado no esquemático da semana anterior.</li>
-            <li>Validamos o sinal no osciloscópio, detectado presença de ruído da rede.</li>
-            <li>Definido a necessidade de implementar mais filtros no circuito para reduzir o ruído.</li>
-            <li>Circuito montado em protoboard:</li>
-        </ul>
-        <div style="display: flex; justify-content: center; margin-top: 20px;">
-            <!-- st.image("caminho/para/imagem_exemplo_atualizacao2.png", width=200) -->
-            <img src="data:image/png;base64,{base64.b64encode(open('image/Protoboard.jpg','rb').read()).decode('utf-8')}"
-                 style="width: 600px; height: 225px; border-radius: 10px; object-fit: cover;"
-                 alt="Circuito montado">
-        </div>
-        <ul style="color:#FFFFFF;">
-            <li>Sinal no osciloscópio:</li>
-        </ul>
-        <div style="display: flex; justify-content: center; margin-top: 20px;">
-            <!-- st.image("caminho/para/imagem_exemplo_atualizacao3.png", width=200) -->
-            <img src="data:image/png;base64,{base64.b64encode(open('image/Osciloscopio_Protoboard.jpg','rb').read()).decode('utf-8')}"
-                 style="width: 600px; height: 400px; border-radius: 10px; object-fit: cover;"
-                 alt="Sinal gerado">
-        </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("<div style='height:40px;'></div>", unsafe_allow_html=True)
-
-    # === Atualização Semanal #1 ===
-    st.markdown(f"""
-    <div style="background-color:#1C1C1C; padding:15px; border-radius:10px; margin-bottom: 20px;">
-        <h4 style="color:#DC143C;">#1 - Atualização Semanal - 09/05/2025</h4>
-        <ul style="color:#FFFFFF;">
-            <li>Realizados testes nos principais componentes do carrinho (motor DC, ESP32 e ponte H), sem identificação de defeitos.</li>
-            <li>Conduzido estudo sobre softwares de modelagem 3D. Optou-se pela utilização do <b>Eagle</b> para o desenvolvimento do carrinho e do sistema EMG.</li>
-            <li>Modelo do site finalizado.</li>
-            <li>Proposta e cronograma revisados e atualizados conforme a devolutiva, já disponíveis no site.</li>
-            <li>Decisões sobre o projeto: Definido que será utilizado baterias 18650 (4.2v) para alimentação dos sistemas.</li>
-            <li>Construção do esquemático EMG:</li>
-        </ul>
-        <div style="display: flex; justify-content: center; margin-top: 20px;">
-            <!-- st.image("caminho/para/imagem_simulacao_emg.gif", width=200) -->
-            <img src="data:image/png;base64,{base64.b64encode(open('image/ESQUEMATICO_Semana1.JPG','rb').read()).decode('utf-8')}"
-                 style="width: 660px; height: 300px; border-radius: 10px; object-fit: cover;"
-                 alt="Exemplo atualização 2">
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
+	A1_col1, A1_col2 = st.columns()
+	with A1_col1:
+		st.markdown("""
+	            <div style='text-align: justify;'>
+	                <h2 style='color: #008080; text-align: center;'>Proposta e Escopo</h2>
+	                <p>O sistema BioMove utiliza <strong style='color: #008080;'>sensores EMG</strong> (montados a partir de amplificadores de instrumentação e filtros analógicos) para captar sinais musculares do paciente.</p>
+	                <p>Estes sinais são processados (amplificação, filtragem, retificação e análise digital) para serem transformados em comandos de controle de um carrinho autônomo.</p>
+	                <p>O projeto prioriza a qualidade do controle baseado em EMG, em vez de funcionalidades avançadas no robô, concentrando esforços na aquisição e interpretação dos sinais.</p>
+	            </div>
+	        """, unsafe_allow_html=True)
+	with A1_col2:
+		st.markdown("""
+	            <div style='text-align: justify;'>
+	                <h2 style='color: #008080; text-align: center;'>Proposta e Escopo</h2>
+	                <p>O sistema BioMove utiliza <strong style='color: #008080;'>sensores EMG</strong> (montados a partir de amplificadores de instrumentação e filtros analógicos) para captar sinais musculares do paciente.</p>
+	                <p>Estes sinais são processados (amplificação, filtragem, retificação e análise digital) para serem transformados em comandos de controle de um carrinho autônomo.</p>
+	                <p>O projeto prioriza a qualidade do controle baseado em EMG, em vez de funcionalidades avançadas no robô, concentrando esforços na aquisição e interpretação dos sinais.</p>
+	            </div>
+	        """, unsafe_allow_html=True)
+	#A2_col1, A2_col2
 
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
