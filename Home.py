@@ -64,7 +64,9 @@ try:
 except FileNotFoundError:
     st.error("Uma ou mais imagens não foram encontradas. Verifique os caminhos dos arquivos.")
     # Atribui None para evitar mais erros
-    img1, img2, img3, img4, img5, img6, img7 = (None,)*7
+    img1, img2, img3, img4, img5, img6, img7, img = (None,)*8
+
+video1 = "video/carrinhoandando.mp4"
 
 ############################################ Conteúdo de acordo com o menu selecionado ############################################
 ################################################################################################   HOME    #################################
@@ -202,14 +204,25 @@ elif selected == "Atualização Semanal":
 	            <div style='text-align: justify;'>
 	                <h2 style='color: #008080; text-align: center;'> #4 - Atualização Semanal - 30/05/2025 </h2>
 			<ul>
-		                <li>Nesta semana, avançamos na produção da placa de circuito impresso (PCI) para o nosso projeto. Reproduzimos o modelo utilizando novamente o filtro notch para testes. No entanto, enfrentamos alguns contratempos que impactaram o andamento do cronograma. Durante a etapa de montagem e teste da placa, identificamos problemas relacionados ao roteamento do circuito e à soldagem de alguns componentes. Esses erros comprometeram o funcionamento esperado da PCI, impossibilitando a continuidade dos testes nesta fase. Estamos trabalhando na correção do layout e no aprimoramento do processo de soldagem para evitar recorrência desses problemas nas próximas versões.</li>
+		                <li>Avançamos na produção da placa de circuito impresso (PCI) para o nosso projeto. Reproduzimos o modelo utilizando novamente o filtro notch para testes. No entanto, enfrentamos alguns contratempos que impactaram o andamento do cronograma. Durante a etapa de montagem e teste da placa, identificamos problemas relacionados ao roteamento do circuito e à soldagem de alguns componentes. Esses erros comprometeram o funcionamento esperado da PCI, impossibilitando a continuidade dos testes nesta fase. Estamos trabalhando na correção do layout e no aprimoramento do processo de soldagem para evitar recorrência desses problemas nas próximas versões.</li>
 			<ul>
 	            </div>
 	        """, unsafe_allow_html=True)
 	with A1_col2:
-		st.image(img8, width=200)
+		st.image(img8, width=400)
+	A2_col1, A2_col2 = st.columns(2)
+	with A2_col1:
+		st.markdown("""
+	            <div style='text-align: justify;'>
+			<ul>
+		                <li>A montagem do carrinho foi finalizada. Nesta semana, a equipe desenvolveu o software que permite controlar o carrinho por meio de um joystick no celular, utilizando conexão via Bluetooth.</li>
+			<ul>
+	            </div>
+	        """, unsafe_allow_html=True)
+	with A2_col2:
+		st.video(video1)
 	st.divider()
-	#A2_col1, A2_col2
+	
 
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
