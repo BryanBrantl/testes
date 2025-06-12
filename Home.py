@@ -1,6 +1,8 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
+import base64
+from pathlib import Path
 
 st.set_page_config(page_title="BIOMOVE", layout="wide")
 
@@ -27,40 +29,21 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Função para converter uma imagem local para Base64
+# Função para converter uma imagem local para Base64 (usada em outras partes, mantida por segurança)
 def img_to_base64(img_path):
     try:
         img_bytes = Path(img_path).read_bytes()
         encoded = base64.b64encode(img_bytes).decode()
         return f"data:image/png;base64,{encoded}"
     except FileNotFoundError:
-        # Retorna uma string vazia ou uma imagem de placeholder se o arquivo não for encontrado
         return ""
-
-############################################################## MODELO BOTAO ######################################################################
-##
-##    <button class="my-button" onclick="window.open('https://www.google.com', '_blank')">
-##        ABRIR RELATORIO
-##    </button> 
-##
-########################################################### linhas  #####################################################################
-## Linha padrão do HTML
-## st.markdown("<hr>", unsafe_allow_html=True)
-##    
-##    # Linha customizada com a cor do seu projeto
-## st.markdown("<hr style='border: 1px solid #008080;'>", unsafe_allow_html=True)
-##    
-##    # Outro exemplo de linha mais grossa e com margens
-## st.markdown("<hr style='height:2px; background-color:#008080; border:none; margin-top: 20px; margin-bottom: 20px;'>", unsafe_allow_html=True)
-#####################################################################################################################################################
-
 
 ########################################################### Título principal #####################################################################
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
 
 # Menu horizontal com abas
 selected = option_menu(
-    menu_title=None,  # remove o título do menu
+    menu_title=None,
     options=["Home", "BioMove", "Atualização Semanal", "Relatórios", "Cronograma"],
     orientation="horizontal",
     default_index=0,
@@ -75,291 +58,193 @@ selected = option_menu(
 
 
 ############################################ IMAGENS ############################################
-img1 = Image.open("image/foto_01.png")
-img2 = Image.open("image/foto_02.png")
-img3 = Image.open("image/foto_03.png")
-img4 = Image.open("image/foto_04.png")
-img5 = Image.open("image/gamificacao.jpg")
-img6 = Image.open("image/Musculo_0.png")
-img7 = Image.open("image/Musculo_1.png")
+# Usando um bloco try-except para evitar que o app quebre se uma imagem não for encontrada
+try:
+    img1 = Image.open("image/foto_01.png")
+    img2 = Image.open("image/foto_02.png")
+    img3 = Image.open("image/foto_03.png")
+    img4 = Image.open("image/foto_04.png")
+    img5 = Image.open("image/gamificacao.jpg")
+    img6 = Image.open("image/Musculo_0.png")
+    img7 = Image.open("image/Musculo_1.png")
+except FileNotFoundError:
+    st.error("Uma ou mais imagens não foram encontradas. Verifique os caminhos dos arquivos.")
+    # Atribui None para evitar mais erros
+    img1, img2, img3, img4, img5, img6, img7 = (None,)*7
+
 ############################################ Conteúdo de acordo com o menu selecionado ############################################
 ################################################################################################   HOME    #################################
-if selected == "Home":
-    st.markdown("""
-        <h1 style='text-align: center; color: #008080 ;'>
-            HOME
-        </h1>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("""
-        <h1 style='text-align: center; color: #008080 ;'>
-            MEMBROS
-        </h1>
-    """, unsafe_allow_html=True)
+if selected == "Home" and all([img1, img2, img3, img4]):
+    st.markdown("<h1 style='text-align: center; color: #008080 ;'>MEMBROS</h1>", unsafe_allow_html=True)
+    st.write("") # Espaço
 
-    col1, col2, col3, col4 = st.columns(4)  
+    col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.image(img1, width=500)
+        st.image(img1, use_column_width=True)
         st.markdown(
             """
             <div style='text-align: center'>
                 <strong><span style='color: #008080;'> Bryan Alexandre de Lima Brantl</span></strong><br><br>
-                 RA: 2414139<br><br>
-                 E-mail: brantl@alunos.utfpr.edu.br<br><br>
+                 RA: 2414139<br>
+                 E-mail: brantl@alunos.utfpr.edu.br<br>
                  Contato: (41) 99278-39299
             </div>
-            """,
-            unsafe_allow_html=True
-        )
+            """, unsafe_allow_html=True)
     
     with col2:
-        st.image(img2, width=500)
+        st.image(img2, use_column_width=True)
         st.markdown(
             """
             <div style='text-align: center'>
-                <strong><span style='color: #008080;'>João Roberto Klassen</span></strong><br>
-                <br>
+                <strong><span style='color: #008080;'>João Roberto Klassen</span></strong><br><br>
                 RA: 2414155<br>
-                <br>
                 E-mail: joaoklassen@alunos.utfpr.edu.br<br>
-                <br>
                 Contato: (41) 99742-4536
             </div>
-            """,
-            unsafe_allow_html=True
-        )
+            """, unsafe_allow_html=True)
     
     with col3:
-        st.image(img3, width=500)
+        st.image(img3, use_column_width=True)
         st.markdown(
             """
             <div style='text-align: center'>
-                <strong><span style='color: #008080;'>Leonardo Amancio</span></strong><br>
-                <br>
+                <strong><span style='color: #008080;'>Leonardo Amancio</span></strong><br><br>
                 RA: 2402580<br>
-                <br>
                 E-mail: leonardoamancio@alunos.utfpr.edu.br<br>
-                <br>
                 Contato: (41) 99805-1279
             </div>
-            """,
-            unsafe_allow_html=True
-        )
+            """, unsafe_allow_html=True)
     
     with col4:
-        st.image(img4, width=500)
+        st.image(img4, use_column_width=True)
         st.markdown(
             """
             <div style='text-align: center'>
-                <strong><span style='color: #008080;'>Luiz Prado</span></strong><br>
-                <br>
+                <strong><span style='color: #008080;'>Luiz Prado</span></strong><br><br>
                 RA: 2402629<br>
-                <br>
                 E-mail: luizoliveira.2002@alunos.utfpr.edu.br<br>
-                <br>
                 Contato: (41) 99815-6532
             </div>
-            """,
-            unsafe_allow_html=True
-        )
+            """, unsafe_allow_html=True)
 ############################################################################################
 ######################################   BIOMOVE    ########################################
 
-elif selected == "BioMove": 
-    st.markdown("""
-        <h1 style='text-align: center; color: #008080 ;'>
-            OVERVIEW DO PROJETO
-        </h1>
-    """, unsafe_allow_html=True)
-##        
-    B1col1, B1col2 = st.columns(2)  
+elif selected == "BioMove" and all([img5, img6, img7]):
+    st.markdown("<h1 style='text-align: center; color: #008080;'>OVERVIEW DO PROJETO</h1>", unsafe_allow_html=True)
+    st.divider()
+
+    # Bloco 1
+    B1col1, B1col2 = st.columns(2)
     with B1col1:
-        st.write("")
-        st.write("")
-        st.image(img5, width=500)   
-##
+        vazia, img_col_b1, vazia2 = st.columns([1, 4, 1])
+        with img_col_b1:
+            st.image(img5)
     with B1col2:
         st.markdown("""
             <div style='text-align: justify;'>
                 <h2 style='color: #008080; text-align: center;'>Problemática e Objetivo</h2>
-                <p>
-                    O projeto BioMove surge para <span style='text-decoration: underline; text-decoration-color: #008080;'>melhorar a interação do paciente com a fisioterapia</span>, tornando-a mais motivadora e eficaz, com objetivo de <span style='text-decoration: underline; text-decoration-color: #008080;'>acelerar o progresso de reabilitação</span>. Muitos pacientes desistem antes de alcançar melhora significativa devido a:
-                </p>
+                <p>O projeto BioMove surge para <span style='text-decoration: underline; text-decoration-color: #008080;'>melhorar a interação do paciente com a fisioterapia</span>, tornando-a mais motivadora e eficaz, com objetivo de <span style='text-decoration: underline; text-decoration-color: #008080;'>acelerar o progresso de reabilitação</span>. Muitos pacientes desistem antes de alcançar melhora significativa devido a:</p>
                 <ul>
                     <li>Métodos tradicionais repetitivos e pouco engajadores;</li>
                     <li>Dificuldade em perceber progresso imediato, causando desmotivação;</li>
                     <li>Falta de acesso a equipamentos modernos que estimulem o tratamento.</li>
                 </ul>
-                <p>
-                    A proposta central é <span style='text-decoration: underline; text-decoration-color: #008080;'>estabelecer uma base de gamificação</span> para o tratamento, inspirando-se em exemplos como o Instituto Albert Einstein, para tornar o processo mais dinâmico e envolvente.
-                </p>
+                <p>A proposta central é <span style='text-decoration: underline; text-decoration-color: #008080;'>estabelecer uma base de gamificação</span> para o tratamento, inspirando-se em exemplos como o Instituto Albert Einstein, para tornar o processo mais dinâmico e envolvente.</p>
             </div>
         """, unsafe_allow_html=True)
-# Linha padrão do HTML
-        st.markdown("<hr>", unsafe_allow_html=True)
-        texto_proposta_escopo = """
-        <div style='text-align: justify;'>
-            <h2 style='color: #008080; text-align: center;'>Proposta e Escopo</h2>
-            <p>
-                O sistema BioMove utiliza <strong style='color: #008080;'>sensores EMG </strong> (montados a partir de amplificadores de instrumentação e filtros analógicos) para captar sinais musculares do paciente.
-            </p>
-            <p>
-                Estes sinais são processados (amplificação, filtragem, retificação e análise digital) para serem transformados em comandos de controle de um carrinho autônomo.
-            </p>
-            <p>
-                O projeto prioriza a qualidade do controle baseado em EMG, em vez de funcionalidades avançadas no robô, concentrando esforços na aquisição e interpretação dos sinais.
-            </p>
-        </div>
-    """
     
-    # 2. Defina o texto para o segundo bloco (Funcionamento Básico)
-    texto_funcionamento = """
-        <div style='text-align: justify;'>
-            <h2 style='color: #008080; text-align: center;'>Funcionamento Básico</h2>
-            <p>
-                Eletrodos são posicionados em músculos-alvo (por exemplo, bíceps direito e esquerdo) para captar o sinal EMG e processá-lo, identificando a ativação muscular.
-            </p>
-            <p>
-                Os sinais são traduzidos em comandos para mover o carrinho, conforme a lógica:
-            </p>
-            <ul>
-                <li><strong>Ambos músculos ativados:</strong> carrinho anda para frente.</li>
-                <li><strong>Somente esquerdo ativado:</strong> carrinho vira à direita.</li>
-                <li><strong>Somente direito ativado:</strong> carrinho vira à esquerda.</li>
-                <li><strong>Sem ativação:</strong> carrinho permanece parado.</li>
-            </ul>
-            <p>
-                A comunicação entre o módulo EMG e o carrinho é feita via <strong style='color: #008080;'>Wi-Fi</strong> ou <strong style='color: #008080;'>Bluetooth</strong>, já que ambos os módulos rodam com um ESP32.
-            </p>
-        </div>
-    """
+    st.divider()
+
+    # Bloco 2
+    texto_proposta_escopo = """...""" # Mantido para não quebrar, mas pode ser removido se não for usado
+    texto_funcionamento = """...""" # Mantido para não quebrar, mas pode ser removido se não for usado
     
-    # 3. Construção do Layout no Streamlit
-    
-    # Bloco 1: Texto na Esquerda, Imagem na Direita
-    B2col1, B2col2 = st.columns([2, 1.5]) # Dando mais espaço para o texto
+    B2col1, B2col2 = st.columns([2, 1.5])
     with B2col1:
-        st.markdown(texto_proposta_escopo, unsafe_allow_html=True)
-    
+        st.markdown("""
+            <div style='text-align: justify;'>
+                <h2 style='color: #008080; text-align: center;'>Proposta e Escopo</h2>
+                <p>O sistema BioMove utiliza <strong style='color: #008080;'>sensores EMG</strong> (montados a partir de amplificadores de instrumentação e filtros analógicos) para captar sinais musculares do paciente.</p>
+                <p>Estes sinais são processados (amplificação, filtragem, retificação e análise digital) para serem transformados em comandos de controle de um carrinho autônomo.</p>
+                <p>O projeto prioriza a qualidade do controle baseado em EMG, em vez de funcionalidades avançadas no robô, concentrando esforços na aquisição e interpretação dos sinais.</p>
+            </div>
+        """, unsafe_allow_html=True)
     with B2col2:
-        # Centralizando a imagem
         vazia1, img_col, vazia2 = st.columns([1, 4, 1])
         with img_col:
-            st.image(img6) 
+            st.image(img6)
     
-    # Adiciona uma linha para separar os blocos
     st.divider()
     
-    # Bloco 2: Imagem na Esquerda, Texto na Direita
-    B3col1, B3col2 = st.columns([1.5, 2]) # Dando mais espaço para o texto
+    # Bloco 3
+    B3col1, B3col2 = st.columns([1.5, 2])
     with B3col1:
-        # Centralizando a imagem
         vazia3, img_col2, vazia4 = st.columns([1, 4, 1])
         with img_col2:
             st.image(img7)
-    
     with B3col2:
-        st.markdown(texto_funcionamento, unsafe_allow_html=True)
+        st.markdown("""
+            <div style='text-align: justify;'>
+                <h2 style='color: #008080; text-align: center;'>Funcionamento Básico</h2>
+                <p>Eletrodos são posicionados em músculos-alvo (por exemplo, bíceps direito e esquerdo) para captar o sinal EMG e processá-lo, identificando a ativação muscular.</p>
+                <p>Os sinais são traduzidos em comandos para mover o carrinho, conforme a lógica:</p>
+                <ul>
+                    <li><strong>Ambos músculos ativados:</strong> carrinho anda para frente.</li>
+                    <li><strong>Somente esquerdo ativado:</strong> carrinho vira à direita.</li>
+                    <li><strong>Somente direito ativado:</strong> carrinho vira à esquerda.</li>
+                    <li><strong>Sem ativação:</strong> carrinho permanece parado.</li>
+                </ul>
+                <p>A comunicação entre o módulo EMG e o carrinho é feita via <strong style='color: #008080;'>Wi-Fi</strong> ou <strong style='color: #008080;'>Bluetooth</strong>, já que ambos os módulos rodam com um ESP32.</p>
+            </div>
+        """, unsafe_allow_html=True)
     
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 
 elif selected == "Atualização Semanal":
-    st.title("Atualizações Semanais")
-    
-# Função modificada para aceitar um caminho de imagem opcional
-    def bloco_atualizacao(titulo, texto, image_path=None):
-        img_html = ""
-        if image_path:
-            # Converte a imagem para Base64 e cria a tag <img>
-            img_base64 = img_to_base64(image_path)
-            if img_base64:
-                img_html = f'<img src="{img_base64}" alt="Imagem da semana" style="width:100%; border-radius:5px; margin-top:10px;">'
-    
+    st.markdown("<h1 style='text-align: center; color: #008080;'>ATUALIZAÇÕES SEMANAIS</h1>", unsafe_allow_html=True)
+    st.divider()
+
+    # --- FUNÇÕES AUXILIARES PARA O ESTILO HÍBRIDO ---
+    def bloco_texto(titulo, texto):
         st.markdown(f"""
-            <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
+            <div style="background-color:#1e1e1e; padding:20px; border-radius:10px 10px 0 0; border-left: 5px solid teal; margin-bottom: -2px;">
                 <h4 style="color:white;">{titulo}</h4>
                 <p style="color:gray;">{texto}</p>
-                {img_html}
             </div>
         """, unsafe_allow_html=True)
-     
-    # --- NOVAS ATUALIZAÇÕES ADICIONADAS AQUI ---
 
-    bloco_atualizacao("Semana 5 - 06/06/2025", """
-    - <strong>[PLACEHOLDER]</strong> Nesta semana, o foco foi na correção da PCI e na integração do software de controle.<br>
-    - Realizamos novos testes de soldagem e estamos validando o layout do circuito.<br>
-    - Próximos passos: Finalizar a PCI funcional e iniciar a integração com o sensor EMG.
-    """)
+    def base_bloco():
+        st.markdown(f"""
+            <div style="background-color:#1e1e1e; padding:10px; border-radius:0 0 10px 10px; border-left: 5px solid teal; margin-bottom: 20px;">
+            </div>
+        """, unsafe_allow_html=True)
+    # ---------------------------------------------------
 
-    bloco_atualizacao("Semana 4 - 30/05/2025", """
-    - Avançamos na produção da placa de circuito impresso (PCI), mas enfrentamos contratempos no roteamento e soldagem que comprometeram o funcionamento da primeira versão.<br>
-    - Estamos corrigindo o layout da PCI e aprimorando o processo de soldagem.<br><br>
-    - Em paralelo, o software para controlar o carrinho via joystick no celular (Bluetooth) foi desenvolvido e finalizado com sucesso.
-    """)
-
-    bloco_atualizacao("Semana 3 - 23/05/2025", """
-    - Finalizada a montagem do chassi e estrutura do carrinho.<br>
-    - Adicionados novos filtros ao esquemático do EMG para melhorar a qualidade do sinal.<br>
-    - O circuito EMG foi montado em placa perfurada, oferecendo mais estabilidade que a protoboard.<br>
-    - O filtro Notch não apresentou o resultado esperado, levando à hipótese de usar filtros digitais no futuro.<br>
-    - Circuito montado em placa perfurada:
-    """, )
-    
-    # --- ATUALIZAÇÕES ANTERIORES ---
-
-    bloco_atualizacao("Semana 2 - 27/05/2025", """
-    - Definido a utilização de um Kit chassi para a construção do carrinho. <br>
-    - Montagem do sensor EMG em protoboard baseado no esquemático da semana anterior. <br>
-    - Validamos o sinal no osciloscópio, detectado presença de ruído da rede. <br>
-    - Definido a necessidade de implementar mais filtros no circuito para reduzir o ruído. <br>
-    - Circuito montado em protoboard:
-    """)
-    
-    bloco_atualizacao("Semana 1 - 20/05/20255", """
-   - Realizados testes nos principais componentes do carrinho (motor DC, ESP32 e ponte H), sem identificação de defeitos.<br>
-   - Conduzido estudo sobre softwares de modelagem 3D. Optou-se pela utilização do Eagle para o desenvolvimento do carrinho e do sistema EMG.<br>
-   - Modelo do site finalizado.<br>
-   - Proposta e cronograma revisados e atualizados conforme a devolutiva, já disponíveis no site.<br>
-   - Decisões sobre o projeto: Definido que será utilizado baterias 18650 (4.2v) para alimentação dos sistemas.<br>
-   - Construção do esquemático EMG:
-    """)
-
-        # --- EXEMPLO 1: TEXTO E DUAS IMAGENS LADO A LADO ---
+    # --- EXEMPLO 1: TEXTO, IMAGEM, TEXTO, IMAGEM (EM SEQUÊNCIA) ---
     bloco_texto(
-        "Semana 3 - Montagem do Circuito e Carrinho",
-        "Nesta semana, finalizamos a montagem do carrinho e também a primeira versão do circuito EMG em placa perfurada, como pode ser visto abaixo:"
+        "Semana 5 - Gamificação e Interface",
+        "O conceito de gamificação é central no BioMove. A interface visual precisa ser motivadora, mostrando o progresso do paciente de forma clara e recompensadora. Abaixo, um exemplo de como o progresso pode ser visualizado."
     )
+    # Usando a imagem que você pediu como exemplo
+    st.image("image/gamificacao.jpg", caption="Exemplo de tela de progresso e recompensas.")
+    st.markdown("Além do progresso, a interface também guiará o paciente nos exercícios, indicando os músculos a serem ativados e o feedback em tempo real do sinal EMG.")
+    base_bloco()
+    
+    st.divider()
 
+    # --- EXEMPLO 2: TEXTO E DUAS IMAGENS (LADO A LADO) ---
+    bloco_texto(
+        "Semana 4 - Hardware e Software",
+        "Nesta semana, finalizamos a montagem do carrinho e também a primeira versão do circuito EMG em placa perfurada. O software de controle via Bluetooth também foi concluído."
+    )
     col1, col2 = st.columns(2)
     with col1:
-        # Substitua pelo caminho da sua imagem
+        # Substitua pelo caminho real da sua imagem
         st.image("image/gamificacao.jpg", caption="Carrinho finalizado")
     with col2:
-        # Substitua pelo caminho da sua imagem
+        # Substitua pelo caminho real da sua imagem
         st.image("image/gamificacao.jpg", caption="EMG em placa perfurada")
-
-    base_bloco()
-
-
-    st.divider() # Apenas para separar os exemplos
-
-
-    # --- EXEMPLO 2: TEXTO, IMAGEM, TEXTO, IMAGEM EM SEQUÊNCIA ---
-    bloco_texto(
-        "Semana 4 - PCI e Software",
-        "Avançamos na produção da placa de circuito impresso (PCI). Apesar de alguns desafios na primeira versão, o aprendizado foi grande."
-    )
-
-    # Substitua pelo caminho da sua imagem
-    st.image("image/gamificacao.jpg", caption="Primeira versão da PCI")
-
-    # Você pode usar st.write ou st.markdown para textos intermediários
-    st.markdown("O desenvolvimento do software de controle, por outro lado, foi um sucesso. O aplicativo permite o controle total do carrinho via Bluetooth.")
-
-    # Substitua pelo caminho da sua imagem
-    st.image("image/gamificacao.jpg", caption="Interface do aplicativo de controle")
-
     base_bloco()
 
 ############################################################################################
@@ -368,10 +253,7 @@ elif selected == "Atualização Semanal":
 elif selected == "Relatórios":
     st.markdown("<h1 style='text-align: center; color: #008080;'>RELATÓRIOS</h1>", unsafe_allow_html=True)
 
-    def bloco_relatorio_final(titulo_bloco, texto_descricao, texto_botao, url_botao):
-        """
-        Cria um bloco de conteúdo estilizado com título, descrição e um botão clicável.
-        """
+    def bloco_relatorio(titulo_bloco, texto_descricao, texto_botao, url_botao):
         texto_descricao_html = texto_descricao.replace('\n', '<br>')
         st.markdown(f"""
             <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
@@ -384,52 +266,42 @@ elif selected == "Relatórios":
             </div>
         """, unsafe_allow_html=True)
 
-    # URL fornecida para o relatório final
     link_do_relatorio_final = "https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing"
 
-    # Chamando a função para criar o bloco do Relatório Final
-    bloco_relatorio_final(
+    bloco_relatorio(
         titulo_bloco="Relatório Final do Projeto",
-        texto_descricao="""O relatório final consolida todos os resultados, análises e conclusões do projeto BioMove.
-Acesse o documento completo para mais detalhes.""", # \n será convertido para <br>
+        texto_descricao="""O relatório final consolida todos os resultados, análises e conclusões do projeto BioMove. Acesse o documento completo para mais detalhes.""",
         texto_botao="ABRIR RELATÓRIO FINAL",
         url_botao=link_do_relatorio_final
     )
-
-    # Exemplo de como adicionar outro bloco de relatório, se necessário:
-    # link_relatorio_parcial = "SUA_URL_PARA_OUTRO_RELATORIO"
-    # bloco_relatorio_final(
-    #     titulo_bloco="Relatório Parcial Q1",
-    #     texto_descricao="Este relatório cobre as atividades e progresso do primeiro trimestre do projeto.",
-    #     texto_botao="ABRIR RELATÓRIO PARCIAL Q1",
-    #     url_botao=link_relatorio_parcial
-    # )
 
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
 elif selected == "Cronograma":
-    st.markdown("<h1 style='text-align: center; color: #008080;'>RELATÓRIOS</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: #008080;'>CRONOGRAMA</h1>", unsafe_allow_html=True)
+    
+    # Você pode usar a mesma função de bloco se o layout for parecido
+    # ou criar uma específica para o cronograma
+    def bloco_cronograma(titulo_bloco, texto_descricao, texto_botao, url_botao):
+        st.markdown(f"""
+            <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
+                <h4 style="color:white;">{titulo_bloco}</h4>
+                <p style="color:gray;">{texto_descricao}</p>
+                <div style="margin-top: 15px; margin-bottom: 5px;"> <a href="{url_botao}" target="_blank" class="my-button" style="text-decoration: none; display: inline-block;">
+                        {texto_botao}
+                    </a>
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    link_cronograma = "https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing"
 
-    # URL fornecida para o relatório final
-    link_do_relatorio_final = "https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing"
-
-    # Chamando a função para criar o bloco do Relatório Final
-    bloco_relatorio_final(
-        titulo_bloco="Relatório Final do Projeto",
-        texto_descricao="""O relatório final consolida todos os resultados, análises e conclusões do projeto BioMove.
-Acesse o documento completo para mais detalhes.""", # \n será convertido para <br>
-        texto_botao="ABRIR RELATÓRIO FINAL",
-        url_botao=link_do_relatorio_final
+    bloco_cronograma(
+        titulo_bloco="Cronograma Detalhado",
+        texto_descricao="Acesse a planilha detalhada com todas as fases, tarefas e prazos do projeto BioMove.",
+        texto_botao="ABRIR CRONOGRAMA",
+        url_botao=link_cronograma
     )
-
-    # Exemplo de como adicionar outro bloco de relatório, se necessário:
-    # link_relatorio_parcial = "SUA_URL_PARA_OUTRO_RELATORIO"
-    # bloco_relatorio_final(
-    #     titulo_bloco="Relatório Parcial Q1",
-    #     texto_descricao="Este relatório cobre as atividades e progresso do primeiro trimestre do projeto.",
-    #     texto_botao="ABRIR RELATÓRIO PARCIAL Q1",
-    #     url_botao=link_relatorio_parcial
-    # )
 
 # Rodapé
 st.markdown("""
@@ -440,14 +312,14 @@ st.markdown("""
             bottom: 0;
             width: 100%;
             background-color: #0E1117;
-            color: #888888;;
+            color: #888888;
             text-align: center;
             padding: 10px;
             font-size: 15px;
+            border-top: 1px solid #262730;
         }
     </style>
     <div class="footer">
-        <hr>
         UTFPR - Universidade Tecnológica Federal do Paraná - Engenharia Eletrônica - 2025
     </div>
 """, unsafe_allow_html=True)
