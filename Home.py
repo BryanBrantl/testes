@@ -69,6 +69,7 @@ except FileNotFoundError:
     img1, img2, img3, img4, img5, img6, img7, img = (None,)*8
 
 video1 = "video/carrinhoandando.mp4"
+video2 = "sinal_emg1.mp4"
 
 ############################################ Conteúdo de acordo com o menu selecionado ############################################
 ################################################################################################   HOME    #################################
@@ -201,6 +202,8 @@ elif selected == "BioMove" and all([img5, img6, img7]):
 elif selected == "Atualização Semanal":
 	##################### atualizacao 5 ##########################################################3
 	A0_col1, A0_col2 = st.columns(2)
+	with A0_col1:
+		st.video(video2)
 	with A0_col2:
 		st.markdown("""
 	            <div style='text-align: justify;'>
