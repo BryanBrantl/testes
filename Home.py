@@ -201,14 +201,15 @@ elif selected == "BioMove" and all([img5, img6, img7]):
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 elif selected == "Atualização Semanal":
+	 st.divider()
 	A1_col1, A1_col2 = st.columns(2)
 	with A1_col1:
 		st.markdown("""
 	            <div style='text-align: justify;'>
-	                <h2 style='color: #008080; text-align: center;'>Proposta e Escopo</h2>
-	                <p>O sistema BioMove utiliza <strong style='color: #008080;'>sensores EMG</strong> (montados a partir de amplificadores de instrumentação e filtros analógicos) para captar sinais musculares do paciente.</p>
-	                <p>Estes sinais são processados (amplificação, filtragem, retificação e análise digital) para serem transformados em comandos de controle de um carrinho autônomo.</p>
-	                <p>O projeto prioriza a qualidade do controle baseado em EMG, em vez de funcionalidades avançadas no robô, concentrando esforços na aquisição e interpretação dos sinais.</p>
+	                <h2 style='color: #008080; text-align: center;'> #4 - Atualização Semanal - 30/05/2025 </h2>
+			<ul>
+		                <li>Nesta semana, avançamos na produção da placa de circuito impresso (PCI) para o nosso projeto. Reproduzimos o modelo utilizando novamente o filtro notch para testes. No entanto, enfrentamos alguns contratempos que impactaram o andamento do cronograma. Durante a etapa de montagem e teste da placa, identificamos problemas relacionados ao roteamento do circuito e à soldagem de alguns componentes. Esses erros comprometeram o funcionamento esperado da PCI, impossibilitando a continuidade dos testes nesta fase. Estamos trabalhando na correção do layout e no aprimoramento do processo de soldagem para evitar recorrência desses problemas nas próximas versões.</li>
+			<ul>
 	            </div>
 	        """, unsafe_allow_html=True)
 	with A1_col2:
@@ -220,11 +221,13 @@ elif selected == "Atualização Semanal":
 	                <p>O projeto prioriza a qualidade do controle baseado em EMG, em vez de funcionalidades avançadas no robô, concentrando esforços na aquisição e interpretação dos sinais.</p>
 	            </div>
 	        """, unsafe_allow_html=True)
+		 st.divider()
 	#A2_col1, A2_col2
 
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
 elif selected == "Cronograma":
+	
     st.markdown("<h1 style='text-align: center; color: #008080;'>CRONOGRAMA</h1>", unsafe_allow_html=True)
     
     # Você pode usar a mesma função de bloco se o layout for parecido
