@@ -201,15 +201,90 @@ elif selected == "BioMove" and all([img5, img6, img7]):
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 elif selected == "Atualização Semanal":
-    st.markdown(
-    """
-    <div style="background-color:darkred; padding:10px; border-radius:10px;">
-        <p style="color:white; font-weight:bold;">Este é um bloco customizado com HTML!</p>
-    </div>
-    """,
-    unsafe_allow_html=True
-    )
+    st.markdown("<h1 style='text-align: center; color: #008080;'>ATUALIZAÇÕES SEMANAIS</h1>", unsafe_allow_html=True)
+    st.divider()
 
+    # --- FUNÇÕES AUXILIARES PARA OS ESTILOS DOS BLOCOS ---
+
+    # Função para um bloco que contém APENAS texto
+    def bloco_completo(titulo, texto):
+        st.markdown(f"""
+            <div style="background-color:#1e1e1e; padding: 20px; margin-bottom: 20px; border-radius: 10px; border-left: 5px solid teal;">
+                <h4 style="color:white;">{titulo}</h4>
+                <p style="color:gray;">{texto}</p>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # Função para ABRIR um bloco que terá mais conteúdo (imagens, vídeos, etc.)
+    def bloco_texto_inicial(titulo, texto):
+        st.markdown(f"""
+            <div style="background-color:#1e1e1e; padding: 20px; padding-bottom: 15px; border-radius: 10px 10px 0 0; border-left: 5px solid teal; margin-bottom: -2px;">
+                <h4 style="color:white;">{titulo}</h4>
+                <p style="color:gray;">{texto}</p>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # Função para FECHAR um bloco que teve conteúdo adicionado
+    def base_bloco():
+        st.markdown(f"""
+            <div style="background-color:#1e1e1e; padding-top: 10px; border-radius: 0 0 10px 10px; border-left: 5px solid teal; margin-bottom: 20px;">
+            </div>
+        """, unsafe_allow_html=True)
+    # ---------------------------------------------------
+
+    # --- Semana 5 (Apenas Texto) ---
+    bloco_completo("Semana 5 - 06/06/2025", """
+    - <strong>[PLACEHOLDER]</strong> Nesta semana, o foco foi na correção da PCI e na integração do software de controle.<br>
+    - Realizamos novos testes de soldagem e estamos validando o layout do circuito.<br>
+    - Próximos passos: Finalizar a PCI funcional e iniciar a integração com o sensor EMG.
+    """)
+
+    # --- Semana 4 (Apenas Texto) ---
+    bloco_completo("Semana 4 - 30/05/2025", """
+    - Avançamos na produção da placa de circuito impresso (PCI), mas enfrentamos contratempos no roteamento e soldagem que comprometeram o funcionamento da primeira versão.<br>
+    - Estamos corrigindo o layout da PCI e aprimorando o processo de soldagem.<br><br>
+    - Em paralelo, o software para controlar o carrinho via joystick no celular (Bluetooth) foi desenvolvido e finalizado com sucesso.
+    """)
+
+    # --- Semana 3 (Texto + Imagem) ---
+    bloco_texto_inicial("Semana 3 - 23/05/2025", """
+    - Finalizada a montagem do chassi e estrutura do carrinho.<br>
+    - Adicionados novos filtros ao esquemático do EMG para melhorar a qualidade do sinal.<br>
+    - O circuito EMG foi montado em placa perfurada, oferecendo mais estabilidade que a protoboard.<br>
+    - O filtro Notch não apresentou o resultado esperado, levando à hipótese de usar filtros digitais no futuro.<br>
+    - Circuito montado em placa perfurada:
+    """)
+    vazia1, col_img1, vazia2 = st.columns([1, 1.5, 1])
+    with col_img1:
+        st.image("caminho/para/imagem_placa_perfurada.png", caption="Circuito EMG em placa perfurada")
+    base_bloco()
+
+    # --- Semana 2 (Texto + Imagem) ---
+    bloco_texto_inicial("Semana 2 - 27/05/2025", """
+    - Definido a utilização de um Kit chassi para a construção do carrinho. <br>
+    - Montagem do sensor EMG em protoboard baseado no esquemático da semana anterior. <br>
+    - Validamos o sinal no osciloscópio, detectado presença de ruído da rede. <br>
+    - Definido a necessidade de implementar mais filtros no circuito para reduzir o ruído. <br>
+    - Circuito montado em protoboard:
+    """)
+    vazia3, col_img2, vazia4 = st.columns([1, 1.5, 1])
+    with col_img2:
+        st.image("caminho/para/imagem_protoboard.png", caption="Protótipo em protoboard")
+    base_bloco()
+    
+    # --- Semana 1 (Texto + Imagem) ---
+    bloco_texto_inicial("Semana 1 - 20/05/2025", """
+    - Realizados testes nos principais componentes do carrinho (motor DC, ESP32 e ponte H), sem identificação de defeitos.<br>
+    - Conduzido estudo sobre softwares de modelagem 3D. Optou-se pela utilização do Eagle para o desenvolvimento do carrinho e do sistema EMG.<br>
+    - Modelo do site finalizado.<br>
+    - Proposta e cronograma revisados e atualizados conforme a devolutiva, já disponíveis no site.<br>
+    - Decisões sobre o projeto: Definido que será utilizado baterias 18650 (4.2v) para alimentação dos sistemas.<br>
+    - Construção do esquemático EMG:
+    """)
+    vazia5, col_img3, vazia6 = st.columns([1, 1.5, 1])
+    with col_img3:
+        st.image("caminho/para/imagem_esquematico.png", caption="Esquema do circuito EMG")
+    base_bloco()
 
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
