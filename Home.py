@@ -211,7 +211,9 @@ elif selected == "Atualização Semanal":
 	##################### atualizacao 5 ##########################################################3
 	A0_col1, A0_col2 = st.columns(2)
 	with A0_col1:
-		st.video(video2)
+		vazia01, col_video01, vazia02 = A0_col1.columns([1, 2, 1])	
+		with col_video01
+			st.video(video2)
 	with A0_col2:
 		st.markdown("""
 	            <div style='text-align: justify;'>
