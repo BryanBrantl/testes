@@ -205,47 +205,63 @@ elif selected == "Atualização Semanal":
     st.markdown("<h1 style='text-align: center; color: #008080;'>ATUALIZAÇÕES SEMANAIS</h1>", unsafe_allow_html=True)
     st.divider()
 
-    # --- FUNÇÕES AUXILIARES PARA O ESTILO HÍBRIDO ---
-    def bloco_texto(titulo, texto):
+    # --- FUNÇÃO AUXILIAR PARA CONVERTER IMAGENS (Necessária para esta abordagem) ---
+    # (Esta função já deve estar no seu código, mas garanta que ela esteja presente)
+    import base64
+    from pathlib import Path
+    def img_to_base64(img_path):
+        try:
+            img_bytes = Path(img_path).read_bytes()
+            encoded = base64.b64encode(img_bytes).decode()
+            return f"data:image/png;base64,{encoded}"
+        except FileNotFoundError:
+            return ""
+
+    # --- NOVA FUNÇÃO ESPECIALIZADA PARA CRIAR O BLOCO COM DUAS IMAGENS ---
+    def bloco_com_duas_imagens(titulo, texto, img1_info, img2_info):
+        """
+        Cria um bloco de atualização completo com texto e duas imagens lado a lado.
+        img1_info e img2_info devem ser tuplas no formato: (caminho_da_imagem, legenda)
+        """
+        # Extrai as informações das imagens
+        img1_path, img1_caption = img1_info
+        img2_path, img2_caption = img2_info
+
+        # Converte as imagens para Base64
+        img1_base64 = img_to_base64(img1_path)
+        img2_base64 = img_to_base64(img2_path)
+        
+        # Monta o HTML completo do bloco
         st.markdown(f"""
-            <div style="background-color:#1e1e1e; padding:20px; border-radius:10px 10px 0 0; border-left: 5px solid teal; margin-bottom: -2px;">
+            <div style="background-color:#1e1e1e; padding: 20px; margin-bottom: 20px; border-radius: 10px; border-left: 5px solid teal;">
+                
                 <h4 style="color:white;">{titulo}</h4>
                 <p style="color:gray;">{texto}</p>
+                
+                <div style="display: flex; justify-content: space-around; align-items: start; margin-top: 20px;">
+                    
+                    <div style="width: 48%; text-align: center;">
+                        <img src="{img1_base64}" style="width: 100%; border-radius: 5px;">
+                        <p style="color: #888; font-size: 14px; margin-top: 5px;">{img1_caption}</p>
+                    </div>
+                    
+                    <div style="width: 48%; text-align: center;">
+                        <img src="{img2_base64}" style="width: 100%; border-radius: 5px;">
+                        <p style="color: #888; font-size: 14px; margin-top: 5px;">{img2_caption}</p>
+                    </div>
+
+                </div>
             </div>
         """, unsafe_allow_html=True)
 
-    def base_bloco():
-        st.markdown(f"""
-            <div style="background-color:#1e1e1e; padding:10px; border-radius:0 0 10px 10px; border-left: 5px solid teal; margin-bottom: 20px;">
-            </div>
-        """, unsafe_allow_html=True)
-    # ---------------------------------------------------
 
-    # --- EXEMPLO 1: TEXTO, IMAGEM, TEXTO, IMAGEM (EM SEQUÊNCIA) ---
-    bloco_texto(
-        "Semana 5 - Gamificação e Interface",
-        "O conceito de gamificação é central no BioMove. A interface visual precisa ser motivadora, mostrando o progresso do paciente de forma clara e recompensadora. Abaixo, um exemplo de como o progresso pode ser visualizado."
+    # --- EXEMPLO DE USO DA NOVA FUNÇÃO ---
+    bloco_com_duas_imagens(
+        titulo="Semana 4 - Hardware e Software",
+        texto="Nesta semana, finalizamos a montagem do carrinho e também a primeira versão do circuito EMG em placa perfurada. O software de controle via Bluetooth também foi concluído.",
+        img1_info=("image/gamificacao.jpg", "Carrinho finalizado"), # Substitua pelo caminho da imagem do carrinho
+        img2_info=("image/gamificacao.jpg", "EMG em placa perfurada")   # Substitua pelo caminho da imagem da placa
     )
-    # Usando a imagem que você pediu como exemplo
-    st.image("image/gamificacao.jpg", caption="Exemplo de tela de progresso e recompensas.")
-    st.markdown("Além do progresso, a interface também guiará o paciente nos exercícios, indicando os músculos a serem ativados e o feedback em tempo real do sinal EMG.")
-    base_bloco()
-    
-    st.divider()
-
-    # --- EXEMPLO 2: TEXTO E DUAS IMAGENS (LADO A LADO) ---
-    bloco_texto(
-        "Semana 4 - Hardware e Software",
-        "Nesta semana, finalizamos a montagem do carrinho e também a primeira versão do circuito EMG em placa perfurada. O software de controle via Bluetooth também foi concluído."
-    )
-    col1, col2 = st.columns(2)
-    with col1:
-        # Substitua pelo caminho real da sua imagem
-        st.image("image/gamificacao.jpg", caption="Carrinho finalizado")
-    with col2:
-        # Substitua pelo caminho real da sua imagem
-        st.image("image/gamificacao.jpg", caption="EMG em placa perfurada")
-    base_bloco()
 
 ############################################################################################
 ###################################   RELATORIOS    ########################################
