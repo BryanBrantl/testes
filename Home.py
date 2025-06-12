@@ -61,8 +61,8 @@ try:
     img6 = Image.open("image/Musculo_0.png")
     img7 = Image.open("image/Musculo_1.png")
     img8 = Image.open("image/pcb1.png")
-    img9 = Image.open("pcb2.jpg")	
-    img10 = Image.open("pcb3.jpg")	
+    img9 = Image.open("image/pcb2.jpg")	
+    img10 = Image.open("image/pcb3.jpg")	
 except FileNotFoundError:
     st.error("Uma ou mais imagens não foram encontradas. Verifique os caminhos dos arquivos.")
     # Atribui None para evitar mais erros
