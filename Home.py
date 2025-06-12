@@ -87,7 +87,7 @@ if selected == "Home" and all([img1, img2, img3, img4]):
                 <strong><span style='color: #008080;'> Bryan Alexandre de Lima Brantl</span></strong><br><br>
                  RA: 2414139<br>
                  E-mail: brantl@alunos.utfpr.edu.br<br>
-                 Contato: (41) 99278-39299
+                 Contato: (41) 99278-392991
             </div>
             """, unsafe_allow_html=True)
     
