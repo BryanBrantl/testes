@@ -60,6 +60,7 @@ try:
     img5 = Image.open("image/gamificacao.jpg")
     img6 = Image.open("image/Musculo_0.png")
     img7 = Image.open("image/Musculo_1.png")
+    img8 = Image.open("image/pcb1.png")	
 except FileNotFoundError:
     st.error("Uma ou mais imagens não foram encontradas. Verifique os caminhos dos arquivos.")
     # Atribui None para evitar mais erros
@@ -206,14 +207,7 @@ elif selected == "Atualização Semanal":
 	            </div>
 	        """, unsafe_allow_html=True)
 	with A1_col2:
-		st.markdown("""
-	            <div style='text-align: justify;'>
-	                <h2 style='color: #008080; text-align: center;'>Proposta e Escopo</h2>
-	                <p>O sistema BioMove utiliza <strong style='color: #008080;'>sensores EMG</strong> (montados a partir de amplificadores de instrumentação e filtros analógicos) para captar sinais musculares do paciente.</p>
-	                <p>Estes sinais são processados (amplificação, filtragem, retificação e análise digital) para serem transformados em comandos de controle de um carrinho autônomo.</p>
-	                <p>O projeto prioriza a qualidade do controle baseado em EMG, em vez de funcionalidades avançadas no robô, concentrando esforços na aquisição e interpretação dos sinais.</p>
-	            </div>
-	        """, unsafe_allow_html=True)
+		st.image(img8)
 	#A2_col1, A2_col2
 
 ############################################################################################
