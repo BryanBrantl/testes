@@ -76,8 +76,8 @@ except FileNotFoundError:
     # Atribui None para evitar mais erros
     img1, img2, img3, img4, img5, img6, img7, img = (None,)*8
 
-video1 = "video/carrinhoandando.mp4"
-video2 = "video/sinal_emg1.mp4"
+video1 = "https://youtube.com/shorts/xoU3nnxIE90"
+video2 = "https://youtube.com/shorts/xoU3nnxIE90"
 
 ############################################ Conteúdo de acordo com o menu selecionado ############################################
 ################################################################################################   HOME    #################################
@@ -211,14 +211,7 @@ elif selected == "Atualização Semanal":
 	##################### atualizacao 5 ##########################################################3
 	A0_col1, A0_col2 = st.columns(2)
 	with A0_col1:
-		st.markdown("""
-	            <div style='text-align: justify;'>
-	                <h2 style='color: #008080; text-align: center;'> #4 - Atualização Semanal - 30/05/2025 </h2>
-			<ul>
-		                <li></li>
-			<ul>
-	            </div>
-	        """, unsafe_allow_html=True)
+		st.video(video1)
 	with A0_col2:
 		st.markdown("""
 	            <div style='text-align: justify;'>
