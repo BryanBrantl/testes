@@ -213,7 +213,7 @@ elif selected == "Atualização Semanal":
 	with A0_col1:
 		vazia01, col_video01, vazia02 = A0_col1.columns([1, 2, 1])	
 		with col_video01
-			st.video(video2)
+			st.video(https://www.youtube.com/shorts/xoU3nnxIE90)
 	with A0_col2:
 		st.markdown("""
 	            <div style='text-align: justify;'>
