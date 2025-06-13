@@ -48,7 +48,7 @@ a.stButton:hover {{
     text-decoration: none;
 }}
 a.stButton:active {{
-    background-color: #004c4c; /* Cor ao clicar */
+    background-color: #008080; /* Cor ao clicar */
     color: white !important;
     text-decoration: none;
 }}
