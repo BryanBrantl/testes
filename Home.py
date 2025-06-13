@@ -7,37 +7,55 @@ from pathlib import Path
 st.set_page_config(page_title="BIOMOVE", layout="wide")
 
 # CSS para os botões com hover (borda e texto mudam, fundo continua)
-st.markdown("""
-    <style>
-        .my-button {
-            background-color: #1c1f26;
-            color: white;
-            border: 2px solid white;
-            border-radius: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            text-align: center;
-            transition: 0.3s;
-        }
+#st.markdown("""
+#    <style>
+#        .my-button {
+#            background-color: #1c1f26;
+#            color: white;
+#            border: 2px solid white;
+#            border-radius: 10px;
+#            padding: 10px 20px;
+#            font-size: 16px;
+#            font-weight: bold;
+#            cursor: pointer;
+#            text-align: center;
+#            transition: 0.3s;
+#        }
+#
+#        .my-button:hover {
+#            color: #00CED1;
+#            border-color: #00CED1;
+#        }
+#    </style>
+#""", unsafe_allow_html=True)
 
-        .my-button:hover {
-            color: #00CED1;
-            border-color: #00CED1;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
+st.markdown(f"""
 <style>
-/* Alvo: o contêiner principal do vídeo do Streamlit */
-div[data-testid="stVideo"] {
-    width: 10%; /* Defina a largura desejada (ex: 60% ou 500px) */
-    margin: auto;      /* Centraliza o vídeo na página */
-}
+a.stButton {{
+    display: inline-block;
+    padding: 0.4em 0.6em; /* Ajuste o padding para o tamanho desejado */
+    background-color: {cor_botao};
+    color: white !important; /* '!important' para garantir a sobreposição */
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 14px;
+}}
+a.stButton:hover {{
+    background-color: #006666; /* Cor mais escura ao passar o mouse */
+    color: white !important;
+    text-decoration: none;
+}}
+a.stButton:active {{
+    background-color: #004c4c; /* Cor ao clicar */
+    color: white !important;
+    text-decoration: none;
+}}
 </style>
 """, unsafe_allow_html=True)
+
+cor_botao = "#008080"
 
 ########################################################### Título principal ################################################################
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
@@ -211,7 +229,7 @@ elif selected == "Atualização Semanal":
 	##################### atualizacao 5 ##########################################################3
 	A0_col1, A0_col2 = st.columns(2)
 	with A0_col1:
-		st.video(video1)
+		st.link_button("LINK DO CARRINHO", video1)
 	with A0_col2:
 		st.markdown("""
 	            <div style='text-align: justify;'>
