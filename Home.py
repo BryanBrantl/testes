@@ -211,7 +211,14 @@ elif selected == "Atualização Semanal":
 	##################### atualizacao 5 ##########################################################3
 	A0_col1, A0_col2 = st.columns(2)
 	with A0_col1:
-		st.video(https://www.youtube.com/watch?v=Crdj-bMUqd8)
+		st.markdown("""
+	            <div style='text-align: justify;'>
+	                <h2 style='color: #008080; text-align: center;'> #4 - Atualização Semanal - 30/05/2025 </h2>
+			<ul>
+		                <li></li>
+			<ul>
+	            </div>
+	        """, unsafe_allow_html=True)
 	with A0_col2:
 		st.markdown("""
 	            <div style='text-align: justify;'>
