@@ -28,7 +28,7 @@ st.set_page_config(page_title="BIOMOVE", layout="wide")
 #        }
 #    </style>
 #""", unsafe_allow_html=True)
-
+cor_botao = "#008080"
 st.markdown(f"""
 <style>
 a.stButton {{
@@ -55,7 +55,7 @@ a.stButton:active {{
 </style>
 """, unsafe_allow_html=True)
 
-cor_botao = "#008080"
+
 
 ########################################################### Título principal ################################################################
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
