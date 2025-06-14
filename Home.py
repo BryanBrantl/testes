@@ -94,7 +94,7 @@ except FileNotFoundError:
     # Atribui None para evitar mais erros
     img1, img2, img3, img4, img5, img6, img7, img = (None,)*8
 
-video1 = "https://www.youtube.com/shorts/Fm3iH1PPgMw"
+video1 = "https://www.youtube.com/watch?v=jdvn68mhcQE"
 video2 = "https://youtube.com/shorts/xoU3nnxIE90"
 
 ############################################ Conteúdo de acordo com o menu selecionado ############################################
