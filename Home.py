@@ -88,7 +88,8 @@ try:
     img7 = Image.open("image/Musculo_1.png")
     img8 = Image.open("image/pcb1.png")
     img9 = Image.open("image/pcb2.jpg")	
-    img10 = Image.open("image/pcb3.jpg")	
+    img10 = Image.open("image/pcb3.jpg")
+    img11 = Image.open("image/sinal_emg1.jpg")
 except FileNotFoundError:
     st.error("Uma ou mais imagens não foram encontradas. Verifique os caminhos dos arquivos.")
     # Atribui None para evitar mais erros
@@ -229,7 +230,7 @@ elif selected == "Atualização Semanal":
 	##################### atualizacao 5 ##########################################################3
 	A0_col1, A0_col2 = st.columns(2)
 	with A0_col1:
-		st.image(img9)
+		st.image(img11, width = 300)
 	with A0_col2:
 		st.markdown("""
 	            <div style='text-align: justify;'>
