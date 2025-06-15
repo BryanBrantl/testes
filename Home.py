@@ -230,53 +230,14 @@ elif selected == "BioMove" and all([img5, img6, img7]):
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 
 elif selected == "Atualização Semanal":
-    st.markdown("""
+	st.markdown("""
         <div style='text-align: justify;'>
             <h2 style='color: #008080; text-align: center;'> #5 - Entrega e Validação do Hardware - 06/06</h2>
         </div>
     """, unsafe_allow_html=True)
+	
+	st.divider()
 
-    # --- 1. Demonstração do Funcionamento do Circuito ---
-    st.subheader("1. Demonstração do Funcionamento do Circuito")
-    A0_col1, A0_col2, A0_col3 = st.columns([1, 0.05, 3])
-    with A0_col1:
-        st.image(img11, caption="Trecho do vídeo - Circuito EMG", use_column_width=True)
-        st.link_button("▶", video1, use_container_width=True)
-    with A0_col3:
-        st.markdown("""
-            <div style='text-align: justify;'>
-                A equipe realizou uma demonstração do funcionamento do circuito EMG. O vídeo do funcionamento foi postado no YouTube. Conforme foi comentado nas outras semanas, a equipe decidiu tratar a interferência do ruído via software, através de um filtro digital, o qual será implementado nas próximas semanas.
-            </div>
-        """, unsafe_allow_html=True)
-
-    # --- 2. Produção da Nova Versão da Placa de Circuito Impresso (PCI) ---
-    st.subheader("2. Produção da Nova Versão da Placa de Circuito Impresso (PCI)")
-    A0_col3_2, A0_col4, A0_col5 = st.columns([1, 2, 1])
-    with A0_col3_2:
-        st.image(img9, caption="PCI Soldada com Componentes", use_column_width=True)
-    with A0_col4:
-        st.markdown("""
-            <div style='text-align: justify;'>
-                Na tentativa de reduzir significativamente o ruído, confeccionamos uma **segunda e nova versão da Placa de Circuito Impresso**. Esta versão apresenta um **roteamento otimizado e diferente**, com a implementação de um **GND em ilha**, visando aprimorar a performance e reduzir interferências.
-                <br><br>
-                As imagens ao lado ilustram este progresso: à esquerda, temos a PCI já soldada com seus componentes, pronta para uso; e à direita, a visualização do layout da PCB no KiCad, detalhando o novo roteamento.
-                <br><br>
-                Esta nova versão da placa será submetida a **testes rigorosos na próxima semana** para validar seu funcionamento e a eficácia das melhorias implementadas.
-            </div>
-        """, unsafe_allow_html=True)
-    with A0_col5:
-        st.image(img10, caption="Layout da PCI no KiCad", use_column_width=True)
-
-    # --- 3. Detalhes dos Diagramas de Hardware ---
-    st.subheader("3. Detalhes dos Diagramas de Hardware")
-    A0_col6, A0_col7, A0_col8 = st.columns(3)
-    with A0_col6:
-        st.image(img12, caption="Diagrama de Hardware EMG", use_column_width=True)
-    with A0_col7:
-        st.image(img13, caption="Diagrama de Hardware do Carrinho", use_column_width=True)
-    with A0_col8:
-        st.image(img14, caption="Esquemático Eletrônico Detalhado", use_column_width=True)
-    st.divider()
    	
 ########################### atualizacao 4 ##########################################################3
 	
