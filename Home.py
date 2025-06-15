@@ -231,29 +231,29 @@ elif selected == "BioMove" and all([img5, img6, img7]):
 
 elif selected == "Atualização Semanal":
     ##################### atualizacao 5 ##########################################################3
-	    st.markdown("""
-	        <div style='text-align: justify;'>
+	st.markdown("""
+ 		<div style='text-align: justify;'>
 	            <h2 style='color: #008080; text-align: center;'> #5 - Entrega e Validação do Hardware - 06/06</h2>
 	        </div>
-	    """, unsafe_allow_html=True)
+	""", unsafe_allow_html=True)
 	
 	    # --- 1. Demonstração do Funcionamento do Circuito ---
-	    st.subheader("1. Demonstração do Funcionamento do Circuito")
+	st.subheader("1. Demonstração do Funcionamento do Circuito")
 	
 	    # Mantido o A0_col1, A0_col2, A0_col3 conforme sua estrutura original.
 	    # A0_col2 será uma pequena separação invisível, já que não é usada.
-	    A0_col1, A0_col2, A0_col3 = st.columns([1, 0.05, 3]) # Ajuste de larguras
+	A0_col1, A0_col2, A0_col3 = st.columns([1, 0.05, 3]) # Ajuste de larguras
 	
-	    with A0_col1:
+	with A0_col1:
 	        # Removido 'width = 300' e adicionado 'use_column_width=True' para melhor responsividade
-	        st.image(img11, caption="Trecho do vídeo - Circuito EMG", use_column_width=True)
+		st.image(img11, caption="Trecho do vídeo - Circuito EMG", use_column_width=True)
 	        # Label do botão mais descritiva
 	        st.link_button("▶ Assistir Vídeo da Demonstração", video1, use_container_width=True)
 	
 	    # with A0_col2: # Coluna A0_col2 existe mas não tem conteúdo, como no seu original.
 	    #    st.write("") # Pode descomentar para adicionar um pequeno espaçador visível se necessário.
 	
-	    with A0_col3:
+	with A0_col3:
 	        st.markdown("""
 	        <div style='text-align: justify;'>
 	            A equipe realizou uma demonstração do funcionamento do circuito EMG. O vídeo do funcionamento foi postado no YouTube. Conforme foi comentado nas outras semanas, a equipe decidiu tratar a interferência do ruído via software, através de um filtro digital, o qual será implementado nas próximas semanas.
@@ -262,16 +262,16 @@ elif selected == "Atualização Semanal":
 	
 	
 	    # --- 2. Produção da Nova Versão da Placa de Circuito Impresso (PCI) ---
-	    st.subheader("2. Produção da Nova Versão da Placa de Circuito Impresso (PCI)")
+	 st.subheader("2. Produção da Nova Versão da Placa de Circuito Impresso (PCI)")
 	
 	    # Mantido A0_col3_2, A0_col4, A0_col5.
 	    # Ajustado as larguras para melhor visualização (texto central mais largo).
-	    A0_col3_2, A0_col4, A0_col5 = st.columns([1, 2, 1]) # Proporções ajustadas
+	A0_col3_2, A0_col4, A0_col5 = st.columns([1, 2, 1]) # Proporções ajustadas
 	
-	    with A0_col3_2:
+	with A0_col3_2:
 	        st.image(img9, caption="PCI Soldada com Componentes", use_column_width=True)
 	
-	    with A0_col4:
+	with A0_col4:
 	        st.markdown("""
 	        <div style='text-align: justify;'>
 	            Na tentativa de reduzir significativamente o ruído, confeccionamos uma **segunda e nova versão da Placa de Circuito Impresso**. Esta versão apresenta um **roteamento otimizado e diferente**, com a implementação de um **GND em ilha**, visando aprimorar a performance e reduzir interferências.
@@ -282,27 +282,27 @@ elif selected == "Atualização Semanal":
 	        </div>
 	        """, unsafe_allow_html=True)
 	
-	    with A0_col5:
+	with A0_col5:
 	        st.image(img10, caption="Layout da PCI no KiCad", use_column_width=True)
 	
 	
 	    # --- 3. Detalhes dos Diagramas de Hardware ---
-	    st.subheader("3. Detalhes dos Diagramas de Hardware")
+	st.subheader("3. Detalhes dos Diagramas de Hardware")
 	
 	    # Mantido A0_col6, A0_col7, A0_col8 com colunas de largura igual.
-	    A0_col6, A0_col7, A0_col8 = st.columns(3)
+	A0_col6, A0_col7, A0_col8 = st.columns(3)
 	
-	    with A0_col6:
+	 with A0_col6:
 	        st.image(img12, caption="Diagrama de Hardware EMG", use_column_width=True)
 	
-	    with A0_col7:
+	 with A0_col7:
 	        st.image(img13, caption="Diagrama de Hardware do Carrinho", use_column_width=True)
 	
-	    with A0_col8:
+	with A0_col8:
 	        st.image(img14, caption="Esquemático Eletrônico Detalhado", use_column_width=True)
-
-	##################### atualizacao 4 ##########################################################3
 	st.divider()
+########################### atualizacao 4 ##########################################################3
+	
 	A1_col1, A1_col2 = st.columns(2)
 	with A1_col1:
 		st.markdown("""
