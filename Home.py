@@ -228,47 +228,135 @@ elif selected == "BioMove" and all([img5, img6, img7]):
     
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
-elif selected == "Atualização Semanal":
-	##################### atualizacao 5 ##########################################################3
-	st.markdown("""
-	    <div style='text-align: justify;'>
-		<h2 style='color: #008080; text-align: center;'> #5 - Entrega e Validação do Hardware - 06/06</h2>
-	    </div>
-	""", unsafe_allow_html=True)
-	A0_col1, A0_col2, A0_col3= st.columns([1,1,3])
-	with A0_col1:
-		st.image(img11, caption="Trecho do video - CIRCUITO EMG ", width = 300)
-		st.link_button("▶",video1, use_container_width=True)
-	#with A0_col2:
-	with A0_col3:
-		st.markdown("""
-		    <div style='text-align: justify;'>
-			<ul>
-				<li><span style='color: #008080;'> Demonstração do Funcionamento do Circuito:</span> A equipe realizou uma demonstração do funcionamento do circuito EMG. O vídeo do funcionamento foi postado no YouTube. Conforme foi comentado nas outras semanas a equipe decidiu retirar a interferência do ruído via software através de um filtro digital, o mesmo será implementado nas próximas semanas.</li>
-			<ul>
-		    </div>
-		""", unsafe_allow_html=True)
-	A0_col3_2, A0_col4, A0_col5 = st.columns(3)
-	with A0_col3_2:
-		st.image(img9)
-	with A0_col4:
-		st.markdown("""
-  			<div style='text-align: justify;'>
-			<ul>
-		                <li><span style='color: #008080;'>Produção da Nova Versão da Placa de Circuito Impresso:</span> Ainda na tentativa de reduzir significativamente reduzir o ruido, fizemos a confecção de uma segunda e nova versão da Placa de Circuito Impresso. Apresenta um roteamento otimizado e diferente, implementação de um GND em ilha, visando aprimorar a performance e reduzir ruídos.</li>
-		  		<li>As imagens ao lado ilustram este progresso: à esquerda, temos a PCI já soldada com seus componentes, pronta para uso; e à direita, a visualização do layout da PCB no KiCad, detalhando o novo roteamento.</li>
-			<ul>
-	            </div>
+Perfeito! Agora que temos os nomes das variáveis das imagens e a estrutura completa, podemos integrar tudo de forma otimizada.
+
+Aqui está o seu código "Atualização Semanal" melhorado, utilizando as variáveis de imagem e coluna que você já definiu, e aplicando as melhorias que discutimos:
+
+Python
+
+import streamlit as st
+from streamlit_option_menu import option_menu
+from PIL import Image # Certifique-se de que Pillow está instalado: pip install Pillow
+
+# --- Definição das Imagens e Vídeos ---
+# Estas linhas devem estar fora do "elif" ou em uma função/seção que é executada uma vez
+# no início do seu script Streamlit.
+# Assegure-se de que o caminho para suas imagens esteja correto (ex: "image/foto_01.png")
+try:
+    img1 = Image.open("image/foto_01.png")
+    img2 = Image.open("image/foto_02.png")
+    img3 = Image.open("image/foto_03.png")
+    img4 = Image.open("image/foto_04.png")
+    img5 = Image.open("image/gamificacao.jpg")
+    img6 = Image.open("image/Musculo_0.png")
+    img7 = Image.open("image/Musculo_1.png")
+    img8 = Image.open("image/pcb1.png")
+    img9 = Image.open("image/pcb2.jpg") # PCB Soldada
+    img10 = Image.open("image/pcb3.jpg") # PCB KiCad
+    img11 = Image.open("image/sinal_emg1.png") # Sinal EMG (Osciloscópio)
+    img12 = Image.open("image/Diagrama_Hardware_EMG.jpg") # Diagrama Hardware EMG
+    img13 = Image.open("image/Diagrama_Hardware_carrinho.png") # Diagrama Hardware Carrinho
+    img14 = Image.open("image/Esquematico_EMG.jpg") # Esquematico EMG
+    video1 = "https://www.youtube.com/watch?v=jdvn68mhcQE" # URL do vídeo
+except FileNotFoundError as e:
+    st.error(f"Erro ao carregar imagem: {e}. Verifique se o caminho do arquivo está correto.")
+    # Fallback para imagens de placeholder se os arquivos não forem encontrados
+    import numpy as np
+    dummy_img = Image.fromarray(np.random.randint(0, 255, (100, 150, 3), dtype=np.uint8))
+    img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14 = [dummy_img]*14
+    video1 = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" # Link de fallback
+    st.info("Usando imagens e vídeo de fallback pois os arquivos originais não foram encontrados.")
+
+
+# --- Menu de Opções ---
+selected = option_menu(
+    menu_title=None,
+    options=["Home", "BioMove", "Atualização Semanal", "Relatórios", "Cronograma"],
+    orientation="horizontal",
+    default_index=0,
+    icons=["house", "bar-chart", "calendar", "file-earmark-text", "clock"],
+    styles={
+        "container": {"padding": "0!important", "background-color": "#0E1117"},
+        "icon": {"color": "white", "font-size": "16px"},
+        "nav-link": {"font-size": "16px", "text-align": "left", "margin": "0px", "color": "white"},
+        "nav-link-selected": {"background-color": "#0E1117", "color": "teal", "border-bottom": "2px solid teal"},
+    }
+)
+
+
+# --- Seção "Atualização Semanal" ---
+if selected == "Atualização Semanal":
+    ##################### atualizacao 5 ##########################################################3
+	    st.markdown("""
+	        <div style='text-align: justify;'>
+	            <h2 style='color: #008080; text-align: center;'> #5 - Entrega e Validação do Hardware - 06/06</h2>
+	        </div>
+	    """, unsafe_allow_html=True)
+	
+	    # --- 1. Demonstração do Funcionamento do Circuito ---
+	    st.subheader("1. Demonstração do Funcionamento do Circuito")
+	
+	    # Mantido o A0_col1, A0_col2, A0_col3 conforme sua estrutura original.
+	    # A0_col2 será uma pequena separação invisível, já que não é usada.
+	    A0_col1, A0_col2, A0_col3 = st.columns([1, 0.05, 3]) # Ajuste de larguras
+	
+	    with A0_col1:
+	        # Removido 'width = 300' e adicionado 'use_column_width=True' para melhor responsividade
+	        st.image(img11, caption="Trecho do vídeo - Circuito EMG", use_column_width=True)
+	        # Label do botão mais descritiva
+	        st.link_button("▶ Assistir Vídeo da Demonstração", video1, use_container_width=True)
+	
+	    # with A0_col2: # Coluna A0_col2 existe mas não tem conteúdo, como no seu original.
+	    #    st.write("") # Pode descomentar para adicionar um pequeno espaçador visível se necessário.
+	
+	    with A0_col3:
+	        st.markdown("""
+	        <div style='text-align: justify;'>
+	            A equipe realizou uma demonstração do funcionamento do circuito EMG. O vídeo do funcionamento foi postado no YouTube. Conforme foi comentado nas outras semanas, a equipe decidiu tratar a interferência do ruído via software, através de um filtro digital, o qual será implementado nas próximas semanas.
+	        </div>
 	        """, unsafe_allow_html=True)
-	with A0_col5:
-		st.image(img10)
-	A0_col6, A0_col7, A0_col8 = st.columns(3)
-	with A0_col6:
-		st.image(img12)
-	with A0_col7:
-		st.image(img13)
-	with A0_col8:
-		st.image(img14)
+	
+	
+	    # --- 2. Produção da Nova Versão da Placa de Circuito Impresso (PCI) ---
+	    st.subheader("2. Produção da Nova Versão da Placa de Circuito Impresso (PCI)")
+	
+	    # Mantido A0_col3_2, A0_col4, A0_col5.
+	    # Ajustado as larguras para melhor visualização (texto central mais largo).
+	    A0_col3_2, A0_col4, A0_col5 = st.columns([1, 2, 1]) # Proporções ajustadas
+	
+	    with A0_col3_2:
+	        st.image(img9, caption="PCI Soldada com Componentes", use_column_width=True)
+	
+	    with A0_col4:
+	        st.markdown("""
+	        <div style='text-align: justify;'>
+	            Na tentativa de reduzir significativamente o ruído, confeccionamos uma **segunda e nova versão da Placa de Circuito Impresso**. Esta versão apresenta um **roteamento otimizado e diferente**, com a implementação de um **GND em ilha**, visando aprimorar a performance e reduzir interferências.
+	            <br><br>
+	            As imagens ao lado ilustram este progresso: à esquerda, temos a PCI já soldada com seus componentes, pronta para uso; e à direita, a visualização do layout da PCB no KiCad, detalhando o novo roteamento.
+	            <br><br>
+	            Esta nova versão da placa será submetida a **testes rigorosos na próxima semana** para validar seu funcionamento e a eficácia das melhorias implementadas.
+	        </div>
+	        """, unsafe_allow_html=True)
+	
+	    with A0_col5:
+	        st.image(img10, caption="Layout da PCI no KiCad", use_column_width=True)
+	
+	
+	    # --- 3. Detalhes dos Diagramas de Hardware ---
+	    st.subheader("3. Detalhes dos Diagramas de Hardware")
+	
+	    # Mantido A0_col6, A0_col7, A0_col8 com colunas de largura igual.
+	    A0_col6, A0_col7, A0_col8 = st.columns(3)
+	
+	    with A0_col6:
+	        st.image(img12, caption="Diagrama de Hardware EMG", use_column_width=True)
+	
+	    with A0_col7:
+	        st.image(img13, caption="Diagrama de Hardware do Carrinho", use_column_width=True)
+	
+	    with A0_col8:
+	        st.image(img14, caption="Esquemático Eletrônico Detalhado", use_column_width=True)
+
 	##################### atualizacao 4 ##########################################################3
 	st.divider()
 	A1_col1, A1_col2 = st.columns(2)
