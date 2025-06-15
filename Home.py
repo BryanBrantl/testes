@@ -234,9 +234,9 @@ elif selected == "Atualização Semanal":
 	with A0_col2:
 		st.markdown("""
 	            <div style='text-align: justify;'>
-	                <h2 style='color: #008080; text-align: center;'> #5 - Entregável de Hardware - 06/06</h2>
+	                <h2 style='color: #008080; text-align: center;'> #5 - Entrega e Validação do Hardware - 06/06</h2>
 			<ul>
-		                <li>Avançamos na produção da placa de circuito impresso (PCI) para o nosso projeto. Reproduzimos o modelo utilizando novamente o filtro notch para testes. No entanto, enfrentamos alguns contratempos que impactaram o andamento do cronograma. Durante a etapa de montagem e teste da placa, identificamos problemas relacionados ao roteamento do circuito e à soldagem de alguns componentes. Esses erros comprometeram o funcionamento esperado da PCI, impossibilitando a continuidade dos testes nesta fase. Estamos trabalhando na correção do layout e no aprimoramento do processo de soldagem para evitar recorrência desses problemas nas próximas versões.</li>
+		                <li> Demonstração do Funcionamento do Circuito: A equipe realizou uma demonstração do funcionamento do circuito EMG. O vídeo do funcionamento foi postado no YouTube. Conforme foi comentado nas outras semanas a equipe decidiu retirar a interferência do ruído via software através de um filtro digital, o mesmo será implementado nas próximas semanas.</li>
 			<ul>
 	            </div>
 	        """, unsafe_allow_html=True)
