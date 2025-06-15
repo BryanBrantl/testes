@@ -91,7 +91,7 @@ try:
     img11 = Image.open("image/sinal_emg1.png")
     img12 = Image.open("image/Diagrama_Hardware_EMG.jpg")
     img13 = Image.open("image/Diagrama_Hardware_carrinho.png")
-    img14 = Image.open("image/Esquematico_EMG.JPG")
+    img14 = Image.open("image/Esquematico_EMG.jpg")
 except FileNotFoundError:
     st.error("Uma ou mais imagens não foram encontradas. Verifique os caminhos dos arquivos.")
     # Atribui None para evitar mais erros
