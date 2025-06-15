@@ -240,7 +240,7 @@ elif selected == "Atualização Semanal":
 			<ul>
 	            </div>
 	        """, unsafe_allow_html=True)
-		A0_col1_1, A0_col1_2 = st.columns([3,1])
+		A0_col1_1, A0_col1_2 = st.columns([1,1])
 		with A0_col1_1:
 			st.write(f"Clique aqui para reproduzir (CIRCUITO EMG):")
 		with A0_col1_2:
