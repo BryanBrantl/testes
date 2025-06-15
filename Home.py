@@ -248,8 +248,8 @@ elif selected == "Atualização Semanal":
 			<ul>
 		    </div>
 		""", unsafe_allow_html=True)
-	A0_col3, A0_col4, A0_col5 = st.columns(3)
-	with A0_col3:
+	A0_col3_2, A0_col4, A0_col5 = st.columns(3)
+	with A0_col3_2:
 		st.image(img9)
 	with A0_col4:
 		st.markdown("""
@@ -262,6 +262,13 @@ elif selected == "Atualização Semanal":
 	        """, unsafe_allow_html=True)
 	with A0_col5:
 		st.image(img10)
+	A0_col6, A0_col7, A0_col8 = st.columns(3)
+	with A0_col6:
+		st.image(12)
+	with A0_col7:
+		st.image(13)
+	with A0_col8:
+		st.image(14)
 	##################### atualizacao 4 ##########################################################3
 	st.divider()
 	A1_col1, A1_col2 = st.columns(2)
