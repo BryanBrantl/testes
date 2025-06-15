@@ -251,7 +251,9 @@ elif selected == "Atualização Semanal":
 	with A0_col4:
 		st.markdown("""
 			<ul>
-		                <li>Avançamos na produção da placa de circuito impresso (PCI) para o nosso projeto. Reproduzimos o modelo utilizando novamente o filtro notch para testes. No entanto, enfrentamos alguns contratempos que impactaram o andamento do cronograma. Durante a etapa de montagem e teste da placa, identificamos problemas relacionados ao roteamento do circuito e à soldagem de alguns componentes. Esses erros comprometeram o funcionamento esperado da PCI, impossibilitando a continuidade dos testes nesta fase. Estamos trabalhando na correção do layout e no aprimoramento do processo de soldagem para evitar recorrência desses problemas nas próximas versões.</li>
+		                <li><span style='color: #008080;'>Produção da Nova Versão da Placa de Circuito Impresso: Ainda na tentativa de reduzir significativamente reduzir o ruido, fizemos a confecção de uma segunda e nova versão da Placa de Circuito Impresso. Apresenta um roteamento otimizado e diferente, implementação de um GND em ilha, visando aprimorar a performance e reduzir ruídos.</span></li>
+		  		<li>As imagens ao lado ilustram este progresso: à esquerda, temos a PCI já soldada com seus componentes, pronta para uso; e à direita, a visualização do layout da PCB no KiCad, detalhando o novo roteamento.</li>
+      				<li>Esta nova versão da placa será testada na próxima semana para validá-la.</li>
 			<ul>
 	            </div>
 	        """, unsafe_allow_html=True)
