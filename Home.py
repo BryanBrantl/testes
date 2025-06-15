@@ -228,7 +228,7 @@ elif selected == "BioMove" and all([img5, img6, img7]):
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 elif selected == "Atualização Semanal":
 	##################### atualizacao 5 ##########################################################3
-	A0_col1, A0_col2 = st.columns(2)
+	A0_col1, A0_col2 = st.columns([1,3])
 	with A0_col1:
 		st.image(img11, width = 300)
 	with A0_col2:
