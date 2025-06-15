@@ -243,16 +243,14 @@ elif selected == "Atualização Semanal":
 	    # Mantido o A0_col1, A0_col2, A0_col3 conforme sua estrutura original.
 	    # A0_col2 será uma pequena separação invisível, já que não é usada.
 	A0_col1, A0_col2, A0_col3 = st.columns([1, 0.05, 3]) # Ajuste de larguras
-	
 	with A0_col1:
 	        # Removido 'width = 300' e adicionado 'use_column_width=True' para melhor responsividade
 		st.image(img11, caption="Trecho do vídeo - Circuito EMG", use_column_width=True)
 	        # Label do botão mais descritiva
-	        st.link_button("▶ Assistir Vídeo da Demonstração", video1, use_container_width=True)
+	        st.link_button("▶", video1, use_container_width=True)
 	
 	    # with A0_col2: # Coluna A0_col2 existe mas não tem conteúdo, como no seu original.
 	    #    st.write("") # Pode descomentar para adicionar um pequeno espaçador visível se necessário.
-	
 	with A0_col3:
 	        st.markdown("""
 	        <div style='text-align: justify;'>
