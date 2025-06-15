@@ -238,11 +238,12 @@ elif selected == "Atualização Semanal":
 		<ul>
 	    </div>
 	""", unsafe_allow_html=True)
-	A0_col1, A0_col2 = st.columns([1,3])
+	A0_col1, A0_col2, A0_col3= st.columns([1,2,2])
 	with A0_col1:
-		st.image(img11, caption="Trecho do video - CIRCUITO EMG ", width = 400)
+		st.image(img11, caption="Trecho do video - CIRCUITO EMG ", width = 300)
 		st.link_button("▶",video1, use_container_width=True)
-	with A0_col2:
+	#with A0_col2:
+	with A0_col3:
 		st.markdown("""
 		    <div style='text-align: justify;'>
 			<ul>
