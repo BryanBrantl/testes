@@ -240,7 +240,7 @@ elif selected == "Atualização Semanal":
 			<ul>
 	            </div>
 	        """, unsafe_allow_html=True)
-		st.link_button("LINK DO CARRINHO", video1)
+		st.link_button("▶ YouTube - CIRCUITO EMG", video1)
 	A0_col3, A0_col4, A0_col5 = st.columns(3)
 	with A0_col3:
 		st.image(img9)
