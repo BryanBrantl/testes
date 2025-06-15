@@ -90,6 +90,9 @@ try:
     img9 = Image.open("image/pcb2.jpg")	
     img10 = Image.open("image/pcb3.jpg")
     img11 = Image.open("image/sinal_emg1.png")
+    img12 = Image.open("image/Diagrama_Hardware_EMG.jpg")
+    img13 = Image.open("image/Diagrama_Hardware_carrinho.png")
+    img14 = Image.open("image/Esquematico_EMG.jpg")
 except FileNotFoundError:
     st.error("Uma ou mais imagens não foram encontradas. Verifique os caminhos dos arquivos.")
     # Atribui None para evitar mais erros
@@ -230,7 +233,10 @@ elif selected == "Atualização Semanal":
 	##################### atualizacao 5 ##########################################################3
 	A0_col1, A0_col2 = st.columns([1,3])
 	with A0_col1:
-		st.image(img11, caption="Trecho do video - CIRCUITO EMG ", width = 300)
+		st.write(" ")
+		st.write(" ")
+		st.write(" ")
+		st.image(img11, caption="Trecho do video - CIRCUITO EMG ", width = 200)
 	with A0_col2:
 		st.markdown("""
 	            <div style='text-align: justify;'>
@@ -254,7 +260,6 @@ elif selected == "Atualização Semanal":
 			<ul>
 		                <li><span style='color: #008080;'>Produção da Nova Versão da Placa de Circuito Impresso:</span> Ainda na tentativa de reduzir significativamente reduzir o ruido, fizemos a confecção de uma segunda e nova versão da Placa de Circuito Impresso. Apresenta um roteamento otimizado e diferente, implementação de um GND em ilha, visando aprimorar a performance e reduzir ruídos.</li>
 		  		<li>As imagens ao lado ilustram este progresso: à esquerda, temos a PCI já soldada com seus componentes, pronta para uso; e à direita, a visualização do layout da PCB no KiCad, detalhando o novo roteamento.</li>
-      				<li>Esta nova versão da placa será testada na próxima semana para validá-la.</li>
 			<ul>
 	            </div>
 	        """, unsafe_allow_html=True)
