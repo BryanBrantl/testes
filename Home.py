@@ -228,63 +228,7 @@ elif selected == "BioMove" and all([img5, img6, img7]):
     
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
-Perfeito! Agora que temos os nomes das variáveis das imagens e a estrutura completa, podemos integrar tudo de forma otimizada.
 
-Aqui está o seu código "Atualização Semanal" melhorado, utilizando as variáveis de imagem e coluna que você já definiu, e aplicando as melhorias que discutimos:
-
-Python
-
-import streamlit as st
-from streamlit_option_menu import option_menu
-from PIL import Image # Certifique-se de que Pillow está instalado: pip install Pillow
-
-# --- Definição das Imagens e Vídeos ---
-# Estas linhas devem estar fora do "elif" ou em uma função/seção que é executada uma vez
-# no início do seu script Streamlit.
-# Assegure-se de que o caminho para suas imagens esteja correto (ex: "image/foto_01.png")
-try:
-    img1 = Image.open("image/foto_01.png")
-    img2 = Image.open("image/foto_02.png")
-    img3 = Image.open("image/foto_03.png")
-    img4 = Image.open("image/foto_04.png")
-    img5 = Image.open("image/gamificacao.jpg")
-    img6 = Image.open("image/Musculo_0.png")
-    img7 = Image.open("image/Musculo_1.png")
-    img8 = Image.open("image/pcb1.png")
-    img9 = Image.open("image/pcb2.jpg") # PCB Soldada
-    img10 = Image.open("image/pcb3.jpg") # PCB KiCad
-    img11 = Image.open("image/sinal_emg1.png") # Sinal EMG (Osciloscópio)
-    img12 = Image.open("image/Diagrama_Hardware_EMG.jpg") # Diagrama Hardware EMG
-    img13 = Image.open("image/Diagrama_Hardware_carrinho.png") # Diagrama Hardware Carrinho
-    img14 = Image.open("image/Esquematico_EMG.jpg") # Esquematico EMG
-    video1 = "https://www.youtube.com/watch?v=jdvn68mhcQE" # URL do vídeo
-except FileNotFoundError as e:
-    st.error(f"Erro ao carregar imagem: {e}. Verifique se o caminho do arquivo está correto.")
-    # Fallback para imagens de placeholder se os arquivos não forem encontrados
-    import numpy as np
-    dummy_img = Image.fromarray(np.random.randint(0, 255, (100, 150, 3), dtype=np.uint8))
-    img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14 = [dummy_img]*14
-    video1 = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" # Link de fallback
-    st.info("Usando imagens e vídeo de fallback pois os arquivos originais não foram encontrados.")
-
-
-# --- Menu de Opções ---
-selected = option_menu(
-    menu_title=None,
-    options=["Home", "BioMove", "Atualização Semanal", "Relatórios", "Cronograma"],
-    orientation="horizontal",
-    default_index=0,
-    icons=["house", "bar-chart", "calendar", "file-earmark-text", "clock"],
-    styles={
-        "container": {"padding": "0!important", "background-color": "#0E1117"},
-        "icon": {"color": "white", "font-size": "16px"},
-        "nav-link": {"font-size": "16px", "text-align": "left", "margin": "0px", "color": "white"},
-        "nav-link-selected": {"background-color": "#0E1117", "color": "teal", "border-bottom": "2px solid teal"},
-    }
-)
-
-
-# --- Seção "Atualização Semanal" ---
 if selected == "Atualização Semanal":
     ##################### atualizacao 5 ##########################################################3
 	    st.markdown("""
