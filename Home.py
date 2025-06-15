@@ -229,7 +229,7 @@ elif selected == "BioMove" and all([img5, img6, img7]):
 ############################################################################################
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 
-if selected == "Atualização Semanal":
+elif selected == "Atualização Semanal":
     ##################### atualizacao 5 ##########################################################3
 	    st.markdown("""
 	        <div style='text-align: justify;'>
