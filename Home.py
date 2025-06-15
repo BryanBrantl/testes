@@ -277,6 +277,7 @@ elif selected == "Atualização Semanal":
     with A0_col8:
         st.image(img14, caption="Esquemático Eletrônico Detalhado", use_column_width=True)
     st.divider()
+   	
 ########################### atualizacao 4 ##########################################################3
 	
 	A1_col1, A1_col2 = st.columns(2)
