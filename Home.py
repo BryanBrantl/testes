@@ -264,11 +264,11 @@ elif selected == "Atualização Semanal":
 		st.image(img10)
 	A0_col6, A0_col7, A0_col8 = st.columns(3)
 	with A0_col6:
-		st.image(12)
+		st.image(img12)
 	with A0_col7:
-		st.image(13)
+		st.image(img13)
 	with A0_col8:
-		st.image(14)
+		st.image(img14)
 	##################### atualizacao 4 ##########################################################3
 	st.divider()
 	A1_col1, A1_col2 = st.columns(2)
