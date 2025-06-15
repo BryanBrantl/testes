@@ -242,17 +242,11 @@ elif selected == "Atualização Semanal":
 		<ul>
 	    </div>
 	""", unsafe_allow_html=True)
-		#A0_col1_1, A0_col1_2 = st.columns([1,9])
-		#with A0_col1_1:
-			#st.write(f"CIRCUITO EMG:")
-		#with A0_col1_2:
-	html_code = f"""
-	<a href="{video1}" target="_blank">
-	    <img src="{img11}" alt="Pré-visualização do Vídeo" style="width:100%; max-width:600px; height:auto; display: block; margin-left: auto; margin-right: auto;">
-	</a>
-	<p style="text-align: center; font-size: 0.9em; color: gray;">Clique na imagem para assistir ao vídeo!</p>
-	"""
-	st.markdown(html_code, unsafe_allow_html=True)
+	A0_col1_1, A0_col1_2 = st.columns([1,9])
+	with A0_col1_1:
+		st.image(img11, caption="Trecho do video - CIRCUITO EMG ", width = 200)
+		st.link_button(video1, use_container_width=True)
+	with A0_col1_2:
 
 	A0_col3, A0_col4, A0_col5 = st.columns(3)
 	with A0_col3:
