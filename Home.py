@@ -239,7 +239,7 @@ elif selected == "Atualização Semanal":
 	    </div>
 	""", unsafe_allow_html=True)
 	A0_col1, A0_col2 = st.columns([1,3])
-	with A0_col1_1:
+	with A0_col1:
 		st.image(img11, caption="Trecho do video - CIRCUITO EMG ", width = 200)
 		st.link_button(video1, use_container_width=True)
 	#with A0_col1_2:
