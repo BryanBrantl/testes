@@ -230,7 +230,7 @@ elif selected == "Atualização Semanal":
 	##################### atualizacao 5 ##########################################################3
 	A0_col1, A0_col2 = st.columns([1,3])
 	with A0_col1:
-		st.image(img11, width = 300)
+		st.image(img11, caption="Trecho do video - CIRCUITO EMG ", width = 300)
 	with A0_col2:
 		st.markdown("""
 	            <div style='text-align: justify;'>
