@@ -233,9 +233,6 @@ elif selected == "Atualização Semanal":
 	st.markdown("""
 	    <div style='text-align: justify;'>
 		<h2 style='color: #008080; text-align: center;'> #5 - Entrega e Validação do Hardware - 06/06</h2>
-		<ul>
-			<li><span style='color: #008080;'> Demonstração do Funcionamento do Circuito:</span> A equipe realizou uma demonstração do funcionamento do circuito EMG. O vídeo do funcionamento foi postado no YouTube. Conforme foi comentado nas outras semanas a equipe decidiu retirar a interferência do ruído via software através de um filtro digital, o mesmo será implementado nas próximas semanas.</li>
-		<ul>
 	    </div>
 	""", unsafe_allow_html=True)
 	A0_col1, A0_col2, A0_col3= st.columns([1,2,2])
