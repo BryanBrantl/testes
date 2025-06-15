@@ -56,7 +56,6 @@ a.stButton:active {{
 """, unsafe_allow_html=True)
 
 
-
 ########################################################### Título principal ##############################################################
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
 
@@ -247,8 +246,14 @@ elif selected == "Atualização Semanal":
 		#with A0_col1_1:
 			#st.write(f"CIRCUITO EMG:")
 		#with A0_col1_2:
-	st.link_button("▶", video1, use_container_width=True)
-	
+	html_code = f"""
+	<a href="{https://www.youtube.com/watch?v=xoU3nnxIE90&list=PLyvCfjQOMx6EXEF0L5veajHFKlPFGlaaP&index=2}" target="_blank">
+	    <img src="{img11}" alt="Pré-visualização do Vídeo" style="width:100%; max-width:600px; height:auto; display: block; margin-left: auto; margin-right: auto;">
+	</a>
+	<p style="text-align: center; font-size: 0.9em; color: gray;">Clique na imagem para assistir ao vídeo!</p>
+	"""
+	st.markdown(html_code, unsafe_allow_html=True)
+
 	A0_col3, A0_col4, A0_col5 = st.columns(3)
 	with A0_col3:
 		st.image(img9)
