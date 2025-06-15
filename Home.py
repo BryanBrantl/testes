@@ -247,7 +247,7 @@ elif selected == "Atualização Semanal":
 			#st.write(f"CIRCUITO EMG:")
 		#with A0_col1_2:
 	html_code = f"""
-	<a href="{https://www.youtube.com/watch?v=xoU3nnxIE90&list=PLyvCfjQOMx6EXEF0L5veajHFKlPFGlaaP&index=2}" target="_blank">
+	<a href="{video1}" target="_blank">
 	    <img src="{img11}" alt="Pré-visualização do Vídeo" style="width:100%; max-width:600px; height:auto; display: block; margin-left: auto; margin-right: auto;">
 	</a>
 	<p style="text-align: center; font-size: 0.9em; color: gray;">Clique na imagem para assistir ao vídeo!</p>
