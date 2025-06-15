@@ -235,14 +235,14 @@ elif selected == "Atualização Semanal":
 	#with A0_col1:
 	#	st.image(img11, caption="Trecho do video - CIRCUITO EMG ", width = 200)
 	#with A0_col2:
-		st.markdown("""
-	            <div style='text-align: justify;'>
-	                <h2 style='color: #008080; text-align: center;'> #5 - Entrega e Validação do Hardware - 06/06</h2>
-			<ul>
-		                <li><span style='color: #008080;'> Demonstração do Funcionamento do Circuito:</span> A equipe realizou uma demonstração do funcionamento do circuito EMG. O vídeo do funcionamento foi postado no YouTube. Conforme foi comentado nas outras semanas a equipe decidiu retirar a interferência do ruído via software através de um filtro digital, o mesmo será implementado nas próximas semanas.</li>
-			<ul>
-	            </div>
-	        """, unsafe_allow_html=True)
+	st.markdown("""
+	    <div style='text-align: justify;'>
+		<h2 style='color: #008080; text-align: center;'> #5 - Entrega e Validação do Hardware - 06/06</h2>
+		<ul>
+			<li><span style='color: #008080;'> Demonstração do Funcionamento do Circuito:</span> A equipe realizou uma demonstração do funcionamento do circuito EMG. O vídeo do funcionamento foi postado no YouTube. Conforme foi comentado nas outras semanas a equipe decidiu retirar a interferência do ruído via software através de um filtro digital, o mesmo será implementado nas próximas semanas.</li>
+		<ul>
+	    </div>
+	""", unsafe_allow_html=True)
 		#A0_col1_1, A0_col1_2 = st.columns([1,9])
 		#with A0_col1_1:
 			#st.write(f"CIRCUITO EMG:")
