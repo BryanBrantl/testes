@@ -240,9 +240,9 @@ elif selected == "Atualização Semanal":
 			<ul>
 	            </div>
 	        """, unsafe_allow_html=True)
-		A0_col1_1, A0_col1_2 = st.columns([2,3])
+		A0_col1_1, A0_col1_2 = st.columns([1,3])
 		with A0_col1_1:
-			st.write(f"Clique aqui para reproduzir (CIRCUITO EMG):")
+			st.write(f"CIRCUITO EMG:")
 		with A0_col1_2:
 			st.link_button("▶", video1)
 	A0_col3, A0_col4, A0_col5 = st.columns(3)
