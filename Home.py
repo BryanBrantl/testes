@@ -282,34 +282,34 @@ elif selected == "Atualização Semanal":
 			st.video(video1)
 	st.divider()
 #####################################################################################################		
-		st.markdown("""
-		    <div style='text-align: justify;'>
-			<h2 style='color: #008080; text-align: center;'> #3 - Atualização Semanal - 23/05/2025 </h2>
-			<ul>
-				<li></li>
-			<ul>
-		    </div>
-		""", unsafe_allow_html=True)
+	st.markdown("""
+	    <div style='text-align: justify;'>
+		<h2 style='color: #008080; text-align: center;'> #3 - Atualização Semanal - 23/05/2025 </h2>
+		<ul>
+			<li></li>
+		<ul>
+	    </div>
+	""", unsafe_allow_html=True)
 	st.divider()
 #####################################################################################################
-		st.markdown("""
-		    <div style='text-align: justify;'>
-			<h2 style='color: #008080; text-align: center;'> #2 - Atualização Semanal - 16/05/2025 </h2>
-			<ul>
-				<li></li>
-			<ul>
-		    </div>
-		""", unsafe_allow_html=True)
+	st.markdown("""
+	    <div style='text-align: justify;'>
+		<h2 style='color: #008080; text-align: center;'> #2 - Atualização Semanal - 16/05/2025 </h2>
+		<ul>
+			<li></li>
+		<ul>
+	    </div>
+	""", unsafe_allow_html=True)
 	st.divider()
 #####################################################################################################
-		st.markdown("""
-		    <div style='text-align: justify;'>
-			<h2 style='color: #008080; text-align: center;'> #1 - Atualização Semanal - 09/05/2025 </h2>
-			<ul>
-				<li></li>
-			<ul>
-		    </div>
-		""", unsafe_allow_html=True)
+	st.markdown("""
+	    <div style='text-align: justify;'>
+		<h2 style='color: #008080; text-align: center;'> #1 - Atualização Semanal - 09/05/2025 </h2>
+		<ul>
+			<li></li>
+		<ul>
+	    </div>
+	""", unsafe_allow_html=True)
 	st.divider()
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
