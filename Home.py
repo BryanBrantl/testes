@@ -241,7 +241,7 @@ elif selected == "Atualização Semanal":
 	A0_col1, A0_col2 = st.columns([1,3])
 	with A0_col1:
 		st.image(img11, caption="Trecho do video - CIRCUITO EMG ", width = 200)
-		st.link_button(video1, use_container_width=True)
+		st.link_button("▶",video1, use_container_width=True)
 	#with A0_col1_2:
 
 	A0_col3, A0_col4, A0_col5 = st.columns(3)
