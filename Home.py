@@ -231,13 +231,10 @@ elif selected == "BioMove" and all([img5, img6, img7]):
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 elif selected == "Atualização Semanal":
 	##################### atualizacao 5 ##########################################################3
-	A0_col1, A0_col2 = st.columns([1,3])
-	with A0_col1:
-		st.write(" ")
-		st.write(" ")
-		st.write(" ")
-		st.image(img11, caption="Trecho do video - CIRCUITO EMG ", width = 200)
-	with A0_col2:
+	#A0_col1, A0_col2 = st.columns([1,3])
+	#with A0_col1:
+	#	st.image(img11, caption="Trecho do video - CIRCUITO EMG ", width = 200)
+	#with A0_col2:
 		st.markdown("""
 	            <div style='text-align: justify;'>
 	                <h2 style='color: #008080; text-align: center;'> #5 - Entrega e Validação do Hardware - 06/06</h2>
