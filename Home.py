@@ -250,6 +250,7 @@ elif selected == "Atualização Semanal":
 		st.image(img9)
 	with A0_col4:
 		st.markdown("""
+  			<div style='text-align: justify;'>
 			<ul>
 		                <li><span style='color: #008080;'>Produção da Nova Versão da Placa de Circuito Impresso:</span> Ainda na tentativa de reduzir significativamente reduzir o ruido, fizemos a confecção de uma segunda e nova versão da Placa de Circuito Impresso. Apresenta um roteamento otimizado e diferente, implementação de um GND em ilha, visando aprimorar a performance e reduzir ruídos.</li>
 		  		<li>As imagens ao lado ilustram este progresso: à esquerda, temos a PCI já soldada com seus componentes, pronta para uso; e à direita, a visualização do layout da PCB no KiCad, detalhando o novo roteamento.</li>
