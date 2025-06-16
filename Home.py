@@ -266,7 +266,6 @@ elif selected == "Atualização Semanal":
 		st.image(img14, caption="Esquemático Eletrônico Detalhado", use_container_width=True)
 	st.divider()
 
-   	<span style='color: #008080;'> Bryan Alexandre de Lima Brantl</span>
 ########################### atualizacao 4 ##########################################################3
 	
 	A1_col1, A1_col2 = st.columns(2)
