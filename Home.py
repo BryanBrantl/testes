@@ -233,7 +233,7 @@ elif selected == "Atualização Semanal":
 	st.markdown("<h1 style='text-align: center; color: #84E3E3;'>Entrega e Validação do Hardware - 06/06</h1>", unsafe_allow_html=True)
 	st.markdown(
 	    """
-	    <hr style="border: 5px solid #84E3E3; border-radius: 5px;">
+	    <hr style="border: 2px solid #84E3E3; border-radius: 2px;">
 	    """,
 	    unsafe_allow_html=True
 	)
