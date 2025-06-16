@@ -234,7 +234,7 @@ elif selected == "Atualização Semanal":
 
 	A0_col1, A0_col2, A0_col3 = st.columns([1, 0.05, 3])
 	with A0_col1:
-		st.image(img11, caption="Trecho do vídeo - Circuito EMG", use_column_width=True)
+		st.image(img11, caption="Trecho do vídeo - Circuito EMG", use_container_width=True)
 		st.link_button("▶", video1, use_container_width=True)
 	with A0_col3:
 	        st.markdown("""
@@ -245,7 +245,7 @@ elif selected == "Atualização Semanal":
 	st.subheader("2. Produção da Nova Versão da Placa de Circuito Impresso (PCI)")
 	A0_col3_2, A0_col4, A0_col5 = st.columns([1, 2, 1])
 	with A0_col3_2:
-		st.image(img9, caption="PCI Soldada com Componentes", use_column_width=True)
+		st.image(img9, caption="PCI Soldada com Componentes",use_container_width=True)
 	with A0_col4:
 	        st.markdown("""
 	            <div style='text-align: justify;'>
@@ -257,15 +257,15 @@ elif selected == "Atualização Semanal":
 	            </div>
 	        """, unsafe_allow_html=True)
 	with A0_col5:
-		st.image(img10, caption="Layout da PCI no KiCad", use_column_width=True)
+		st.image(img10, caption="Layout da PCI no KiCad", use_container_width=True)
 	st.subheader("3. Detalhes dos Diagramas de Hardware")
 	A0_col6, A0_col7, A0_col8 = st.columns(3)
 	with A0_col6:
-		st.image(img12, caption="Diagrama de Hardware EMG", use_column_width=True)
+		st.image(img12, caption="Diagrama de Hardware EMG", use_container_width=True)
 	with A0_col7:
-		st.image(img13, caption="Diagrama de Hardware do Carrinho", use_column_width=True)
+		st.image(img13, caption="Diagrama de Hardware do Carrinho", use_container_width=True)
 	with A0_col8:
-		st.image(img14, caption="Esquemático Eletrônico Detalhado", use_column_width=True)
+		st.image(img14, caption="Esquemático Eletrônico Detalhado", use_container_width=True)
 	st.divider()
 
    	
