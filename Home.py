@@ -257,7 +257,7 @@ elif selected == "Atualização Semanal":
 	            </div>
 	        """, unsafe_allow_html=True)
 	with A0_col5:
-		st.image(img10, caption="Layout da PCI no KiCad", use_container_width=True)
+		st.image(img10, caption="Layout da PCI no KiCad", width=200)
 	st.subheader("3. Detalhes dos Diagramas de Hardware")
 	A0_col6, A0_col7, A0_col8 = st.columns(3)
 	with A0_col6:
