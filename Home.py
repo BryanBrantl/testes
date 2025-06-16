@@ -249,11 +249,9 @@ elif selected == "Atualização Semanal":
 	with A0_col4:
 	        st.markdown("""
 	            <div style='text-align: justify;'>
-	                Na tentativa de reduzir significativamente o ruído, confeccionamos uma **segunda e nova versão da Placa de Circuito Impresso**. Esta versão apresenta um **roteamento otimizado e diferente**, com a implementação de um **plano terra**, visando aprimorar a performance e reduzir interferências.
+	                Na tentativa de reduzir significativamente o ruído, confeccionamos uma <span style='color: #008080;'>segunda e nova versão da Placa de Circuito Impresso</span>. Esta versão apresenta um <span style='color: #008080;'>roteamento otimizado e diferente</span>, com a implementação de um <span style='color: #008080;'>plano terra</span>, visando aprimorar a performance e reduzir interferências.
 	                <br><br>
 	                As imagens ao lado ilustram este progresso: à esquerda, temos a PCI já soldada com seus componentes, pronta para uso; e à direita, a visualização do layout da PCB no KiCad, detalhando o novo roteamento.
-	                <br><br>
-	                Esta nova versão da placa será submetida a **testes rigorosos na próxima semana** para validar seu funcionamento e a eficácia das melhorias implementadas.
 	            </div>
 	        """, unsafe_allow_html=True)
 	with A0_col5:
@@ -268,7 +266,7 @@ elif selected == "Atualização Semanal":
 		st.image(img14, caption="Esquemático Eletrônico Detalhado", use_container_width=True)
 	st.divider()
 
-   	
+   	<span style='color: #008080;'> Bryan Alexandre de Lima Brantl</span>
 ########################### atualizacao 4 ##########################################################3
 	
 	A1_col1, A1_col2 = st.columns(2)
