@@ -260,9 +260,9 @@ elif selected == "Atualização Semanal":
 	###########	
 	
 	A0_col6_1, A0_col6_2 = st.columns(2)
-	st.subheader("Descritivo de Hardware do Carrinho")
 	with A0_col6_1:
 		st.markdown("""
+  			<h3>DDescritivo de Hardware do Carrinho</h3>
 		    <div style='text-align: justify;'>
 		        O sistema do carrinho é composto por um <span style='color: #008080;'>ESP-32</span>, responsável pelo controle, enviando sinais de comando para a <span style='color: #008080;'>ponte H L298N</span>, que atua como driver dos dois motores DC (esquerdo e direito). Ambos os módulos (ESP-32 e L298N) são alimentados por uma única fonte de alimentação, que fornece energia tanto para o funcionamento do sistema quanto para a tração dos motores.
 		    </div>
@@ -271,13 +271,13 @@ elif selected == "Atualização Semanal":
 		st.markdown("<br>", unsafe_allow_html=True)
 		st.image(img12, caption="Diagrama de Hardware EMG", use_container_width=True)
 
-	st.subheader("Descritivo de Hardware do EMG")
 	A0_col7_1, A0_col7_2 = st.columns(2)
 	with A0_col7_1:
 		st.markdown("<br>", unsafe_allow_html=True)
 		st.image(img13, caption="Diagrama de Hardware do Carrinho", use_container_width=True)
 	with A0_col7_2:
 		st.markdown("""
+  			<h3>Descritivo de Hardware do EMG</h3>
 		    <div style='text-align: justify;'>
 		        O diagrama de blocos representa um sistema de aquisição de sinais EMG. O sinal é captado por eletrodos, amplificado na etapa de pré-amplificação, e então filtrado por um filtro passa-faixa de 20 a 500 Hz. Após o condicionamento final do sinal, ele é enviado ao microcontrolador ESP32 por uma porta ADC para processamento.
 		    </div>
