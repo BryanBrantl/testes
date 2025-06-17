@@ -262,13 +262,13 @@ elif selected == "Atualização Semanal":
 	A0_col6_1, A0_col6_2 = st.columns(2)
 	with A0_col6_1:
 		st.markdown("""
-  			<h3>DDescritivo de Hardware do Carrinho</h3>
+  			<h3>Descritivo de Hardware do Carrinho</h3>
 		    <div style='text-align: justify;'>
 		        O sistema do carrinho é composto por um <span style='color: #008080;'>ESP-32</span>, responsável pelo controle, enviando sinais de comando para a <span style='color: #008080;'>ponte H L298N</span>, que atua como driver dos dois motores DC (esquerdo e direito). Ambos os módulos (ESP-32 e L298N) são alimentados por uma única fonte de alimentação, que fornece energia tanto para o funcionamento do sistema quanto para a tração dos motores.
 		    </div>
 		""", unsafe_allow_html=True)
 	with A0_col6_2:
-		st.markdown("<br>", unsafe_allow_html=True)
+		st.markdown("<br><br>", unsafe_allow_html=True)
 		st.image(img12, caption="Diagrama de Hardware EMG", use_container_width=True)
 
 	A0_col7_1, A0_col7_2 = st.columns(2)
