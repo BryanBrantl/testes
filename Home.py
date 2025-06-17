@@ -277,7 +277,7 @@ elif selected == "Atualização Semanal":
 		st.markdown("""
 		    <div style='text-align: justify;'>
 		        <h3 style='color: white;'>Descritivo de Hardware do Carrinho</h3>
-		        O sistema do carrinho é composto por um **ESP-32**, responsável pelo controle, enviando sinais de comando para a **ponte H L298N**, que atua como driver dos dois motores DC (esquerdo e direito). Ambos os módulos (ESP-32 e L298N) são alimentados por uma única fonte de alimentação, que fornece energia tanto para o funcionamento do sistema quanto para a tração dos motores.
+		        O sistema do carrinho é composto por um <span style='color: #008080;'>ESP-32</span>, responsável pelo controle, enviando sinais de comando para a <span style='color: #008080;'>ponte H L298N</span>, que atua como driver dos dois motores DC (esquerdo e direito). Ambos os módulos (ESP-32 e L298N) são alimentados por uma única fonte de alimentação, que fornece energia tanto para o funcionamento do sistema quanto para a tração dos motores.
 		    </div>
 		""", unsafe_allow_html=True)
 	with A0_col6_2:
