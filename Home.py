@@ -92,7 +92,7 @@ try:
     img12 = Image.open("image/Diagrama_Hardware_EMG.jpg")
     img13 = Image.open("image/Diagrama_Hardware_carrinho.png")
     img14 = Image.open("image/Esquematico_EMG.jpg")
-    img15 = Image.open("ESQUEMATICO_Semana1.JPG")	
+    img15 = Image.open("image/ESQUEMATICO_Semana1.jpg")	
 except FileNotFoundError:
     st.error("Uma ou mais imagens não foram encontradas. Verifique os caminhos dos arquivos.")
     # Atribui None para evitar mais erros
