@@ -256,11 +256,16 @@ elif selected == "Atualização Semanal":
 		st.image(img11, caption="Trecho do vídeo - Circuito EMG", use_container_width=True)
 		st.link_button("▶", video1, use_container_width=True)
 	with A0_col3:
-	        st.markdown("""
-	            <div style='text-align: justify;'>
-	                A equipe realizou uma demonstração do funcionamento do circuito EMG. O vídeo do funcionamento foi postado no YouTube. Conforme foi comentado nas outras semanas, a equipe decidiu tratar a interferência do ruído via software, através de um filtro digital, o qual será implementado nas próximas semanas.
-	            </div>
-	        """, unsafe_allow_html=True)
+		st.markdown("""
+		    <div style='text-align: justify;'>
+		        <h3>Demonstração do Circuito EMG e Próximos Passos no Tratamento de Ruído:</h3>
+		        <ul>
+		            <li>A equipe realizou uma demonstração do funcionamento do circuito EMG.</li>
+		            <li>O vídeo com essa demonstração foi postado no YouTube.</li>
+		            <li>Conforme planejado nas semanas anteriores, a equipe decidiu tratar a interferência do ruído via software, através da implementação de um filtro digital, que será desenvolvido nas próximas semanas.</li>
+		        </ul>
+		    </div>
+		""", unsafe_allow_html=True)
 	st.subheader("2. Produção da Nova Versão da Placa de Circuito Impresso (PCI)")
 	A0_col3_2, A0_col4, A0_col5 = st.columns([1, 2, 1])
 	with A0_col3_2:
