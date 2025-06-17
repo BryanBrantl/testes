@@ -311,7 +311,7 @@ elif selected == "Atualização Semanal":
 	        </ul>
 	    </div>
 	""", unsafe_allow_html=True)
-	st.link_button("Acessar Vídeo no YouTube", video1, type="primary")
+	st.link_button("▶", video1)
 	
 	st.divider()
 #####################################################################################################		
