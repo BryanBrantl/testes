@@ -167,10 +167,6 @@ elif selected == "BioMove" and all([img5, img6, img7]):
         """, unsafe_allow_html=True)
     
     st.divider()
-
-    # Bloco 2
-    texto_proposta_escopo = """...""" # Mantido para não quebrar, mas pode ser removido se não for usado
-    texto_funcionamento = """...""" # Mantido para não quebrar, mas pode ser removido se não for usado
     
     B2col1, B2col2 = st.columns([2, 1.5])
     with B2col1:
@@ -272,6 +268,8 @@ elif selected == "Atualização Semanal":
 		    </div>
 		""", unsafe_allow_html=True)
 	with A0_col6_2:
+		st.write(" ")
+		st.write(" ")
 		st.image(img12, caption="Diagrama de Hardware EMG", use_container_width=True)
 
 	st.subheader("Descritivo de Hardware do EMG")
