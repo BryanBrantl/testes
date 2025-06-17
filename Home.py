@@ -82,8 +82,8 @@ except FileNotFoundError:
 video1 = "https://www.youtube.com/watch?v=jdvn68mhcQE"
 video2 = "https://youtube.com/shorts/xoU3nnxIE90"
 
-proposta ="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing"
-relatorio_final ="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing"
+proposta_url ="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing"
+relatorio_final_url ="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing"
 cronograma = "https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing"
 ############################################ Conteúdo de acordo com o menu selecionado ############################################
 ################################################################################################   HOME    #################################
@@ -432,29 +432,48 @@ elif selected == "Atualização Semanal":
 ############################################################################################
 ###################################   RELATORIO    ########################################
 elif selected == "Relatórios":
-	st.markdown("<h1 style='text-align: center; color: #008080;'>RELATÓRIOS", unsafe_allow_html=True)
-	st.markdown("""
-	    <h3>Proposta do Projeto:</h3>
-	""", unsafe_allow_html=True)
+	def bloco_informacao(titulo_bloco, texto_descricao, texto_botao, url_botao):
+	    st.markdown(f"""
+	        <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
+	            <h4 style="color:white; margin-top:0;">{titulo_bloco}</h4>
+	            <p style="color:gray; font-size:16px;">{texto_descricao}</p>
+	            <div style="margin-top: 15px; text-align: center;"> 
+	                <a href="{url_botao}" target="_blank" style="
+	                    text-decoration: none; 
+	                    display: inline-block; 
+	                    padding: 10px 20px; 
+	                    background-color: #008080; 
+	                    color: white; 
+	                    border-radius: 5px; 
+	                    text-align: center; 
+	                    cursor: pointer;
+	                    font-weight: bold;
+	                    transition: background-color 0.3s ease;
+	                ">
+	                    {texto_botao}
+	                </a>
+	            </div>
+	        </div>
+	    """, unsafe_allow_html=True)
 	
-	st.markdown("""
-	    <div style='text-align: justify;'>
-	        Nesta seção, está disponibilizada a <span style='color: #008080;'>proposta de projeto do BioMove</span>. O documento reúne informações detalhadas sobre o escopo do projeto, sendo esta proposta já aprovada.
-	        Você pode acessar o documento completo clicando no botão abaixo:
-	    </div>
-	""", unsafe_allow_html=True)
-	st.link_button("Acessar Proposta", proposta, help="Clique para ver a proposta de projeto do BioMove.",type="secondary")
-	st.markdown("---") 
-	st.markdown("""
-	    <div style='text-align: justify;'>
-	        <h3>Relatório Final do Projeto:</h3>
-	        O relatório final do projeto BioMove, contendo todos os resultados, análises e conclusões, também pode ser acessado através do botão abaixo:
-	    </div>
-	""", unsafe_allow_html=True)
+	# Título principal da seção de RELATÓRIOS
+	st.markdown("<h1 style='text-align: center; color: #008080;'>RELATÓRIOS</h1>", unsafe_allow_html=True)
 	
-	st.link_button("Acessar Relatório Final", proposta, help="Clique para baixar o relatório final do projeto BioMove.", type="secondary")
+	# Bloco para a Proposta do Projeto
+	bloco_informacao(
+	    titulo_bloco="Proposta do Projeto",
+	    texto_descricao="Nesta seção, está disponibilizada a proposta de projeto do BioMove. O documento reúne informações detalhadas sobre o escopo do projeto, sendo esta proposta já aprovada.",
+	    texto_botao="ACESSAR PROPOSTA",
+	    url_botao=proposta_url
+	)
 	
-	st.divider()
+	# Bloco para o Relatório Final do Projeto
+	bloco_informacao(
+	    titulo_bloco="Relatório Final do Projeto",
+	    texto_descricao="O relatório final do projeto BioMove, contendo todos os resultados, análises e conclusões, também pode ser acessado através do botão abaixo:",
+	    texto_botao="ACESSAR RELATÓRIO FINAL",
+	    url_botao=relatorio_final_url
+	)
 
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
