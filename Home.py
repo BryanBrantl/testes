@@ -268,13 +268,13 @@ elif selected == "Atualização Semanal":
 		    </div>
 		""", unsafe_allow_html=True)
 	with A0_col6_2:
-		st.write(" ")
-		st.write(" ")
+		st.markdown("<br><br>", unsafe_allow_html=True)
 		st.image(img12, caption="Diagrama de Hardware EMG", use_container_width=True)
 
 	st.subheader("Descritivo de Hardware do EMG")
 	A0_col7_1, A0_col7_2 = st.columns(2)
 	with A0_col7_1:
+		st.markdown("<br><br>", unsafe_allow_html=True)
 		st.image(img13, caption="Diagrama de Hardware do Carrinho", use_container_width=True)
 	with A0_col7_2:
 		st.markdown("""
