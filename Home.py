@@ -244,7 +244,8 @@ elif selected == "Atualização Semanal":
 		        </ul>
 		    </div>
 		""", unsafe_allow_html=True)
-	st.subheader("2. Produção da Nova Versão da Placa de Circuito Impresso (PCI)")
+	#########	
+	st.subheader("Produção da Nova Versão da Placa de Circuito Impresso (PCI)")
 	A0_col3_2, A0_col4, A0_col5 = st.columns([1, 2, 1])
 	with A0_col3_2:
 		st.image(img9, caption="PCI Soldada com Componentes",use_container_width=True)
@@ -257,8 +258,9 @@ elif selected == "Atualização Semanal":
 	            </div>
 	        """, unsafe_allow_html=True)
 	with A0_col5:
-		st.image(img10, caption="Layout da PCI no KiCad", width=200)
-	st.subheader("3. Detalhes dos Diagramas de Hardware")
+		st.image(img10, caption="Layout da PCI no KiCad", width=400)
+	###########	
+	st.subheader("Detalhes dos Diagramas de Hardware")
 	A0_col6, A0_col7, A0_col8 = st.columns(3)
 	with A0_col6:
 		st.image(img12, caption="Diagrama de Hardware EMG", use_container_width=True)
