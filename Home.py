@@ -104,6 +104,9 @@ except FileNotFoundError:
 video1 = "https://www.youtube.com/watch?v=jdvn68mhcQE"
 video2 = "https://youtube.com/shorts/xoU3nnxIE90"
 
+proposta ="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing"
+relatorio_final ="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing"
+cronograma = "https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing"
 ############################################ Conteúdo de acordo com o menu selecionado ############################################
 ################################################################################################   HOME    #################################
 if selected == "Home" and all([img1, img2, img3, img4]):
@@ -403,6 +406,40 @@ elif selected == "Atualização Semanal":
 	""", unsafe_allow_html=True)
 	st.image(img15)
 	st.divider()
+############################################################################################
+###################################   RELATORIO    ########################################
+elif selected === "Relatórios"
+	st.markdown("<h1 style='text-align: center; color: #84E3E3;'>Relatórios", unsafe_allow_html=True)
+	st.markdown(
+	    """
+	    <hr style="border: 2px solid #84E3E3; border-radius: 2px;">
+	    """,
+	    unsafe_allow_html=True
+	)
+
+	st.markdown("""
+	    <h2 style='color: #008080;'>Proposta de Projeto</h2>
+	""", unsafe_allow_html=True)
+	
+	st.markdown("""
+	    <div style='text-align: justify;'>
+	        Nesta seção, está disponibilizada a <span style='color: #008080;'>proposta de projeto do BioMove</span>. O documento reúne informações detalhadas sobre o escopo do projeto, sendo esta proposta já aprovada.
+	        Você pode acessar o documento completo clicando no botão abaixo:
+	    </div>
+	""", unsafe_allow_html=True)
+	st.link_button("Acessar Proposta", proposta, help="Clique para ver a proposta de projeto do BioMove.", type="primary")
+	st.markdown("---") 
+	st.markdown("""
+	    <div style='text-align: justify;'>
+	        <h3>Relatório Final do Projeto:</h3>
+	        O relatório final do projeto BioMove, contendo todos os resultados, análises e conclusões, também pode ser acessado através do botão abaixo:
+	    </div>
+	""", unsafe_allow_html=True)
+	
+	st.link_button("Acessar Relatório Final", proposta, help="Clique para baixar o relatório final do projeto BioMove.", type="secondary")
+	
+	st.divider()
+
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
 elif selected == "Cronograma":
