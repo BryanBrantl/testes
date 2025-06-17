@@ -84,7 +84,7 @@ video2 = "https://youtube.com/shorts/xoU3nnxIE90"
 
 proposta_url ="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing"
 relatorio_final_url ="https://docs.google.com/document/d/1uJpoXcehrK1Lv2cPMxUtHkvSNNtmgnatSJdmxfzy8gc/edit?usp=sharing"
-cronograma = "https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing"
+cronograma_url = "https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing"
 ############################################ Conteúdo de acordo com o menu selecionado ############################################
 ################################################################################################   HOME    #################################
 if selected == "Home" and all([img1, img2, img3, img4]):
@@ -478,31 +478,13 @@ elif selected == "Relatórios":
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
 elif selected == "Cronograma":
-	
-    st.markdown("<h1 style='text-align: center; color: #008080;'>CRONOGRAMA</h1>", unsafe_allow_html=True)
-    
-    # Você pode usar a mesma função de bloco se o layout for parecido
-    # ou criar uma específica para o cronograma
-    def bloco_cronograma(titulo_bloco, texto_descricao, texto_botao, url_botao):
-        st.markdown(f"""
-            <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
-                <h4 style="color:white;">{titulo_bloco}</h4>
-                <p style="color:gray;">{texto_descricao}</p>
-                <div style="margin-top: 15px; margin-bottom: 5px;"> <a href="{url_botao}" target="_blank" class="my-button" style="text-decoration: none; display: inline-block;">
-                        {texto_botao}
-                    </a>
-                </div>
-            </div>
-        """, unsafe_allow_html=True)
-        
-    link_cronograma = "https://docs.google.com/spreadsheets/d/1Fb5_otX8z50tuy9RbcGGC89BLKfErs_SCnML-JGeyQU/edit?usp=sharing"
 
-    bloco_cronograma(
-        titulo_bloco="Cronograma Detalhado",
-        texto_descricao="Acesse a planilha detalhada com todas as fases, tarefas e prazos do projeto BioMove.",
-        texto_botao="ABRIR CRONOGRAMA",
-        url_botao=link_cronograma
-    )
+	bloco_informacao(
+	    titulo_bloco="Cronograma Detalhado",
+	    texto_descricao="Acesse a planilha detalhada com todas as fases, tarefas e prazos do projeto BioMove.",
+	    texto_botao="ABRIR CRONOGRAMA",
+	    url_botao=cronograma_url
+	)
 
 # Rodapé
 st.markdown("""
