@@ -6,34 +6,6 @@ from pathlib import Path
 
 st.set_page_config(page_title="BIOMOVE", layout="wide")
 
-cor_botao = "#008080"
-st.markdown(f"""
-<style>
-a.stButton {{
-    display: inline-block;
-    padding: 0.4em 0.6em; /* Ajuste o padding para o tamanho desejado */
-    background-color: {cor_botao};
-    color: white !important; /* '!important' para garantir a sobreposição */
-    border: none;
-    border-radius: 4px;
-    text-align: center;
-    text-decoration: none; /* Remove o sublinhado do link */
-    font-size: 14px;
-}}
-a.stButton:hover {{
-    background-color: #006666; /* Cor mais escura ao passar o mouse */
-    color: white !important;
-    text-decoration: none;
-}}
-a.stButton:active {{
-    background-color: #008080; /* Cor ao clicar */
-    color: white !important;
-    text-decoration: none;
-}}
-</style>
-""", unsafe_allow_html=True)
-
-
 ########################################################### Título principal ###########################################################
 st.markdown("<h1 style='color:white;'>BIOMOVE</h1>", unsafe_allow_html=True)
 
