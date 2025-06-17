@@ -342,7 +342,7 @@ elif selected == "Atualização Semanal":
 	with A4_col1:
 		st.image(img16, caption="Circuito montado em protoboard")
 	with A4_col2:
-		st.image(img17, caption="Sinal do sensor EMG capturado no osciloscópio")
+		st.image(img17, caption="Sinal do sensor EMG capturado no osciloscópio", width = 400)
 	st.divider()
 #####################################################################################################
 	#semana1
