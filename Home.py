@@ -321,9 +321,14 @@ elif selected == "Atualização Semanal":
 	""", unsafe_allow_html=True)
 	st.divider()
 #####################################################################################################
+	
+	st.markdown("""
+ 		<h2 style='color: #008080; text-align: center;'> #1 - Atualização Semanal - 09/05/2025 </h2>
+ 	""", unsafe_allow_html=True)
+	
 	st.markdown("""
 	    <div style='text-align: justify;'>
-		<h2 style='color: #008080; text-align: center;'> #1 - Atualização Semanal - 09/05/2025 </h2>
+		 <h3>Progresso e Decisões Iniciais do Projeto:</h3>
 		<ul>
 			<li>Realizados testes nos principais componentes do carrinho (motor DC, ESP32 e ponte H), sem identificação de defeitos.</li>
 			<li>Conduzido estudo sobre softwares de modelagem 3D. Optou-se pela utilização do Eagle para o desenvolvimento do carrinho e do sistema EMG.</li>
@@ -332,6 +337,7 @@ elif selected == "Atualização Semanal":
 		<ul>
 	    </div>
 	""", unsafe_allow_html=True)
+	
 	st.markdown("""
 	    <div style='text-align: justify;'>
 	        <h3>Decisões sobre o projeto:</h3>
@@ -341,7 +347,7 @@ elif selected == "Atualização Semanal":
 	        <h3>Construção do esquemático EMG:</h3>
 	    </div>
 	""", unsafe_allow_html=True)
-	
+	st.image(img15)
 	st.divider()
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
