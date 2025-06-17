@@ -95,6 +95,7 @@ try:
     img15 = Image.open("image/ESQUEMATICO_Semana1.jpg")	
     img16 = Image.open("image/Protoboard.jpg")
     img17 = Image.open("image/Osciloscopio_Protoboard.jpg")	
+    img18 = Image.open("image/Placa_Perfurada.jpg")	
 except FileNotFoundError:
     st.error("Uma ou mais imagens não foram encontradas. Verifique os caminhos dos arquivos.")
     # Atribui None para evitar mais erros
@@ -303,16 +304,34 @@ elif selected == "Atualização Semanal":
 			st.video(video1)
 	st.divider()
 #####################################################################################################		
+	#semana3
+	st.markdown("""
+	    <h2 style='color: #008080; text-align: center;'> #3 - Atualização Semanal - 23/05/2025 </h2>
+	""", unsafe_allow_html=True)
+	
 	st.markdown("""
 	    <div style='text-align: justify;'>
-		<h2 style='color: #008080; text-align: center;'> #3 - Atualização Semanal - 23/05/2025 </h2>
-		<ul>
-			<li></li>
-		<ul>
+	        <h3>Montagem do Carrinho e Otimização do Circuito EMG:</h3>
+	        <ul>
+	            <li>Finalizada a montagem do carrinho.</li>
+	            <li>Adição de novos filtros no esquemático do EMG.</li>
+	            <li>Montagem do circuito EMG em placa perfurada para melhorar os testes quando comparado a protoboard.</li>
+	            <li>O filtro Notch não apresentou o resultado esperado, levantando a hipótese de utilizar filtros digitais para melhorar a performance.</li>
+	        </ul>
 	    </div>
 	""", unsafe_allow_html=True)
-	st.divider()
+	
+	st.markdown("""
+	    <div style='text-align: justify;'>
+	        <h3>Circuito EMG em Placa Perfurada:</h3>
+	        <ul>
+	            <li>Circuito montado em placa perfurada:</li>
+	        </ul>
+	    </div>
+	""", unsafe_allow_html=True)
+	st.image(img18, caption="Circuito do sensor EMG montado em placa perfurada.")
 #####################################################################################################
+	#semana2
 	st.markdown("""
 	    <h2 style='color: #008080; text-align: center;'> #2 - Atualização Semanal - 16/05/2025 </h2>
 	""", unsafe_allow_html=True)
