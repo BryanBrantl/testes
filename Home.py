@@ -263,15 +263,6 @@ elif selected == "Atualização Semanal":
 		st.image(img10, caption="Layout da PCI no KiCad", width=400)
 	###########	
 	
-	st.subheader("Detalhes dos Diagramas de Hardware")
-	A0_col6, A0_col7, A0_col8 = st.columns(3)
-	with A0_col6:
-		st.image(img12, caption="Diagrama de Hardware EMG", use_container_width=True)
-	with A0_col7:
-		st.image(img13, caption="Diagrama de Hardware do Carrinho", use_container_width=True)
-	with A0_col8:
-		st.image(img14, caption="Esquemático Eletrônico Detalhado", use_container_width=True)
-	
 	A0_col6_1, A0_col6_2 = st.columns(2)
 	with A0_col6_1:
 		st.markdown("""
@@ -293,7 +284,16 @@ elif selected == "Atualização Semanal":
 		        O diagrama de blocos representa um sistema de aquisição de sinais EMG. O sinal é captado por eletrodos, amplificado na etapa de pré-amplificação, e então filtrado por um filtro passa-faixa de 20 a 500 Hz. Após o condicionamento final do sinal, ele é enviado ao microcontrolador ESP32 por uma porta ADC para processamento.
 		    </div>
 		""", unsafe_allow_html=True)
+
+	st.subheader("Esquemático do Circuito EMG Apresentado")
+	st.markdown("""
+	    <div style='text-align: justify;'>
+	        Esquemático apresentado no entregavel de hardware:
+	    </div>
+	""", unsafe_allow_html=True)
+	st.image(img14, caption="Esquemático Eletrônico Detalhado", use_container_width=True)
 	st.divider()
+	
 
 ########################### atualizacao 4 ##########################################################3
 	
