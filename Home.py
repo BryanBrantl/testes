@@ -277,31 +277,32 @@ elif selected == "Atualização Semanal":
 
 ########################### atualizacao 4 ##########################################################3
 	
-	A1_col1, A1_col2 = st.columns(2)
-	with A1_col1:
-		st.markdown("""
-	            <div style='text-align: justify;'>
-	                <h2 style='color: #008080; text-align: center;'> #4 - Atualização Semanal - 30/05/2025 </h2>
-			<ul>
-		                <li></li>
-			<ul>
-	            </div>
-	        """, unsafe_allow_html=True)
-	with A1_col2:
-		st.image(img8, width=400)
-	A2_col1, A2_col2 = st.columns(2)
-	with A2_col1:
-		st.markdown("""
-	            <div style='text-align: justify;'>
-			<ul>
-		                <li>A montagem do carrinho foi finalizada. Nesta semana, a equipe desenvolveu o software que permite controlar o carrinho por meio de um joystick no celular, utilizando conexão via Bluetooth.</li>
-			<ul>
-	            </div>
-	        """, unsafe_allow_html=True)
-	with A2_col2:
-		vazia1, col_video, vazia2 = A2_col2.columns([1, 2, 1])
-		with col_video:
-			st.video(video1)
+	st.markdown("""
+	    <h2 style='color: #008080; text-align: center;'> #4 - Atualização Semanal - 30/05/2025 </h2>
+	""", unsafe_allow_html=True)
+	
+	st.markdown("""
+	    <div style='text-align: justify;'>
+	        <h3>Desafios na Produção da Placa de Circuito Impresso (PCI):</h3>
+	        <ul>
+	            <li>Avançamos na produção da placa de circuito impresso (PCI) para o projeto, reproduzindo o modelo com o filtro notch para testes.</li>
+	            <li>Enfrentamos contratempos significativos durante a montagem e teste da placa, identificando problemas no roteamento do circuito e na soldagem de componentes.</li>
+	            <li>Esses erros comprometeram o funcionamento da PCI, impossibilitando a continuidade dos testes nesta fase.</li>
+	            <li>Estamos trabalhando na correção do layout e no aprimoramento do processo de soldagem para evitar recorrências.</li>
+	        </ul>
+	    </div>
+	""", unsafe_allow_html=True)
+	
+	st.markdown("""
+	    <div style='text-align: justify;'>
+	        <h3>Desenvolvimento do Sistema de Controle do Carrinho:</h3>
+	        <ul>
+	            <li>Conforme informado na semana passada, a montagem do carrinho foi finalizada.</li>
+	            <li>Nesta semana, a equipe desenvolveu o software que permite controlar o carrinho por meio de um joystick no celular, utilizando conexão via Bluetooth.</li>
+	        </ul>
+	    </div>
+	""", unsafe_allow_html=True)
+	
 	st.divider()
 #####################################################################################################		
 	#semana3
