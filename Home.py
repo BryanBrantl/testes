@@ -273,7 +273,7 @@ elif selected == "Atualização Semanal":
 
 	A0_col7_1, A0_col7_2 = st.columns(2)
 	with A0_col7_1:
-		st.markdown("<br>", unsafe_allow_html=True)
+		st.markdown("<br><br>", unsafe_allow_html=True)
 		st.image(img13, caption="Diagrama de Hardware do Carrinho", use_container_width=True)
 	with A0_col7_2:
 		st.markdown("""
