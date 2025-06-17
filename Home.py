@@ -408,7 +408,7 @@ elif selected == "Atualização Semanal":
 	st.divider()
 ############################################################################################
 ###################################   RELATORIO    ########################################
-elif selected == "Relatórios"
+elif selected == "Relatórios":
 	st.markdown("<h1 style='text-align: center; color: #84E3E3;'>Relatórios", unsafe_allow_html=True)
 	st.markdown(
 	    """
