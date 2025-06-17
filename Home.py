@@ -478,7 +478,30 @@ elif selected == "Relatórios":
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
 elif selected == "Cronograma":
-
+	def bloco_informacao(titulo_bloco, texto_descricao, texto_botao, url_botao):
+	    st.markdown(f"""
+	        <div style="background-color:#1e1e1e; padding:20px; margin-bottom:10px; border-radius:10px; border-left: 5px solid teal;">
+	            <h4 style="color:white; margin-top:0;">{titulo_bloco}</h4>
+	            <p style="color:gray; font-size:16px;">{texto_descricao}</p>
+	            <div style="margin-top: 15px; text-align: center;"> 
+	                <a href="{url_botao}" target="_blank" style="
+	                    text-decoration: none; 
+	                    display: inline-block; 
+	                    padding: 10px 20px; 
+	                    background-color: #008080; 
+	                    color: white; 
+	                    border-radius: 5px; 
+	                    text-align: center; 
+	                    cursor: pointer;
+	                    font-weight: bold;
+	                    transition: background-color 0.3s ease;
+	                ">
+	                    {texto_botao}
+	                </a>
+	            </div>
+	        </div>
+	    """, unsafe_allow_html=True)
+     
 	bloco_informacao(
 	    titulo_bloco="Cronograma Detalhado",
 	    texto_descricao="Acesse a planilha detalhada com todas as fases, tarefas e prazos do projeto BioMove.",
