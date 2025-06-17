@@ -92,6 +92,7 @@ try:
     img12 = Image.open("image/Diagrama_Hardware_EMG.jpg")
     img13 = Image.open("image/Diagrama_Hardware_carrinho.png")
     img14 = Image.open("image/Esquematico_EMG.jpg")
+    img15 = Image.open("ESQUEMATICO_Semana1.JPG")	
 except FileNotFoundError:
     st.error("Uma ou mais imagens não foram encontradas. Verifique os caminhos dos arquivos.")
     # Atribui None para evitar mais erros
@@ -324,10 +325,23 @@ elif selected == "Atualização Semanal":
 	    <div style='text-align: justify;'>
 		<h2 style='color: #008080; text-align: center;'> #1 - Atualização Semanal - 09/05/2025 </h2>
 		<ul>
-			<li></li>
+			<li>Realizados testes nos principais componentes do carrinho (motor DC, ESP32 e ponte H), sem identificação de defeitos.</li>
+			<li>Conduzido estudo sobre softwares de modelagem 3D. Optou-se pela utilização do Eagle para o desenvolvimento do carrinho e do sistema EMG.</li>
+			<li>Modelo do site finalizado.</li>
+			<li>Proposta e cronograma revisados e atualizados conforme a devolutiva, já disponíveis no site.</li>
 		<ul>
 	    </div>
 	""", unsafe_allow_html=True)
+	st.markdown("""
+	    <div style='text-align: justify;'>
+	        <h3>Decisões sobre o projeto:</h3>
+	        <ul>
+	            <li>Definido que serão utilizadas baterias 18650 (4.2V) para alimentação dos sistemas.</li>
+	        </ul>
+	        <h3>Construção do esquemático EMG:</h3>
+	    </div>
+	""", unsafe_allow_html=True)
+	
 	st.divider()
 ############################################################################################
 ###################################   CRONOGRAMA    ########################################
