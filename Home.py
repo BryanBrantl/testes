@@ -6,28 +6,6 @@ from pathlib import Path
 
 st.set_page_config(page_title="BIOMOVE", layout="wide")
 
-# CSS para os botões com hover (borda e texto mudam, fundo continua)
-#st.markdown("""
-#    <style>
-#        .my-button {
-#            background-color: #1c1f26;
-#            color: white;
-#            border: 2px solid white;
-#            border-radius: 10px;
-#            padding: 10px 20px;
-#            font-size: 16px;
-#            font-weight: bold;
-#            cursor: pointer;
-#            text-align: center;
-#            transition: 0.3s;
-#        }
-#
-#        .my-button:hover {
-#            color: #00CED1;
-#            border-color: #00CED1;
-#        }
-#    </style>
-#""", unsafe_allow_html=True)
 cor_botao = "#008080"
 st.markdown(f"""
 <style>
