@@ -302,6 +302,16 @@ elif selected == "Atualização Semanal":
 	        </ul>
 	    </div>
 	""", unsafe_allow_html=True)
+	st.markdown("""
+	    <div style='text-align: justify;'>
+	        <h3>Demonstração do Controle do Carrinho:</h3>
+	        <ul>
+	            <li>Foi adicionado um vídeo no YouTube demonstrando o funcionamento básico do carrinho via controle Bluetooth.</li>
+	            <li>Para visualizar, clique no botão abaixo.</li>
+	        </ul>
+	    </div>
+	""", unsafe_allow_html=True)
+	st.link_button("Acessar Vídeo no YouTube", video1, type="primary")
 	
 	st.divider()
 #####################################################################################################		
