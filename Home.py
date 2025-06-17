@@ -379,19 +379,25 @@ elif selected == "Atualização Semanal":
 	    </div>
 	""", unsafe_allow_html=True)
 	
-	st.markdown("""
-	    <div style='text-align: justify;'>
-	        <h3>Detalhes do Circuito e Sinal:</h3>
-	        <ul>
-	            <li>Circuito montado em protoboard:</li>
-	            <li>Sinal no osciloscópio:</li>
-	        </ul>
-	    </div>
-	""", unsafe_allow_html=True)
+	st.subheader("Detalhes do Circuito e Sinal:")
 	A4_col1, A4_col2 = st.columns(2)
 	with A4_col1:
+		st.markdown("""
+		    <div style='text-align: justify;'>
+		        <ul>
+		            <li>Circuito montado em protoboard:</li>
+		        </ul>
+		    </div>
+		""", unsafe_allow_html=True)
 		st.image(img16, caption="Circuito montado em protoboard")
 	with A4_col2:
+		st.markdown("""
+		    <div style='text-align: justify;'>
+		        <ul>
+		            <li>Sinal no osciloscópio:</li>
+		        </ul>
+		    </div>
+		""", unsafe_allow_html=True)
 		st.image(img17, caption="Sinal do sensor EMG capturado no osciloscópio", width = 480)
 	st.divider()
 #####################################################################################################
