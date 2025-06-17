@@ -230,7 +230,7 @@ elif selected == "Atualização Semanal":
 	    """,
 	    unsafe_allow_html=True
 	)
-	##########################################
+	########################################
 	A0_col1, A0_col2, A0_col3 = st.columns([1, 0.05, 3])
 	with A0_col1:
 		st.image(img11, caption="Trecho do vídeo - Circuito EMG", use_container_width=True)
