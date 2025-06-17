@@ -67,7 +67,7 @@ try:
     img9 = Image.open("image/pcb2.jpg")	
     img10 = Image.open("image/pcb3.jpg")
     img11 = Image.open("image/sinal_emg1.png")
-    img12 = Image.open("image/Diagrama_Hardware_EMG.jpg")
+    img12 = Image.open("image/Diagrama_EMG.png")
     img13 = Image.open("image/Diagrama_Hardware_carrinho.png")
     img14 = Image.open("image/Esquematico_EMG.jpg")
     img15 = Image.open("image/ESQUEMATICO_Semana1.jpg")	
@@ -215,6 +215,8 @@ elif selected == "BioMove" and all([img5, img6, img7]):
 ##########################   ATUALIZAÇÃO SEMANAL    ########################################
 
 elif selected == "Atualização Semanal":
+
+	##########################################
 	st.markdown(
 	    """
 	    <hr style="border: 2px solid #008080; border-radius: 2px;">
@@ -228,7 +230,7 @@ elif selected == "Atualização Semanal":
 	    """,
 	    unsafe_allow_html=True
 	)
-	
+	##########################################
 	A0_col1, A0_col2, A0_col3 = st.columns([1, 0.05, 3])
 	with A0_col1:
 		st.image(img11, caption="Trecho do vídeo - Circuito EMG", use_container_width=True)
@@ -260,6 +262,7 @@ elif selected == "Atualização Semanal":
 	with A0_col5:
 		st.image(img10, caption="Layout da PCI no KiCad", width=400)
 	###########	
+	
 	st.subheader("Detalhes dos Diagramas de Hardware")
 	A0_col6, A0_col7, A0_col8 = st.columns(3)
 	with A0_col6:
@@ -268,6 +271,28 @@ elif selected == "Atualização Semanal":
 		st.image(img13, caption="Diagrama de Hardware do Carrinho", use_container_width=True)
 	with A0_col8:
 		st.image(img14, caption="Esquemático Eletrônico Detalhado", use_container_width=True)
+	
+	A0_col6_1, A0_col6_2 = st.columns(2)
+	with col6_1:
+		st.markdown("""
+		    <div style='text-align: justify;'>
+		        <h3 style='color: white;'>Descritivo de Hardware do Carrinho</h3>
+		        O sistema do carrinho é composto por um **ESP-32**, responsável pelo controle, enviando sinais de comando para a **ponte H L298N**, que atua como driver dos dois motores DC (esquerdo e direito). Ambos os módulos (ESP-32 e L298N) são alimentados por uma única fonte de alimentação, que fornece energia tanto para o funcionamento do sistema quanto para a tração dos motores.
+		    </div>
+		""", unsafe_allow_html=True)
+	with col6_2:
+		st.image(img12, caption="Diagrama de Hardware EMG", use_container_width=True)
+	
+	A0_col7_1, A0_col7_2 = st.columns(2)
+	with col7_1:
+		st.image(img13, caption="Diagrama de Hardware do Carrinho", use_container_width=True)
+	with col7_2:
+		st.markdown("""
+		    <div style='text-align: justify;'>
+		        <h3 style='color: white;'>Descritivo de Hardware do EMG</h3>
+		        O diagrama de blocos representa um sistema de aquisição de sinais EMG. O sinal é captado por eletrodos, amplificado na etapa de pré-amplificação, e então filtrado por um filtro passa-faixa de 20 a 500 Hz. Após o condicionamento final do sinal, ele é enviado ao microcontrolador ESP32 por uma porta ADC para processamento.
+		    </div>
+		""", unsafe_allow_html=True)
 	st.divider()
 
 ########################### atualizacao 4 ##########################################################3
