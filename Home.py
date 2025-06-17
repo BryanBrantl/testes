@@ -417,13 +417,6 @@ elif selected == "Atualização Semanal":
 ###################################   RELATORIO    ########################################
 elif selected == "Relatórios":
 	st.markdown("<h1 style='text-align: center; color: #008080;'>Relatórios", unsafe_allow_html=True)
-	st.markdown(
-	    """
-	    <hr style="border: 2px solid #008080; border-radius: 2px;">
-	    """,
-	    unsafe_allow_html=True
-	)
-
 	st.markdown("""
 	    <h2 style='color: #008080;'>Proposta de Projeto</h2>
 	""", unsafe_allow_html=True)
