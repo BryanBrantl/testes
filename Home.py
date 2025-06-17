@@ -314,7 +314,7 @@ elif selected == "Atualização Semanal":
 	        </ul>
 	    </div>
 	""", unsafe_allow_html=True)
-	st.link_button("▶", video1)
+	st.link_button("▶", video1, type="secondary")
 	
 	st.divider()
 #####################################################################################################		
@@ -427,7 +427,7 @@ elif selected == "Relatórios":
 	        Você pode acessar o documento completo clicando no botão abaixo:
 	    </div>
 	""", unsafe_allow_html=True)
-	st.link_button("Acessar Proposta", proposta, help="Clique para ver a proposta de projeto do BioMove.", type="primary")
+	st.link_button("Acessar Proposta", proposta, help="Clique para ver a proposta de projeto do BioMove.",type="secondary")
 	st.markdown("---") 
 	st.markdown("""
 	    <div style='text-align: justify;'>
