@@ -243,7 +243,7 @@ elif selected == "Atualização Semanal":
 	    """,
 	    unsafe_allow_html=True
 	)
-	st.markdown("<h1 style='text-align: center; color: #008080;'>Entrega e Validação do Hardware - 06/06</h1>", unsafe_allow_html=True)
+	st.markdown("<h1 style='text-align: center; color: #008080;'>ENTREGA E VALIDAÇÃO DO HARDWARE - 06/06</h1>", unsafe_allow_html=True)
 	st.markdown(
 	    """
 	    <hr style="border: 2px solid #008080; border-radius: 2px;">
@@ -416,9 +416,9 @@ elif selected == "Atualização Semanal":
 ############################################################################################
 ###################################   RELATORIO    ########################################
 elif selected == "Relatórios":
-	st.markdown("<h1 style='text-align: center; color: #008080;'>Relatórios", unsafe_allow_html=True)
+	st.markdown("<h1 style='text-align: center; color: #008080;'>RELATÓRIOS", unsafe_allow_html=True)
 	st.markdown("""
-	    <h2 style='color: #008080;'>Proposta de Projeto</h2>
+	    <h3>Proposta do Projeto:</h3>
 	""", unsafe_allow_html=True)
 	
 	st.markdown("""
