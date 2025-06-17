@@ -93,6 +93,8 @@ try:
     img13 = Image.open("image/Diagrama_Hardware_carrinho.png")
     img14 = Image.open("image/Esquematico_EMG.jpg")
     img15 = Image.open("image/ESQUEMATICO_Semana1.jpg")	
+    img16 = Image.open("image/Protoboard.jpg")
+    img17 = Image.open("image/Osciloscopio_Protoboard.jpg")	
 except FileNotFoundError:
     st.error("Uma ou mais imagens não foram encontradas. Verifique os caminhos dos arquivos.")
     # Atribui None para evitar mais erros
@@ -312,16 +314,38 @@ elif selected == "Atualização Semanal":
 	st.divider()
 #####################################################################################################
 	st.markdown("""
+	    <h2 style='color: #008080; text-align: center;'> #2 - Atualização Semanal - 16/05/2025 </h2>
+	""", unsafe_allow_html=True)
+	
+	st.markdown("""
 	    <div style='text-align: justify;'>
-		<h2 style='color: #008080; text-align: center;'> #2 - Atualização Semanal - 16/05/2025 </h2>
-		<ul>
-			<li></li>
-		<ul>
+	        <h3>Desenvolvimento e Validação do Circuito EMG:</h3>
+	        <ul>
+	            <li>Definida a utilização de um Kit chassi para a construção do carrinho.</li>
+	            <li>Montagem do sensor EMG em protoboard baseado no esquemático da semana anterior.</li>
+	            <li>Validamos o sinal no osciloscópio, detectando presença de ruído da rede.</li>
+	            <li>Definida a necessidade de implementar mais filtros no circuito para reduzir o ruído.</li>
+	        </ul>
 	    </div>
 	""", unsafe_allow_html=True)
+	
+	st.markdown("""
+	    <div style='text-align: justify;'>
+	        <h3>Detalhes do Circuito e Sinal:</h3>
+	        <ul>
+	            <li>Circuito montado em protoboard:</li>
+	            <li>Sinal no osciloscópio:</li>
+	        </ul>
+	    </div>
+	""", unsafe_allow_html=True)
+	A4_col1, A4_col2 = st.columns(2)
+	with A4_col1:
+		st.image(img16, caption="Circuito montado em protoboard")
+	with A4_col2:
+		st.image(img17, caption="Sinal do sensor EMG capturado no osciloscópio")
 	st.divider()
 #####################################################################################################
-	
+	#semana1
 	st.markdown("""
  		<h2 style='color: #008080; text-align: center;'> #1 - Atualização Semanal - 09/05/2025 </h2>
  	""", unsafe_allow_html=True)
